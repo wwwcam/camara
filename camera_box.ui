@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(62, 70, 73);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>151</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(46, 47, 49);</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(34, 168, 109);
+color: rgb(255, 255, 255);
+font: 75 &quot;맑은 고딕&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Login &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;To Your Account&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>156</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>맑은 고딕</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(34, 168, 109);
+color: rgb(255, 255, 255);
+font: &quot;맑은 고딕&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Logout</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>131</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(62, 70, 73);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>131</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(62, 70, 73);
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>156</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>맑은 고딕</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(34, 168, 109);
+color: rgb(255, 255, 255);
+font: &quot;맑은 고딕&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>151</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(46, 47, 49);</string>
+    </property>
+    <widget class="QListWidget" name="listWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>131</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(62, 70, 73);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Camera No.1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.11</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.14</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.15</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.17</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.18</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.19</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.20</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.21</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.22</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.23</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.24</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.25</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.26</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.27</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.28</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.29</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.30</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.31</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.32</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(34, 168, 109);
+font: 75 &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;CAMERA LIST&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_5" native="true">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>10</y>
+      <width>1581</width>
+      <height>971</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(46, 47, 49);</string>
+    </property>
+    <widget class="QWidget" name="CMRA_02" native="true">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>56</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>no.02</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="CMRA_03" native="true">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>10</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_04" native="true">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>10</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_05" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>10</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_07" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_13" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_19" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>490</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_25" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>650</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_01" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>56</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>no.01</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="CMRA_31" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>810</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_14" native="true">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>330</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_08" native="true">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>170</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_20" native="true">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>490</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_26" native="true">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>650</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_32" native="true">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>810</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_15" native="true">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>330</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_09" native="true">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>170</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_21" native="true">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>490</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_27" native="true">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>650</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_33" native="true">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>810</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_16" native="true">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>330</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_10" native="true">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>170</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_22" native="true">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>490</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_28" native="true">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>650</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_34" native="true">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>810</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_17" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>330</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_11" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>170</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_23" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>490</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_29" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>650</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_35" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>810</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_30" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>650</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_18" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>330</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_36" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>810</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_06" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>10</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_24" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>490</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="CMRA_12" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1320</x>
+       <y>170</y>
+       <width>250</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="datas/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
