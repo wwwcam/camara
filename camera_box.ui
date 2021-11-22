@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2021</width>
-    <height>1005</height>
+    <width>1930</width>
+    <height>1019</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>10</x>
+      <y>0</y>
       <width>391</width>
       <height>51</height>
      </rect>
@@ -29,7 +29,7 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(46, 47, 49);</string>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="login_ID">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -46,7 +46,7 @@ color: rgb(255, 255, 255);</string>
       <string>ID</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="login_Pw">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -63,7 +63,7 @@ color: rgb(255, 255, 255);</string>
       <string>PW</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="login_Bt">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -94,21 +94,21 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>180</y>
-      <width>161</width>
+      <x>220</x>
+      <y>170</y>
+      <width>181</width>
       <height>321</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(46, 47, 49);</string>
     </property>
-    <widget class="QListWidget" name="listWidget_2">
+    <widget class="QListWidget" name="cmr_listWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>40</y>
-       <width>141</width>
+       <width>161</width>
        <height>271</height>
       </rect>
      </property>
@@ -287,7 +287,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>161</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -313,10 +313,10 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_5" native="true">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>10</y>
+      <x>410</x>
+      <y>0</y>
       <width>1511</width>
-      <height>851</height>
+      <height>911</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -328,7 +328,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
        <x>260</x>
        <y>10</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -358,7 +358,7 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
        <x>510</x>
        <y>10</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -389,7 +389,7 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
        <x>760</x>
        <y>10</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -420,7 +420,7 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
        <x>1010</x>
        <y>10</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -449,9 +449,9 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>150</y>
+       <y>160</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -479,9 +479,9 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>290</y>
+       <y>310</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -509,15 +509,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>430</y>
+       <y>460</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_23">
+     <widget class="QLabel" name="label_19">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -539,15 +539,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>570</y>
+       <y>610</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_29">
+     <widget class="QLabel" name="label_25">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -571,7 +571,7 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
        <x>10</x>
        <y>10</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -599,15 +599,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>710</y>
+       <y>760</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_35">
+     <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -629,15 +629,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>290</y>
+       <y>310</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_18">
+     <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -659,9 +659,9 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>150</y>
+       <y>160</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -689,15 +689,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>430</y>
+       <y>460</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_24">
+     <widget class="QLabel" name="label_20">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -719,15 +719,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>570</y>
+       <y>610</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_30">
+     <widget class="QLabel" name="label_26">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -749,15 +749,15 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>710</y>
+       <y>760</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_36">
+     <widget class="QLabel" name="label_32">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -779,16 +779,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>510</x>
-       <y>290</y>
+       <y>310</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_19">
+     <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -810,9 +810,9 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>510</x>
-       <y>150</y>
+       <y>160</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -841,16 +841,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>510</x>
-       <y>430</y>
+       <y>460</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_25">
+     <widget class="QLabel" name="label_21">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -872,16 +872,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>510</x>
-       <y>570</y>
+       <y>610</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_31">
+     <widget class="QLabel" name="label_27">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -903,16 +903,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>510</x>
-       <y>710</y>
+       <y>760</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_37">
+     <widget class="QLabel" name="label_33">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -934,16 +934,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>290</y>
+       <y>310</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_20">
+     <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -965,16 +965,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>150</y>
+       <y>160</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -996,16 +996,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>430</y>
+       <y>460</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_26">
+     <widget class="QLabel" name="label_22">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1027,16 +1027,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>570</y>
+       <y>610</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_32">
+     <widget class="QLabel" name="label_28">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1058,16 +1058,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>710</y>
+       <y>760</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_38">
+     <widget class="QLabel" name="label_34">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1089,16 +1089,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1010</x>
-       <y>290</y>
+       <y>310</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_21">
+     <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1120,16 +1120,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1010</x>
-       <y>150</y>
+       <y>160</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_15">
+     <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1151,16 +1151,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1010</x>
-       <y>430</y>
+       <y>460</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_27">
+     <widget class="QLabel" name="label_23">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1182,16 +1182,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1010</x>
-       <y>570</y>
+       <y>610</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_33">
+     <widget class="QLabel" name="label_29">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1213,16 +1213,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1010</x>
-       <y>710</y>
+       <y>760</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_39">
+     <widget class="QLabel" name="label_35">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1244,16 +1244,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1260</x>
-       <y>570</y>
+       <y>610</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_34">
+     <widget class="QLabel" name="label_30">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1275,16 +1275,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1260</x>
-       <y>290</y>
+       <y>310</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_22">
+     <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1306,16 +1306,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1260</x>
-       <y>710</y>
+       <y>760</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_40">
+     <widget class="QLabel" name="label_36">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1339,7 +1339,7 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
        <x>1260</x>
        <y>10</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1368,16 +1368,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1260</x>
-       <y>430</y>
+       <y>460</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_28">
+     <widget class="QLabel" name="label_24">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1399,16 +1399,16 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>1260</x>
-       <y>150</y>
+       <y>160</y>
        <width>240</width>
-       <height>130</height>
+       <height>138</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_16">
+     <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -1430,8 +1430,8 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_6" native="true">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>870</y>
+      <x>410</x>
+      <y>920</y>
       <width>1511</width>
       <height>51</height>
      </rect>
@@ -1439,18 +1439,18 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(46, 47, 49);</string>
     </property>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>13</x>
+       <x>10</x>
        <y>8</y>
-       <width>1292</width>
+       <width>1491</width>
        <height>35</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="functionBt_01">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1471,7 +1471,7 @@ font: 75 14pt &quot;맑은 고딕&quot;;</string>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="functionBt_02">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1487,12 +1487,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>2</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="functionBt_03">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1508,12 +1508,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>3</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="functionBt_04">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1529,12 +1529,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>4</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_7">
+       <widget class="QPushButton" name="functionBt_05">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1550,12 +1550,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>5</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_8">
+       <widget class="QPushButton" name="functionBt_06">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1571,12 +1571,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>6</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_10">
+       <widget class="QPushButton" name="functionBt_07">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1592,12 +1592,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>7</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_9">
+       <widget class="QPushButton" name="functionBt_08">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1613,12 +1613,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>8</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_13">
+       <widget class="QPushButton" name="functionBt_09">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1634,12 +1634,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>9</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_14">
+       <widget class="QPushButton" name="functionBt_10">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1655,12 +1655,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>10</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_16">
+       <widget class="QPushButton" name="functionBt_11">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1676,12 +1676,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>11</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_15">
+       <widget class="QPushButton" name="functionBt_12">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1697,12 +1697,12 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
+         <string>12</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_11">
+       <widget class="QPushButton" name="functionBt_13">
         <property name="font">
          <font>
           <family>맑은 고딕</family>
@@ -1718,70 +1718,7 @@ color: rgb(255, 255, 255);
 font: 75 14pt &quot;맑은 고딕&quot;;</string>
         </property>
         <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_17">
-        <property name="font">
-         <font>
-          <family>맑은 고딕</family>
-          <pointsize>14</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-font: 75 14pt &quot;맑은 고딕&quot;;</string>
-        </property>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_12">
-        <property name="font">
-         <font>
-          <family>맑은 고딕</family>
-          <pointsize>14</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-font: 75 14pt &quot;맑은 고딕&quot;;</string>
-        </property>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_18">
-        <property name="font">
-         <font>
-          <family>맑은 고딕</family>
-          <pointsize>14</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-font: 75 14pt &quot;맑은 고딕&quot;;</string>
-        </property>
-        <property name="text">
-         <string>1</string>
+         <string>13</string>
         </property>
        </widget>
       </item>
@@ -1791,33 +1728,33 @@ font: 75 14pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_7" native="true">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>510</y>
+      <x>10</x>
+      <y>500</y>
       <width>391</width>
-      <height>411</height>
+      <height>471</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(46, 47, 49);</string>
     </property>
-    <widget class="QWidget" name="CMRA_37" native="true">
+    <widget class="QWidget" name="Map" native="true">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
        <width>371</width>
-       <height>391</height>
+       <height>451</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 0, 0);</string>
      </property>
-     <widget class="QLabel" name="label_41">
+     <widget class="QLabel" name="label_44">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>20</y>
-        <width>141</width>
+        <x>0</x>
+        <y>0</y>
+        <width>371</width>
         <height>41</height>
        </rect>
       </property>
@@ -1826,14 +1763,14 @@ font: 75 14pt &quot;맑은 고딕&quot;;</string>
 font: 75 16pt &quot;맑은 고딕&quot;;</string>
       </property>
       <property name="text">
-       <string>CAMERA MAP</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;CAMERA MAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="logo">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>350</y>
+        <y>380</y>
         <width>371</width>
         <height>41</height>
        </rect>
@@ -1842,7 +1779,7 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
        <string notr="true">color: rgb(240, 240, 240);</string>
       </property>
       <property name="text">
-       <string>LoGo</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;LoGo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -1850,21 +1787,21 @@ font: 75 16pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_8" native="true">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>180</y>
-      <width>171</width>
+      <x>10</x>
+      <y>170</y>
+      <width>201</width>
       <height>321</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(46, 47, 49);</string>
     </property>
-    <widget class="QListWidget" name="listWidget_6">
+    <widget class="QListWidget" name="file_listWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>40</y>
-       <width>151</width>
+       <width>181</width>
        <height>271</height>
       </rect>
      </property>
@@ -2043,7 +1980,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>171</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -2069,8 +2006,8 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>70</y>
+      <x>10</x>
+      <y>60</y>
       <width>391</width>
       <height>101</height>
      </rect>
@@ -2078,7 +2015,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(46, 47, 49);</string>
     </property>
-    <widget class="QPushButton" name="pushButton_19">
+    <widget class="QPushButton" name="folferOpen_Bt">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -2105,12 +2042,12 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
       <string>FOLDER OPEN</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="folferAddres">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>0</x>
        <y>35</y>
-       <width>371</width>
+       <width>391</width>
        <height>31</height>
       </rect>
      </property>
@@ -2118,7 +2055,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
       <string notr="true">background-color: rgb(62, 70, 73);</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_20">
+    <widget class="QPushButton" name="folferSelect_Bt">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -2152,7 +2089,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2021</width>
+     <width>1930</width>
      <height>21</height>
     </rect>
    </property>
