@@ -452,7 +452,7 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.07</string>
+      <string>No.06</string>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_07">
