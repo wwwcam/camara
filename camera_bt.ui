@@ -545,7 +545,7 @@ background-color: rgb(61, 63, 67);</string>
       <string>No.31</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="cmraBt_8">
+    <widget class="QPushButton" name="cmraBt_08">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -563,7 +563,7 @@ background-color: rgb(61, 63, 67);</string>
       <string>No.08</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="cmraBt_9">
+    <widget class="QPushButton" name="cmraBt_09">
      <property name="geometry">
       <rect>
        <x>510</x>
@@ -998,8 +998,8 @@ background-color: rgb(61, 63, 67);</string>
     <widget class="QLabel" name="splash_Scr">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>110</y>
+       <x>200</x>
+       <y>100</y>
        <width>1141</width>
        <height>671</height>
       </rect>
