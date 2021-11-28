@@ -4,14 +4,11 @@ from PySide2.QtCore import QTimer,QObject,Signal,QTime
 from PySide2.QtGui import QColor
 from PySide2 import QtGui ,QtWidgets ,QtCore
 from PySide2.QtWidgets import * 
-from PySide2 import QtCore, QtGui
 from PySide2.QtGui import * 
 from PySide2.QtCore import * 
-import win32gui
 import datetime
 from datetime import timedelta
 import subprocess
-import win32con    
 import pickle
 import time
 import psutil
