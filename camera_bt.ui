@@ -1058,7 +1058,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>ip</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit">
@@ -1084,14 +1084,14 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>980</x>
+        <x>965</x>
         <y>450</y>
-        <width>56</width>
-        <height>12</height>
+        <width>71</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>camera nm</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_3">
@@ -1114,7 +1114,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>zoom</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
@@ -1127,7 +1127,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>memo</string>
       </property>
      </widget>
      <widget class="QTextEdit" name="textEdit">
@@ -1163,7 +1163,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>sensitive</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_7">
@@ -1176,7 +1176,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>fococe</string>
       </property>
      </widget>
      <widget class="QSlider" name="horizontalSlider_2">
@@ -1202,7 +1202,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>memo</string>
       </property>
      </widget>
      <widget class="QSlider" name="horizontalSlider_3">
@@ -1228,7 +1228,7 @@ color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>location</string>
       </property>
      </widget>
     </widget>
