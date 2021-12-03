@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1962</width>
-    <height>1059</height>
+    <width>2857</width>
+    <height>1766</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1178,8 +1178,8 @@ font: 75 14pt &quot;맑은 고딕&quot;;</string>
     <widget class="QTimeEdit" name="timeEdit">
      <property name="geometry">
       <rect>
-       <x>800</x>
-       <y>10</y>
+       <x>830</x>
+       <y>12</y>
        <width>211</width>
        <height>31</height>
       </rect>
@@ -1970,7 +1970,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1962</width>
+     <width>2857</width>
      <height>21</height>
     </rect>
    </property>
