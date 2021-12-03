@@ -54,7 +54,7 @@ class MyMainWindow(QWidget,btns , vplayer): #클래스로 직접 적용하였음
 
         ### 비디오 플레이를 위한 타이머 추가
         self.vp1 = QTimer(self.ui)
-        self.vp1.setInterval(33)
+        self.vp1.setInterval(10)
         self.vp1.timeout.connect(self.playV1)
         self.vp1.start()
 
