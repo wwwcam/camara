@@ -113,7 +113,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_02.resize(240 , 138)
-                self.parent.ui.cmraBt_02.move(10+250*1,10)
+                self.parent.ui.cmraBt_02.move(10+240*1,10)
                 for i in range(1,37):
                     if i == 2 :
                         pass
@@ -135,7 +135,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_03.resize(240 , 138)
-                self.parent.ui.cmraBt_03.move(10+250*2,10)
+                self.parent.ui.cmraBt_03.move(10+240*2,10)
                 for i in range(1,37):
                     if i == 3 :
                         pass
@@ -156,7 +156,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_04.resize(240 , 138)
-                self.parent.ui.cmraBt_04.move(10+250*3,10)
+                self.parent.ui.cmraBt_04.move(10+240*3,10)
                 for i in range(1,37):
                     if i == 4 :
                         pass
@@ -177,7 +177,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_05.resize(240 , 138)
-                self.parent.ui.cmraBt_05.move(10+250*4,10)
+                self.parent.ui.cmraBt_05.move(10+240*4,10)
                 for i in range(1,37):
                     if i == 5 :
                         pass
@@ -198,7 +198,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_06.resize(240 , 138)
-                self.parent.ui.cmraBt_06.move(10+250*5,10)
+                self.parent.ui.cmraBt_06.move(10+240*5,10)
                 for i in range(1,37):
                     if i == 6 :
                         pass
@@ -219,7 +219,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_07.resize(240 , 138)
-                self.parent.ui.cmraBt_07.move(10+250*0,10+150*1)
+                self.parent.ui.cmraBt_07.move(10+240*0,10+140*1)
                 for i in range(1,37):
                     if i == 7 :
                         pass
@@ -240,7 +240,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_08.resize(240 , 138)
-                self.parent.ui.cmraBt_08.move(10+250*1,10+150*1)
+                self.parent.ui.cmraBt_08.move(10+240*1,10+140*1)
                 for i in range(1,37):
                     if i == 8 :
                         pass
@@ -261,7 +261,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_09.resize(240 , 138)
-                self.parent.ui.cmraBt_09.move(10+250*2,10+150*1)
+                self.parent.ui.cmraBt_09.move(10+240*2,10+140*1)
                 for i in range(1,37):
                     if i == 9 :
                         pass
@@ -282,7 +282,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_10.resize(240 , 138)
-                self.parent.ui.cmraBt_10.move(10+250*3,10+150*1)
+                self.parent.ui.cmraBt_10.move(10+240*3,10+140*1)
                 for i in range(1,37):
                     if i == 10 :
                         pass
@@ -304,7 +304,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_11.resize(240 , 138)
-                self.parent.ui.cmraBt_11.move(10+250*4,10+150*1)
+                self.parent.ui.cmraBt_11.move(10+240*4,10+140*1)
                 for i in range(1,37):
                     if i == 11 :
                         pass
@@ -325,7 +325,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_12.resize(240 , 138)
-                self.parent.ui.cmraBt_12.move(10+250*5,10+150*1)
+                self.parent.ui.cmraBt_12.move(10+240*5,10+140*1)
                 for i in range(1,37):
                     if i == 12 :
                         pass
@@ -346,7 +346,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_13.resize(240 , 138)
-                self.parent.ui.cmraBt_13.move(10+250*0,10+150*2)
+                self.parent.ui.cmraBt_13.move(10+240*0,10+140*2)
                 for i in range(1,37):
                     if i == 13 :
                         pass
@@ -367,7 +367,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_14.resize(240 , 138)
-                self.parent.ui.cmraBt_14.move(10+250*1,10+150*2)
+                self.parent.ui.cmraBt_14.move(10+240*1,10+140*2)
                 for i in range(1,37):
                     if i == 14 :
                         pass
@@ -388,7 +388,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_15.resize(240 , 138)
-                self.parent.ui.cmraBt_15.move(10+250*2,10+150*2)
+                self.parent.ui.cmraBt_15.move(10+240*2,10+140*2)
                 for i in range(1,37):
                     if i == 15 :
                         pass
@@ -409,7 +409,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_16.resize(240 , 138)
-                self.parent.ui.cmraBt_16.move(10+250*3,10+150*2)
+                self.parent.ui.cmraBt_16.move(10+240*3,10+140*2)
                 for i in range(1,37):
                     if i == 16 :
                         pass
@@ -430,7 +430,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_17.resize(240 , 138)
-                self.parent.ui.cmraBt_17.move(10+250*4,10+150*2)
+                self.parent.ui.cmraBt_17.move(10+240*4,10+140*2)
                 for i in range(1,37):
                     if i == 17 :
                         pass
@@ -451,7 +451,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_18.resize(240 , 138)
-                self.parent.ui.cmraBt_18.move(10+250*5,10+150*2)
+                self.parent.ui.cmraBt_18.move(10+240*5,10+140*2)
                 for i in range(1,37):
                     if i == 18 :
                         pass
@@ -472,7 +472,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_19.resize(240 , 138)
-                self.parent.ui.cmraBt_19.move(10+250*0,10+150*3)
+                self.parent.ui.cmraBt_19.move(10+240*0,10+140*3)
                 for i in range(1,37):
                     if i == 19 :
                         pass
@@ -493,7 +493,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_20.resize(240 , 138)
-                self.parent.ui.cmraBt_20.move(10+250*1,10+150*3)
+                self.parent.ui.cmraBt_20.move(10+240*1,10+140*3)
                 for i in range(1,37):
                     if i == 20 :
                         pass
@@ -514,7 +514,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_21.resize(240 , 138)
-                self.parent.ui.cmraBt_21.move(10+250*2,10+150*3)
+                self.parent.ui.cmraBt_21.move(10+240*2,10+140*3)
                 for i in range(1,37):
                     if i == 21 :
                         pass
@@ -535,7 +535,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_22.resize(240 , 138)
-                self.parent.ui.cmraBt_22.move(10+250*3,10+150*3)
+                self.parent.ui.cmraBt_22.move(10+240*3,10+140*3)
                 for i in range(1,37):
                     if i == 22 :
                         pass
@@ -556,7 +556,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_23.resize(240 , 138)
-                self.parent.ui.cmraBt_23.move(10+250*4,10+150*3)
+                self.parent.ui.cmraBt_23.move(10+240*4,10+140*3)
                 for i in range(1,37):
                     if i == 23 :
                         pass
@@ -577,7 +577,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_24.resize(240 , 138)
-                self.parent.ui.cmraBt_24.move(10+250*5,10+150*3)
+                self.parent.ui.cmraBt_24.move(10+240*5,10+140*3)
                 for i in range(1,37):
                     if i == 24 :
                         pass
@@ -598,7 +598,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_25.resize(240 , 138)
-                self.parent.ui.cmraBt_25.move(10+250*0,10+150*4)
+                self.parent.ui.cmraBt_25.move(10+240*0,10+140*4)
                 for i in range(1,37):
                     if i == 25 :
                         pass
@@ -619,7 +619,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_26.resize(240 , 138)
-                self.parent.ui.cmraBt_26.move(10+250*1,10+150*4)
+                self.parent.ui.cmraBt_26.move(10+240*1,10+140*4)
                 for i in range(1,37):
                     if i == 26 :
                         pass
@@ -640,7 +640,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_27.resize(240 , 138)
-                self.parent.ui.cmraBt_27.move(10+250*2,10+150*4)
+                self.parent.ui.cmraBt_27.move(10+240*2,10+140*4)
                 for i in range(1,37):
                     if i == 27 :
                         pass
@@ -661,7 +661,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_28.resize(240 , 138)
-                self.parent.ui.cmraBt_28.move(10+250*3,10+150*4)
+                self.parent.ui.cmraBt_28.move(10+240*3,10+140*4)
                 for i in range(1,37):
                     if i == 28 :
                         pass
@@ -682,7 +682,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_29.resize(240 , 138)
-                self.parent.ui.cmraBt_29.move(10+250*4,10+150*4)
+                self.parent.ui.cmraBt_29.move(10+240*4,10+140*4)
                 for i in range(1,37):
                     if i == 29 :
                         pass
@@ -703,7 +703,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_30.resize(240 , 138)
-                self.parent.ui.cmraBt_30.move(10+250*5,10+150*4)
+                self.parent.ui.cmraBt_30.move(10+240*5,10+140*4)
                 for i in range(1,37):
                     if i == 30 :
                         pass
@@ -724,7 +724,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_31.resize(240 , 138)
-                self.parent.ui.cmraBt_31.move(10+250*0,10+150*5)
+                self.parent.ui.cmraBt_31.move(10+240*0,10+140*5)
                 for i in range(1,37):
                     if i == 31 :
                         pass
@@ -745,7 +745,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_32.resize(240 , 138)
-                self.parent.ui.cmraBt_32.move(10+250*1,10+150*5)
+                self.parent.ui.cmraBt_32.move(10+240*1,10+140*5)
                 for i in range(1,37):
                     if i == 32 :
                         pass
@@ -766,7 +766,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_33.resize(240 , 138)
-                self.parent.ui.cmraBt_33.move(10+250*2,10+150*5)
+                self.parent.ui.cmraBt_33.move(10+240*2,10+140*5)
                 for i in range(1,37):
                     if i == 33 :
                         pass
@@ -787,7 +787,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_34.resize(240 , 138)
-                self.parent.ui.cmraBt_34.move(10+250*3,10+150*5)
+                self.parent.ui.cmraBt_34.move(10+240*3,10+140*5)
                 for i in range(1,37):
                     if i == 34 :
                         pass
@@ -808,7 +808,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_35.resize(240 , 138)
-                self.parent.ui.cmraBt_35.move(10+250*4,10+150*5)
+                self.parent.ui.cmraBt_35.move(10+240*4,10+140*5)
                 for i in range(1,37):
                     if i == 35 :
                         pass
@@ -829,7 +829,7 @@ class btns():
                         exec('self.parent.ui.cmraBt_%02d.hide()'%i)
             else:
                 self.parent.ui.cmraBt_36.resize(240 , 138)
-                self.parent.ui.cmraBt_36.move(10+250*5,10+150*5)
+                self.parent.ui.cmraBt_36.move(10+240*5,10+140*5)
                 for i in range(1,37):
                     if i == 36 :
                         pass
