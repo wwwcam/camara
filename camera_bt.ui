@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>290</y>
+      <y>280</y>
       <width>461</width>
       <height>231</height>
      </rect>
@@ -943,8 +943,8 @@ background-color: rgb(61, 63, 67);</string>
     <widget class="QLabel" name="splash_Scr">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>100</y>
+       <x>740</x>
+       <y>90</y>
        <width>1141</width>
        <height>671</height>
       </rect>
@@ -961,8 +961,8 @@ color: rgb(255, 255, 255);</string>
     <widget class="QWidget" name="widget_9" native="true">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>30</y>
+       <x>1050</x>
+       <y>50</y>
        <width>1411</width>
        <height>751</height>
       </rect>
@@ -984,7 +984,7 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>datas/images/settingTransPb.png</normaloff>datas/images/settingTransPb.png</iconset>
+        <normaloff>../../../.designer/backup/datas/images/settingTransPb.png</normaloff>../../../.designer/backup/datas/images/settingTransPb.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -1207,6 +1207,102 @@ color: rgb(255, 255, 255);</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Location&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
+    </widget>
+    <widget class="QPushButton" name="alarm">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Alarm</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="alarm_2">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>30</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Alarm</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="alarm_3">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>30</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Alarm</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="alarm_4">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>30</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Alarm</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="alarm_5">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>30</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Alarm</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="alarm_6">
+     <property name="geometry">
+      <rect>
+       <x>1220</x>
+       <y>30</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 85, 0);</string>
+     </property>
+     <property name="text">
+      <string>Alarm</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_6" native="true">
@@ -1539,7 +1635,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>530</y>
+      <y>520</y>
       <width>461</width>
       <height>191</height>
      </rect>
@@ -1795,7 +1891,7 @@ color: rgb(255, 255, 255);
 font: 75 12pt &quot;맑은 고딕&quot;;</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Alaram &amp;amp; File List&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Alarm &amp;amp; File List&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QPushButton" name="folferSelect_Bt">
@@ -1870,7 +1966,7 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
+      <y>50</y>
       <width>461</width>
       <height>221</height>
      </rect>
