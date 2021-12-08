@@ -1,84 +1,63 @@
 import time
 
 class btns():
-    def __init__(self , ui):
+    def __init__(self , ui,parent):
         self.ui = ui
+        self.parent = parent
         self.dclickTime = [time.time() for i in range(37)]
-        self.fullscreen01 = self.fullscreen01
         self.ui.cmraBt_01.clicked.connect(self.fullscreen01)
-        self.fullscreen02 = self.fullscreen02
         self.ui.cmraBt_02.clicked.connect(self.fullscreen02)
-        self.fullscreen03 = self.fullscreen03
         self.ui.cmraBt_03.clicked.connect(self.fullscreen03)
-        self.fullscreen04 = self.fullscreen04
         self.ui.cmraBt_04.clicked.connect(self.fullscreen04)
-        self.fullscreen05 = self.fullscreen05
         self.ui.cmraBt_05.clicked.connect(self.fullscreen05)
-        self.fullscreen06 = self.fullscreen06
         self.ui.cmraBt_06.clicked.connect(self.fullscreen06)
-        self.fullscreen07 = self.fullscreen07
         self.ui.cmraBt_07.clicked.connect(self.fullscreen07)
-        self.fullscreen08 = self.fullscreen08
         self.ui.cmraBt_08.clicked.connect(self.fullscreen08)
-        self.fullscreen09 = self.fullscreen09
         self.ui.cmraBt_09.clicked.connect(self.fullscreen09)
-        self.fullscreen10 = self.fullscreen10
         self.ui.cmraBt_10.clicked.connect(self.fullscreen10)
-        self.fullscreen11 = self.fullscreen11
         self.ui.cmraBt_11.clicked.connect(self.fullscreen11)
-        self.fullscreen12 = self.fullscreen12
         self.ui.cmraBt_12.clicked.connect(self.fullscreen12)
-        self.fullscreen13 = self.fullscreen13
         self.ui.cmraBt_13.clicked.connect(self.fullscreen13)
-        self.fullscreen14 = self.fullscreen14
         self.ui.cmraBt_14.clicked.connect(self.fullscreen14)
-        self.fullscreen15 = self.fullscreen15
         self.ui.cmraBt_15.clicked.connect(self.fullscreen15)
-        self.fullscreen16 = self.fullscreen16
         self.ui.cmraBt_16.clicked.connect(self.fullscreen16)
-        self.fullscreen17 = self.fullscreen17
         self.ui.cmraBt_17.clicked.connect(self.fullscreen17)
-        self.fullscreen18 = self.fullscreen18
         self.ui.cmraBt_18.clicked.connect(self.fullscreen18)
-        self.fullscreen19 = self.fullscreen19
         self.ui.cmraBt_19.clicked.connect(self.fullscreen19)
-        self.fullscreen20 = self.fullscreen20
         self.ui.cmraBt_20.clicked.connect(self.fullscreen20)
-        self.fullscreen21 = self.fullscreen21
         self.ui.cmraBt_21.clicked.connect(self.fullscreen21)
-        self.fullscreen22 = self.fullscreen22
         self.ui.cmraBt_22.clicked.connect(self.fullscreen22)
-        self.fullscreen23 = self.fullscreen23
         self.ui.cmraBt_23.clicked.connect(self.fullscreen23)
-        self.fullscreen24 = self.fullscreen24
         self.ui.cmraBt_24.clicked.connect(self.fullscreen24)
-        self.fullscreen25 = self.fullscreen25
         self.ui.cmraBt_25.clicked.connect(self.fullscreen25)
-        self.fullscreen26 = self.fullscreen26
         self.ui.cmraBt_26.clicked.connect(self.fullscreen26)
-        self.fullscreen27 = self.fullscreen27
         self.ui.cmraBt_27.clicked.connect(self.fullscreen27)
-        self.fullscreen28 = self.fullscreen28
         self.ui.cmraBt_28.clicked.connect(self.fullscreen28)
-        self.fullscreen29 = self.fullscreen29
         self.ui.cmraBt_29.clicked.connect(self.fullscreen29)
-        self.fullscreen30 = self.fullscreen30
         self.ui.cmraBt_30.clicked.connect(self.fullscreen30)
-        self.fullscreen31 = self.fullscreen31
         self.ui.cmraBt_31.clicked.connect(self.fullscreen31)
-        self.fullscreen32 = self.fullscreen32
         self.ui.cmraBt_32.clicked.connect(self.fullscreen32)
-        self.fullscreen33 = self.fullscreen33
         self.ui.cmraBt_33.clicked.connect(self.fullscreen33)
-        self.fullscreen34 = self.fullscreen34
         self.ui.cmraBt_34.clicked.connect(self.fullscreen34)
-        self.fullscreen35 = self.fullscreen35
         self.ui.cmraBt_35.clicked.connect(self.fullscreen35)
-        self.fullscreen36 = self.fullscreen36
-        self.ui.cmraBt_36.clicked.connect(self.fullscreen36)       
+        self.ui.cmraBt_36.clicked.connect(self.fullscreen36) 
+        parent.cameras = [self.ui.cmraBt_01,self.ui.cmraBt_02,self.ui.cmraBt_03,
+                        self.ui.cmraBt_04,self.ui.cmraBt_05,self.ui.cmraBt_06,
+                        self.ui.cmraBt_07,self.ui.cmraBt_08,self.ui.cmraBt_09,
+                        self.ui.cmraBt_10,self.ui.cmraBt_11,self.ui.cmraBt_12,
+                        self.ui.cmraBt_13,self.ui.cmraBt_14,self.ui.cmraBt_15,
+                        self.ui.cmraBt_16,self.ui.cmraBt_17,self.ui.cmraBt_18,
+                        self.ui.cmraBt_19,self.ui.cmraBt_20,self.ui.cmraBt_21,
+                        self.ui.cmraBt_22,self.ui.cmraBt_23,self.ui.cmraBt_24,
+                        self.ui.cmraBt_25,self.ui.cmraBt_26,self.ui.cmraBt_27,
+                        self.ui.cmraBt_28,self.ui.cmraBt_29,self.ui.cmraBt_30,
+                        self.ui.cmraBt_31,self.ui.cmraBt_32,self.ui.cmraBt_33,
+                        self.ui.cmraBt_34,self.ui.cmraBt_35,self.ui.cmraBt_36]
+           
+        
+
       
     def fullscreen01(self):
-        print("ok")
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_01.size().width() == 240:
@@ -89,7 +68,7 @@ class btns():
                         pass
                     else :
                         exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.ui.widget_9.show()
+                self.parent.settingLayer.show()
             else:
                 self.ui.cmraBt_01.resize(240 , 138)
                 self.ui.cmraBt_01.move(10,10)
@@ -98,7 +77,7 @@ class btns():
                         pass
                     else :
                         exec('self.ui.cmraBt_%02d.show()'%i)
-                self.ui.widget_9.hide()
+                self.parent.settingLayer.hide()
         self.dclickTime[1] = time.time()
         
 
@@ -838,4 +817,3 @@ class btns():
                     else :
                         exec('self.ui.cmraBt_%02d.show()'%i)
         self.dclickTime[1] = time.time()
-    

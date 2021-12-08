@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>313</width>
-    <height>633</height>
+    <width>263</width>
+    <height>869</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>311</width>
-     <height>631</height>
+     <width>261</width>
+     <height>871</height>
     </rect>
    </property>
    <property name="mouseTracking">
@@ -34,8 +34,8 @@
    <widget class="QLabel" name="sens_label_7">
     <property name="geometry">
      <rect>
-      <x>81</x>
-      <y>494</y>
+      <x>31</x>
+      <y>344</y>
       <width>65</width>
       <height>21</height>
      </rect>
@@ -51,8 +51,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLineEdit" name="ip_lineEdit_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>376</y>
+      <x>102</x>
+      <y>226</y>
       <width>150</width>
       <height>20</height>
      </rect>
@@ -65,8 +65,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="foco_label_7">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>522</y>
+      <x>50</x>
+      <y>372</y>
       <width>43</width>
       <height>21</height>
      </rect>
@@ -82,8 +82,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLineEdit" name="camera_lineEdit_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>403</y>
+      <x>102</x>
+      <y>253</y>
       <width>150</width>
       <height>20</height>
      </rect>
@@ -96,8 +96,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QSlider" name="foco_horizontalSlider_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>522</y>
+      <x>102</x>
+      <y>372</y>
       <width>150</width>
       <height>22</height>
      </rect>
@@ -109,8 +109,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="loca_label_7">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>430</y>
+      <x>30</x>
+      <y>280</y>
       <width>63</width>
       <height>21</height>
      </rect>
@@ -126,8 +126,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QSlider" name="sens_horizontalSlider_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>494</y>
+      <x>102</x>
+      <y>344</y>
       <width>150</width>
       <height>22</height>
      </rect>
@@ -139,8 +139,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QTextEdit" name="memo_textEdit_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>550</y>
+      <x>102</x>
+      <y>400</y>
       <width>151</width>
       <height>71</height>
      </rect>
@@ -153,8 +153,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="ip_label_7">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>376</y>
+      <x>80</x>
+      <y>226</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -170,8 +170,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLineEdit" name="loca_lineEdit_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>430</y>
+      <x>102</x>
+      <y>280</y>
       <width>150</width>
       <height>20</height>
      </rect>
@@ -184,8 +184,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="memo_label_7">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>550</y>
+      <x>50</x>
+      <y>400</y>
       <width>48</width>
       <height>21</height>
      </rect>
@@ -201,8 +201,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="zoom_label_7">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>466</y>
+      <x>50</x>
+      <y>316</y>
       <width>43</width>
       <height>21</height>
      </rect>
@@ -218,8 +218,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QSlider" name="zoom_horizontalSlider_7">
     <property name="geometry">
      <rect>
-      <x>152</x>
-      <y>466</y>
+      <x>102</x>
+      <y>316</y>
       <width>150</width>
       <height>22</height>
      </rect>
@@ -238,12 +238,13 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
+     <string notr="true">color: rgba(255, 255, 255);
+background-color: rgba(222, 255, 254, 30);
 font: 11pt &quot;Agency FB&quot;;
 font: 16pt &quot;Agency FB&quot;;</string>
     </property>
     <property name="text">
-     <string>icon</string>
+     <string/>
     </property>
     <property name="icon">
      <iconset>
@@ -259,8 +260,8 @@ font: 16pt &quot;Agency FB&quot;;</string>
    <widget class="QLabel" name="camera__label_7">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>403</y>
+      <x>40</x>
+      <y>253</y>
       <width>55</width>
       <height>21</height>
      </rect>
@@ -273,8 +274,26 @@ color: rgb(255, 255, 255);</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Camera&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="saveButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 229, 246, 30);</string>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="datas/image.qrc"/>
+ </resources>
  <connections/>
 </ui>

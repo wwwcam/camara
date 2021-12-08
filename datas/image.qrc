@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
-    <file>images/1.jpg</file>
+    <file>images/settimgIcon.png</file>
   </qresource>
+  <qresource prefix="newPrefix"/>
 </RCC>
