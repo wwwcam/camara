@@ -67,7 +67,6 @@ class MyMainWindow(QWidget,btns , vplayer): #클래스로 직접 적용하였음
         self.vp1.start()
 
 
-
             
             
     

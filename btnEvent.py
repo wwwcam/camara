@@ -4,6 +4,40 @@ class btns():
     def __init__(self , ui,parent):
         self.ui = ui
         self.parent = parent
+        self.camSettimgs = {
+        "cam01":{},
+        "cam02":{},
+        "cam03":{},
+        "cam04":{},
+        "cam05":{},
+        "cam06":{},
+        "cam07":{},
+        "cam08":{},
+        "cam09":{},
+        "cam10":{},
+        "cam11":{},
+        "cam12":{},
+        "cam13":{},
+        "cam14":{},
+        "cam15":{},
+        "cam16":{},
+        "cam17":{},
+        "cam18":{},
+        "cam19":{},
+        "cam20":{},
+        "cam21":{},
+        "cam22":{},
+        "cam23":{},
+        "cam24":{},
+        "cam25":{},
+        "cam26":{},
+        "cam27":{},
+        "cam28":{},
+        "cam29":{},
+        "cam30":{},
+        "cam31":{},
+        "cam32":{},}
+
         self.dclickTime = [time.time() for i in range(37)]
         self.ui.cmraBt_01.clicked.connect(self.fullscreen01)
         self.ui.cmraBt_02.clicked.connect(self.fullscreen02)

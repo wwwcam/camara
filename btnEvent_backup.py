@@ -111,6 +111,7 @@ class btns():
  
       
     def fullscreen01(self):
+        self.parent.currentCam = 'cam01'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_01.size().width() == 240:
@@ -135,6 +136,7 @@ class btns():
         
 
     def fullscreen02(self):
+        self.parent.currentCam = 'cam02'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_02.size().width() == 240:
@@ -157,6 +159,7 @@ class btns():
 
 
     def fullscreen03(self):
+        self.parent.currentCam = 'cam03'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_03.size().width() == 240:
@@ -178,6 +181,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen04(self):
+        self.parent.currentCam = 'cam04'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_04.size().width() == 240:
@@ -199,6 +203,7 @@ class btns():
         self.dclickTime[1] = time.time()
 
     def fullscreen05(self):
+        self.parent.currentCam = 'cam05'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_05.size().width() == 240:
@@ -220,6 +225,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen06(self):
+        self.parent.currentCam = 'cam06'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_06.size().width() == 240:
@@ -241,6 +247,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen07(self):
+        self.parent.currentCam = 'cam07'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_07.size().width() == 240:
@@ -262,6 +269,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen08(self):
+        self.parent.currentCam = 'cam08'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_08.size().width() == 240:
@@ -283,6 +291,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen09(self):
+        self.parent.currentCam = 'cam09'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_09.size().width() == 240:
@@ -304,6 +313,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen10(self):
+        self.parent.currentCam = 'cam10'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_10.size().width() == 240:
@@ -326,6 +336,7 @@ class btns():
     
 
     def fullscreen11(self):
+        self.parent.currentCam = 'cam11'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_11.size().width() == 240:
@@ -347,6 +358,7 @@ class btns():
         self.dclickTime[1] = time.time()
 
     def fullscreen12(self):
+        self.parent.currentCam = 'cam12'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_12.size().width() == 240:
@@ -368,6 +380,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen13(self):
+        self.parent.currentCam = 'cam13'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_13.size().width() == 240:
@@ -389,6 +402,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen14(self):
+        self.parent.currentCam = 'cam14'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_14.size().width() == 240:
@@ -410,6 +424,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen15(self):
+        self.parent.currentCam = 'cam15'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_15.size().width() == 240:
@@ -431,6 +446,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen16(self):
+        self.parent.currentCam = 'cam16'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_16.size().width() == 240:
@@ -452,6 +468,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen17(self):
+        self.parent.currentCam = 'cam17'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_17.size().width() == 240:
@@ -473,6 +490,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen18(self):
+        self.parent.currentCam = 'cam18'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_18.size().width() == 240:
@@ -494,6 +512,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen19(self):
+        self.parent.currentCam = 'cam19'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_19.size().width() == 240:
@@ -515,6 +534,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen20(self):
+        self.parent.currentCam = 'cam20'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_20.size().width() == 240:
@@ -536,6 +556,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen21(self):
+        self.parent.currentCam = 'cam21'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_21.size().width() == 240:
@@ -557,6 +578,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen22(self):
+        self.parent.currentCam = 'cam22'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_22.size().width() == 240:
@@ -578,6 +600,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen23(self):
+        self.parent.currentCam = 'cam23'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_23.size().width() == 240:
@@ -599,6 +622,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen24(self):
+        self.parent.currentCam = 'cam24'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_24.size().width() == 240:
@@ -620,6 +644,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen25(self):
+        self.parent.currentCam = 'cam25'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_25.size().width() == 240:
@@ -641,6 +666,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen26(self):
+        self.parent.currentCam = 'cam26'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_26.size().width() == 240:
@@ -662,6 +688,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen27(self):
+        self.parent.currentCam = 'cam27'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_27.size().width() == 240:
@@ -683,6 +710,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen28(self):
+        self.parent.currentCam = 'cam28'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_28.size().width() == 240:
@@ -704,6 +732,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen29(self):
+        self.parent.currentCam = 'cam29'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_29.size().width() == 240:
@@ -725,6 +754,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen30(self):
+        self.parent.currentCam = 'cam30'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_30.size().width() == 240:
@@ -746,6 +776,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen31(self):
+        self.parent.currentCam = 'cam31'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_31.size().width() == 240:
@@ -767,6 +798,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen32(self):
+        self.parent.currentCam = 'cam32'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_32.size().width() == 240:
@@ -788,6 +820,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen33(self):
+        self.parent.currentCam = 'cam33'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_33.size().width() == 240:
@@ -809,6 +842,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen34(self):
+        self.parent.currentCam = 'cam34'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_34.size().width() == 240:
@@ -830,6 +864,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen35(self):
+        self.parent.currentCam = 'cam35'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_35.size().width() == 240:
@@ -851,6 +886,7 @@ class btns():
         self.dclickTime[1] = time.time()
     
     def fullscreen36(self):
+        self.parent.currentCam = 'cam36'
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
             if self.ui.cmraBt_36.size().width() == 240:
