@@ -30,12 +30,16 @@ class MyMainWindow(QWidget,btns , vplayer): #클래스로 직접 적용하였음
         self.ui = QtUiTools.QUiLoader(parent=self).load("./camera_bt.ui" ,self  )
         btns.__init__(self , self.ui , self)   
         
+        self.layers = []
+        self.camSettings = {}
         self.settingLayer = QWidget(self.ui)
         self.settingLayer.resize(259 , 850)
         self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
         self.pannel = Pannel(self.settingLayer , "./camera_setting.ui")
         self.settingLayer.move(1650 , 10)
         self.settingLayer.hide()
+
+        
 
         ################## 스플래시 스크린에 입체 그림자 적용, 잘 안됨##################
         #self.pannel.ui.widget_9.setStyleSheet(u"background-color: rgba(0, 0, 0, 0);")
