@@ -1997,6 +1997,58 @@ color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="functionBt_11">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>1030</y>
+      <width>55</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔고딕 ExtraBold</family>
+      <pointsize>25</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(147, 147, 147);
+font: 75 25pt &quot;나눔고딕 ExtraBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stop_bt">
+    <property name="geometry">
+     <rect>
+      <x>1640</x>
+      <y>1030</y>
+      <width>55</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔고딕 ExtraBold</family>
+      <pointsize>30</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(147, 147, 147);
+font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ㅁ</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
