@@ -321,111 +321,9 @@ class Ui_MainWindow(object):
         self.widget_6.setObjectName(u"widget_6")
         self.widget_6.setGeometry(QRect(480, 860, 1461, 141))
         self.widget_6.setStyleSheet(u"background-color: rgb(56, 56, 56);")
-        self.layoutWidget = QWidget(self.widget_6)
-        self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(10, 10, 806, 35))
-        self.horizontalLayout = QHBoxLayout(self.layoutWidget)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.functionBt_01 = QPushButton(self.layoutWidget)
-        self.functionBt_01.setObjectName(u"functionBt_01")
-        font2 = QFont()
-        font2.setFamily(u"\ub9d1\uc740 \uace0\ub515")
-        font2.setPointSize(14)
-        font2.setBold(False)
-        font2.setItalic(False)
-        font2.setWeight(9)
-        self.functionBt_01.setFont(font2)
-        self.functionBt_01.setStyleSheet(u"background-color: rgb(228, 163, 21);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_01)
-
-        self.functionBt_02 = QPushButton(self.layoutWidget)
-        self.functionBt_02.setObjectName(u"functionBt_02")
-        self.functionBt_02.setFont(font2)
-        self.functionBt_02.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_02)
-
-        self.functionBt_03 = QPushButton(self.layoutWidget)
-        self.functionBt_03.setObjectName(u"functionBt_03")
-        self.functionBt_03.setFont(font2)
-        self.functionBt_03.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_03)
-
-        self.functionBt_04 = QPushButton(self.layoutWidget)
-        self.functionBt_04.setObjectName(u"functionBt_04")
-        self.functionBt_04.setFont(font2)
-        self.functionBt_04.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_04)
-
-        self.functionBt_05 = QPushButton(self.layoutWidget)
-        self.functionBt_05.setObjectName(u"functionBt_05")
-        self.functionBt_05.setFont(font2)
-        self.functionBt_05.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_05)
-
-        self.functionBt_06 = QPushButton(self.layoutWidget)
-        self.functionBt_06.setObjectName(u"functionBt_06")
-        self.functionBt_06.setFont(font2)
-        self.functionBt_06.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_06)
-
-        self.functionBt_07 = QPushButton(self.layoutWidget)
-        self.functionBt_07.setObjectName(u"functionBt_07")
-        self.functionBt_07.setFont(font2)
-        self.functionBt_07.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_07)
-
-        self.functionBt_08 = QPushButton(self.layoutWidget)
-        self.functionBt_08.setObjectName(u"functionBt_08")
-        self.functionBt_08.setFont(font2)
-        self.functionBt_08.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_08)
-
-        self.functionBt_09 = QPushButton(self.layoutWidget)
-        self.functionBt_09.setObjectName(u"functionBt_09")
-        self.functionBt_09.setFont(font2)
-        self.functionBt_09.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_09)
-
-        self.functionBt_10 = QPushButton(self.layoutWidget)
-        self.functionBt_10.setObjectName(u"functionBt_10")
-        self.functionBt_10.setFont(font2)
-        self.functionBt_10.setStyleSheet(u"background-color: rgb(61, 63, 67);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 14pt \"\ub9d1\uc740 \uace0\ub515\";")
-
-        self.horizontalLayout.addWidget(self.functionBt_10)
-
         self.timeEdit = QTimeEdit(self.widget_6)
         self.timeEdit.setObjectName(u"timeEdit")
-        self.timeEdit.setGeometry(QRect(830, 12, 211, 31))
+        self.timeEdit.setGeometry(QRect(940, 12, 211, 41))
         self.timeEdit.setAutoFillBackground(True)
         self.timeEdit.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";")
@@ -439,15 +337,79 @@ class Ui_MainWindow(object):
         self.timeEdit.setTimeSpec(Qt.LocalTime)
         self.Map_3 = QWidget(self.widget_6)
         self.Map_3.setObjectName(u"Map_3")
-        self.Map_3.setGeometry(QRect(10, 60, 1441, 71))
+        self.Map_3.setGeometry(QRect(10, 70, 1441, 61))
         self.Map_3.setStyleSheet(u"background-color: rgb(58, 60, 64);")
         self.label_9 = QLabel(self.Map_3)
         self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(0, 10, 161, 31))
+        self.label_9.setGeometry(QRect(0, 0, 111, 61))
         self.label_9.setFont(font1)
         self.label_9.setStyleSheet(u"background-color: rgb(91, 91, 91);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";")
+        self.functionBt_06 = QPushButton(self.widget_6)
+        self.functionBt_06.setObjectName(u"functionBt_06")
+        self.functionBt_06.setGeometry(QRect(464, 10, 55, 48))
+        font2 = QFont()
+        font2.setFamily(u"\ub9d1\uc740 \uace0\ub515")
+        font2.setPointSize(14)
+        font2.setBold(False)
+        font2.setItalic(False)
+        font2.setWeight(50)
+        self.functionBt_06.setFont(font2)
+        self.functionBt_06.setStyleSheet(u"background-color: rgb(147, 147, 147);")
+        self.functionBt_05 = QPushButton(self.widget_6)
+        self.functionBt_05.setObjectName(u"functionBt_05")
+        self.functionBt_05.setGeometry(QRect(373, 10, 55, 48))
+        self.functionBt_05.setFont(font2)
+        self.functionBt_05.setStyleSheet(u"background-color: rgb(180, 180, 180);\n"
+"image: url(:/icons/images/13.png);")
+        self.functionBt_04 = QPushButton(self.widget_6)
+        self.functionBt_04.setObjectName(u"functionBt_04")
+        self.functionBt_04.setGeometry(QRect(283, 10, 55, 48))
+        self.functionBt_04.setFont(font2)
+        self.functionBt_04.setStyleSheet(u"background-color: rgb(180, 180, 180);\n"
+"image: url(:/icons/images/10.png);")
+        self.functionBt_07 = QPushButton(self.widget_6)
+        self.functionBt_07.setObjectName(u"functionBt_07")
+        self.functionBt_07.setGeometry(QRect(554, 10, 55, 48))
+        self.functionBt_07.setFont(font2)
+        self.functionBt_07.setStyleSheet(u"background-color: rgb(147, 147, 147);")
+        self.functionBt_08 = QPushButton(self.widget_6)
+        self.functionBt_08.setObjectName(u"functionBt_08")
+        self.functionBt_08.setGeometry(QRect(645, 10, 55, 48))
+        self.functionBt_08.setFont(font2)
+        self.functionBt_08.setStyleSheet(u"background-color: rgb(147, 147, 147);")
+        self.functionBt_10 = QPushButton(self.widget_6)
+        self.functionBt_10.setObjectName(u"functionBt_10")
+        self.functionBt_10.setGeometry(QRect(826, 10, 55, 48))
+        self.functionBt_10.setFont(font2)
+        self.functionBt_10.setStyleSheet(u"background-color: rgb(147, 147, 147);")
+        self.functionBt_09 = QPushButton(self.widget_6)
+        self.functionBt_09.setObjectName(u"functionBt_09")
+        self.functionBt_09.setGeometry(QRect(735, 10, 55, 48))
+        self.functionBt_09.setFont(font2)
+        self.functionBt_09.setStyleSheet(u"background-color: rgb(147, 147, 147);")
+        self.functionBt_01 = QPushButton(self.widget_6)
+        self.functionBt_01.setObjectName(u"functionBt_01")
+        self.functionBt_01.setGeometry(QRect(11, 10, 55, 48))
+        self.functionBt_01.setFont(font2)
+        self.functionBt_01.setStyleSheet(u"background-color: rgb(180, 180, 180);\n"
+"image: url(:/icons/images/6.png);")
+        self.functionBt_01.setAutoDefault(False)
+        self.functionBt_03 = QPushButton(self.widget_6)
+        self.functionBt_03.setObjectName(u"functionBt_03")
+        self.functionBt_03.setGeometry(QRect(192, 10, 55, 48))
+        self.functionBt_03.setFont(font2)
+        self.functionBt_03.setStyleSheet(u"background-color: rgb(180, 180, 180);\n"
+"image: url(:/icons/images/7_1.png);")
+        self.functionBt_02 = QPushButton(self.widget_6)
+        self.functionBt_02.setObjectName(u"functionBt_02")
+        self.functionBt_02.setGeometry(QRect(102, 10, 55, 48))
+        self.functionBt_02.setFont(font2)
+        self.functionBt_02.setLayoutDirection(Qt.LeftToRight)
+        self.functionBt_02.setStyleSheet(u"background-color: rgb(180, 180, 180);\n"
+"image: url(:/icons/images/7.png);\n"
+"")
         self.widget_7 = QWidget(self.centralwidget)
         self.widget_7.setObjectName(u"widget_7")
         self.widget_7.setGeometry(QRect(10, 520, 461, 191))
@@ -569,7 +531,7 @@ class Ui_MainWindow(object):
         self.widget_9 = QWidget(self.centralwidget)
         self.widget_9.setObjectName(u"widget_9")
         self.widget_9.setEnabled(True)
-        self.widget_9.setGeometry(QRect(1590, 840, 311, 631))
+        self.widget_9.setGeometry(QRect(1240, 1050, 311, 631))
         self.widget_9.setMouseTracking(False)
         self.widget_9.setStyleSheet(u"background-color: rgba(0, 0, 0, 0);")
         self.sens_label_7 = QLabel(self.widget_9)
@@ -636,10 +598,12 @@ class Ui_MainWindow(object):
         self.zoom_horizontalSlider_7.setOrientation(Qt.Horizontal)
         self.iconBt_7 = QPushButton(self.widget_9)
         self.iconBt_7.setObjectName(u"iconBt_7")
-        self.iconBt_7.setGeometry(QRect(0, 0, 261, 211))
+        self.iconBt_7.setGeometry(QRect(160, 10, 131, 131))
         self.iconBt_7.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 11pt \"Agency FB\";\n"
-"font: 16pt \"Agency FB\";")
+"font: 16pt \"Agency FB\";\n"
+"image: url(:/icons/images/settingTransPb.png)\n"
+"")
         icon = QIcon()
         icon.addFile(u"../../../.designer/backup/datas/images/settingTransPb.png", QSize(), QIcon.Normal, QIcon.Off)
         self.iconBt_7.setIcon(icon)
@@ -781,21 +745,21 @@ class Ui_MainWindow(object):
         self.cmraBt_34.setText(QCoreApplication.translate("MainWindow", u"No.34", None))
         self.cmraBt_35.setText(QCoreApplication.translate("MainWindow", u"No.35", None))
         self.cmraBt_36.setText(QCoreApplication.translate("MainWindow", u"No.36", None))
-        self.functionBt_01.setText(QCoreApplication.translate("MainWindow", u"1", None))
-        self.functionBt_02.setText(QCoreApplication.translate("MainWindow", u"4", None))
-        self.functionBt_03.setText(QCoreApplication.translate("MainWindow", u"6", None))
-        self.functionBt_04.setText(QCoreApplication.translate("MainWindow", u"9", None))
-        self.functionBt_05.setText(QCoreApplication.translate("MainWindow", u"5", None))
-        self.functionBt_06.setText(QCoreApplication.translate("MainWindow", u"6", None))
-        self.functionBt_07.setText(QCoreApplication.translate("MainWindow", u"7", None))
-        self.functionBt_08.setText(QCoreApplication.translate("MainWindow", u"8", None))
-        self.functionBt_09.setText(QCoreApplication.translate("MainWindow", u"9", None))
-        self.functionBt_10.setText(QCoreApplication.translate("MainWindow", u"10", None))
 #if QT_CONFIG(tooltip)
         self.timeEdit.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.timeEdit.setDisplayFormat(QCoreApplication.translate("MainWindow", u"AP HH:mm:ss", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">System Monitoring</p></body></html>", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">System</p><p align=\"center\">Monitoring</p></body></html>", None))
+        self.functionBt_06.setText("")
+        self.functionBt_05.setText("")
+        self.functionBt_04.setText("")
+        self.functionBt_07.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.functionBt_08.setText(QCoreApplication.translate("MainWindow", u"8", None))
+        self.functionBt_10.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.functionBt_09.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.functionBt_01.setText("")
+        self.functionBt_03.setText("")
+        self.functionBt_02.setText("")
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Camera Map</p></body></html>", None))
 
         __sortingEnabled3 = self.cmr_listWidget_5.isSortingEnabled()
@@ -877,7 +841,7 @@ class Ui_MainWindow(object):
         self.ip_label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">Ip</p></body></html>", None))
         self.memo_label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">Memo</p></body></html>", None))
         self.zoom_label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">Zoom</p></body></html>", None))
-        self.iconBt_7.setText(QCoreApplication.translate("MainWindow", u"icon", None))
+        self.iconBt_7.setText("")
         self.camera__label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">Camera</p></body></html>", None))
     # retranslateUi
 
