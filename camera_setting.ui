@@ -284,7 +284,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 229, 246, 30);</string>
+     <string notr="true">background-color: rgba(43, 128, 255,100);</string>
     </property>
     <property name="text">
      <string>Save</string>
@@ -292,6 +292,17 @@ color: rgb(255, 255, 255);</string>
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>ip_lineEdit_7</tabstop>
+  <tabstop>camera_lineEdit_7</tabstop>
+  <tabstop>loca_lineEdit_7</tabstop>
+  <tabstop>zoom_horizontalSlider_7</tabstop>
+  <tabstop>sens_horizontalSlider_7</tabstop>
+  <tabstop>foco_horizontalSlider_7</tabstop>
+  <tabstop>memo_textEdit_7</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>iconBt_7</tabstop>
+ </tabstops>
  <resources>
   <include location="datas/image.qrc"/>
  </resources>

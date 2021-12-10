@@ -106,7 +106,15 @@ class Ui_Form(object):
         self.saveButton = QPushButton(self.widget_9)
         self.saveButton.setObjectName(u"saveButton")
         self.saveButton.setGeometry(QRect(10, 480, 81, 23))
-        self.saveButton.setStyleSheet(u"background-color: rgba(255, 229, 246, 30);")
+        self.saveButton.setStyleSheet(u"background-color: rgba(43, 128, 255,100);")
+        QWidget.setTabOrder(self.ip_lineEdit_7, self.camera_lineEdit_7)
+        QWidget.setTabOrder(self.camera_lineEdit_7, self.loca_lineEdit_7)
+        QWidget.setTabOrder(self.loca_lineEdit_7, self.zoom_horizontalSlider_7)
+        QWidget.setTabOrder(self.zoom_horizontalSlider_7, self.sens_horizontalSlider_7)
+        QWidget.setTabOrder(self.sens_horizontalSlider_7, self.foco_horizontalSlider_7)
+        QWidget.setTabOrder(self.foco_horizontalSlider_7, self.memo_textEdit_7)
+        QWidget.setTabOrder(self.memo_textEdit_7, self.saveButton)
+        QWidget.setTabOrder(self.saveButton, self.iconBt_7)
 
         self.retranslateUi(Form)
 
