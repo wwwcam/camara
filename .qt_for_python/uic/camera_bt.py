@@ -27,6 +27,10 @@ class Ui_MainWindow(object):
         self.widget_4.setGeometry(QRect(10, 280, 461, 231))
         self.widget_4.setStyleSheet(u"background-color: rgb(56, 56, 56);")
         self.cmr_listWidget = QListWidget(self.widget_4)
+        brush = QBrush(QColor(0, 255, 0, 255))
+        brush.setStyle(Qt.SolidPattern)
+        __qlistwidgetitem = QListWidgetItem(self.cmr_listWidget)
+        __qlistwidgetitem.setBackground(brush);
         QListWidgetItem(self.cmr_listWidget)
         QListWidgetItem(self.cmr_listWidget)
         QListWidgetItem(self.cmr_listWidget)
@@ -40,9 +44,14 @@ class Ui_MainWindow(object):
         self.cmr_listWidget.setObjectName(u"cmr_listWidget")
         self.cmr_listWidget.setGeometry(QRect(10, 40, 141, 181))
         font = QFont()
-        font.setPointSize(11)
+        font.setFamily(u"\uad74\ub9bc")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.cmr_listWidget.setFont(font)
         self.cmr_listWidget.setStyleSheet(u"background-color: rgb(46, 47, 49);\n"
+"font: 10pt \"\uad74\ub9bc\";\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
 "")
@@ -58,10 +67,12 @@ class Ui_MainWindow(object):
         QListWidgetItem(self.cmr_listWidget_3)
         QListWidgetItem(self.cmr_listWidget_3)
         QListWidgetItem(self.cmr_listWidget_3)
+        QListWidgetItem(self.cmr_listWidget_3)
         self.cmr_listWidget_3.setObjectName(u"cmr_listWidget_3")
         self.cmr_listWidget_3.setGeometry(QRect(160, 40, 141, 181))
         self.cmr_listWidget_3.setFont(font)
         self.cmr_listWidget_3.setStyleSheet(u"background-color: rgb(46, 47, 49);\n"
+"font: 10pt \"\uad74\ub9bc\";\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
 "")
@@ -76,12 +87,11 @@ class Ui_MainWindow(object):
         QListWidgetItem(self.cmr_listWidget_4)
         QListWidgetItem(self.cmr_listWidget_4)
         QListWidgetItem(self.cmr_listWidget_4)
-        QListWidgetItem(self.cmr_listWidget_4)
-        QListWidgetItem(self.cmr_listWidget_4)
         self.cmr_listWidget_4.setObjectName(u"cmr_listWidget_4")
         self.cmr_listWidget_4.setGeometry(QRect(310, 40, 141, 181))
         self.cmr_listWidget_4.setFont(font)
         self.cmr_listWidget_4.setStyleSheet(u"background-color: rgb(46, 47, 49);\n"
+"font: 10pt \"\uad74\ub9bc\";\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
 "")
@@ -298,21 +308,6 @@ class Ui_MainWindow(object):
         self.widget_6.setObjectName(u"widget_6")
         self.widget_6.setGeometry(QRect(480, 860, 1461, 141))
         self.widget_6.setStyleSheet(u"background-color: rgb(56, 56, 56);")
-        self.timeEdit = QTimeEdit(self.widget_6)
-        self.timeEdit.setObjectName(u"timeEdit")
-        self.timeEdit.setGeometry(QRect(940, 12, 231, 41))
-        self.timeEdit.setAutoFillBackground(True)
-        self.timeEdit.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";\n"
-"font: 20pt \"HY\ud0dc\ubc31B\";")
-        self.timeEdit.setWrapping(True)
-        self.timeEdit.setFrame(True)
-        self.timeEdit.setReadOnly(True)
-        self.timeEdit.setAccelerated(True)
-        self.timeEdit.setDate(QDate(2021, 12, 1))
-        self.timeEdit.setCalendarPopup(True)
-        self.timeEdit.setTimeSpec(Qt.LocalTime)
-        self.timeEdit.setProperty("showGroupSeparator", True)
         self.Map_3 = QWidget(self.widget_6)
         self.Map_3.setObjectName(u"Map_3")
         self.Map_3.setGeometry(QRect(10, 70, 1441, 61))
@@ -431,6 +426,12 @@ class Ui_MainWindow(object):
         icon6.addFile(u"datas/images/7.png", QSize(), QIcon.Normal, QIcon.Off)
         self.functionBt_03.setIcon(icon6)
         self.functionBt_03.setIconSize(QSize(55, 48))
+        self.timeedit = QLabel(self.widget_6)
+        self.timeedit.setObjectName(u"timeedit")
+        self.timeedit.setGeometry(QRect(1100, 10, 341, 51))
+        self.timeedit.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"border: 3px solid rgb(100, 255, 100);\n"
+"font: 75 25pt \"\ub9d1\uc740 \uace0\ub515\";")
         self.widget_7 = QWidget(self.centralwidget)
         self.widget_7.setObjectName(u"widget_7")
         self.widget_7.setGeometry(QRect(10, 520, 461, 191))
@@ -483,7 +484,9 @@ class Ui_MainWindow(object):
         QListWidgetItem(self.cmr_listWidget_5)
         self.cmr_listWidget_5.setObjectName(u"cmr_listWidget_5")
         self.cmr_listWidget_5.setGeometry(QRect(10, 50, 441, 151))
-        self.cmr_listWidget_5.setFont(font)
+        font4 = QFont()
+        font4.setPointSize(11)
+        self.cmr_listWidget_5.setFont(font4)
         self.cmr_listWidget_5.setStyleSheet(u"background-color: rgb(46, 47, 49);\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
@@ -498,13 +501,13 @@ class Ui_MainWindow(object):
         self.folferSelect_Bt = QPushButton(self.widget_8)
         self.folferSelect_Bt.setObjectName(u"folferSelect_Bt")
         self.folferSelect_Bt.setGeometry(QRect(10, 240, 221, 21))
-        font4 = QFont()
-        font4.setFamily(u"\ub9d1\uc740 \uace0\ub515")
-        font4.setPointSize(10)
-        font4.setBold(False)
-        font4.setItalic(False)
-        font4.setWeight(9)
-        self.folferSelect_Bt.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"\ub9d1\uc740 \uace0\ub515")
+        font5.setPointSize(10)
+        font5.setBold(False)
+        font5.setItalic(False)
+        font5.setWeight(9)
+        self.folferSelect_Bt.setFont(font5)
         self.folferSelect_Bt.setStyleSheet(u"background-color: rgb(91, 91, 91);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 10pt \"\ub9d1\uc740 \uace0\ub515\";")
@@ -518,7 +521,7 @@ class Ui_MainWindow(object):
         self.folferOpen_Bt = QPushButton(self.widget_8)
         self.folferOpen_Bt.setObjectName(u"folferOpen_Bt")
         self.folferOpen_Bt.setGeometry(QRect(240, 240, 211, 21))
-        self.folferOpen_Bt.setFont(font4)
+        self.folferOpen_Bt.setFont(font5)
         self.folferOpen_Bt.setStyleSheet(u"background-color: rgb(91, 91, 91);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 10pt \"\ub9d1\uc740 \uace0\ub515\";")
@@ -529,23 +532,14 @@ class Ui_MainWindow(object):
         self.calendarWidget = QCalendarWidget(self.widget_10)
         self.calendarWidget.setObjectName(u"calendarWidget")
         self.calendarWidget.setGeometry(QRect(11, 10, 441, 201))
-        font5 = QFont()
-        font5.setPointSize(12)
-        self.calendarWidget.setFont(font5)
+        font6 = QFont()
+        font6.setPointSize(12)
+        self.calendarWidget.setFont(font6)
         self.calendarWidget.setStyleSheet(u"background-color: rgb(91, 91, 91);")
         self.widget_11 = QWidget(self.centralwidget)
         self.widget_11.setObjectName(u"widget_11")
         self.widget_11.setGeometry(QRect(10, 0, 461, 41))
         self.widget_11.setStyleSheet(u"background-color: rgb(56, 56, 56);")
-        self.comboBox = QComboBox(self.widget_11)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(10, 10, 111, 21))
-        self.comboBox.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"background-color: rgb(91, 91, 91);")
         self.splash_Scr = QLabel(self.centralwidget)
         self.splash_Scr.setObjectName(u"splash_Scr")
         self.splash_Scr.setGeometry(QRect(30, 1040, 1141, 671))
@@ -640,25 +634,25 @@ class Ui_MainWindow(object):
         self.functionBt_11 = QPushButton(self.centralwidget)
         self.functionBt_11.setObjectName(u"functionBt_11")
         self.functionBt_11.setGeometry(QRect(1570, 1030, 55, 48))
-        font6 = QFont()
-        font6.setFamily(u"\ub098\ub214\uace0\ub515 ExtraBold")
-        font6.setPointSize(25)
-        font6.setBold(False)
-        font6.setItalic(False)
-        font6.setWeight(9)
-        self.functionBt_11.setFont(font6)
+        font7 = QFont()
+        font7.setFamily(u"\ub098\ub214\uace0\ub515 ExtraBold")
+        font7.setPointSize(25)
+        font7.setBold(False)
+        font7.setItalic(False)
+        font7.setWeight(9)
+        self.functionBt_11.setFont(font7)
         self.functionBt_11.setStyleSheet(u"background-color: rgb(147, 147, 147);\n"
 "font: 75 25pt \"\ub098\ub214\uace0\ub515 ExtraBold\";")
         self.stop_bt = QPushButton(self.centralwidget)
         self.stop_bt.setObjectName(u"stop_bt")
         self.stop_bt.setGeometry(QRect(1640, 1030, 55, 51))
-        font7 = QFont()
-        font7.setFamily(u"\ub098\ub214\uace0\ub515 ExtraBold")
-        font7.setPointSize(30)
-        font7.setBold(False)
-        font7.setItalic(False)
-        font7.setWeight(9)
-        self.stop_bt.setFont(font7)
+        font8 = QFont()
+        font8.setFamily(u"\ub098\ub214\uace0\ub515 ExtraBold")
+        font8.setPointSize(30)
+        font8.setBold(False)
+        font8.setItalic(False)
+        font8.setWeight(9)
+        self.stop_bt.setFont(font8)
         self.stop_bt.setStyleSheet(u"background-color: rgb(147, 147, 147);\n"
 "font: 75 30pt \"\ub098\ub214\uace0\ub515 ExtraBold\";")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -700,59 +694,59 @@ class Ui_MainWindow(object):
         ___qlistwidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Camera No.9", None));
         ___qlistwidgetitem9 = self.cmr_listWidget.item(9)
         ___qlistwidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Camera No.10", None));
+        ___qlistwidgetitem10 = self.cmr_listWidget.item(10)
+        ___qlistwidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Camera No.11", None));
         self.cmr_listWidget.setSortingEnabled(__sortingEnabled)
 
 
         __sortingEnabled1 = self.cmr_listWidget_3.isSortingEnabled()
         self.cmr_listWidget_3.setSortingEnabled(False)
-        ___qlistwidgetitem10 = self.cmr_listWidget_3.item(0)
-        ___qlistwidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Camera No.11", None));
-        ___qlistwidgetitem11 = self.cmr_listWidget_3.item(1)
+        ___qlistwidgetitem11 = self.cmr_listWidget_3.item(0)
         ___qlistwidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Camera No.12", None));
-        ___qlistwidgetitem12 = self.cmr_listWidget_3.item(2)
+        ___qlistwidgetitem12 = self.cmr_listWidget_3.item(1)
         ___qlistwidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Camera No.13", None));
-        ___qlistwidgetitem13 = self.cmr_listWidget_3.item(3)
+        ___qlistwidgetitem13 = self.cmr_listWidget_3.item(2)
         ___qlistwidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Camera No.14", None));
-        ___qlistwidgetitem14 = self.cmr_listWidget_3.item(4)
+        ___qlistwidgetitem14 = self.cmr_listWidget_3.item(3)
         ___qlistwidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Camera No.15", None));
-        ___qlistwidgetitem15 = self.cmr_listWidget_3.item(5)
+        ___qlistwidgetitem15 = self.cmr_listWidget_3.item(4)
         ___qlistwidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Camera No.16", None));
-        ___qlistwidgetitem16 = self.cmr_listWidget_3.item(6)
+        ___qlistwidgetitem16 = self.cmr_listWidget_3.item(5)
         ___qlistwidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Camera No.17", None));
-        ___qlistwidgetitem17 = self.cmr_listWidget_3.item(7)
+        ___qlistwidgetitem17 = self.cmr_listWidget_3.item(6)
         ___qlistwidgetitem17.setText(QCoreApplication.translate("MainWindow", u"Camera No.18", None));
-        ___qlistwidgetitem18 = self.cmr_listWidget_3.item(8)
+        ___qlistwidgetitem18 = self.cmr_listWidget_3.item(7)
         ___qlistwidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Camera No.19", None));
-        ___qlistwidgetitem19 = self.cmr_listWidget_3.item(9)
+        ___qlistwidgetitem19 = self.cmr_listWidget_3.item(8)
         ___qlistwidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Camera No.20", None));
+        ___qlistwidgetitem20 = self.cmr_listWidget_3.item(9)
+        ___qlistwidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Camera No.21", None));
+        ___qlistwidgetitem21 = self.cmr_listWidget_3.item(10)
+        ___qlistwidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Camera No.22", None));
         self.cmr_listWidget_3.setSortingEnabled(__sortingEnabled1)
 
 
         __sortingEnabled2 = self.cmr_listWidget_4.isSortingEnabled()
         self.cmr_listWidget_4.setSortingEnabled(False)
-        ___qlistwidgetitem20 = self.cmr_listWidget_4.item(0)
-        ___qlistwidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Camera No.21", None));
-        ___qlistwidgetitem21 = self.cmr_listWidget_4.item(1)
-        ___qlistwidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Camera No.22", None));
-        ___qlistwidgetitem22 = self.cmr_listWidget_4.item(2)
+        ___qlistwidgetitem22 = self.cmr_listWidget_4.item(0)
         ___qlistwidgetitem22.setText(QCoreApplication.translate("MainWindow", u"Camera No.23", None));
-        ___qlistwidgetitem23 = self.cmr_listWidget_4.item(3)
+        ___qlistwidgetitem23 = self.cmr_listWidget_4.item(1)
         ___qlistwidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Camera No.24", None));
-        ___qlistwidgetitem24 = self.cmr_listWidget_4.item(4)
+        ___qlistwidgetitem24 = self.cmr_listWidget_4.item(2)
         ___qlistwidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Camera No.25", None));
-        ___qlistwidgetitem25 = self.cmr_listWidget_4.item(5)
+        ___qlistwidgetitem25 = self.cmr_listWidget_4.item(3)
         ___qlistwidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Camera No.26", None));
-        ___qlistwidgetitem26 = self.cmr_listWidget_4.item(6)
+        ___qlistwidgetitem26 = self.cmr_listWidget_4.item(4)
         ___qlistwidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Camera No.27", None));
-        ___qlistwidgetitem27 = self.cmr_listWidget_4.item(7)
+        ___qlistwidgetitem27 = self.cmr_listWidget_4.item(5)
         ___qlistwidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Camera No.28", None));
-        ___qlistwidgetitem28 = self.cmr_listWidget_4.item(8)
+        ___qlistwidgetitem28 = self.cmr_listWidget_4.item(6)
         ___qlistwidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Camera No.29", None));
-        ___qlistwidgetitem29 = self.cmr_listWidget_4.item(9)
+        ___qlistwidgetitem29 = self.cmr_listWidget_4.item(7)
         ___qlistwidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Camera No.30", None));
-        ___qlistwidgetitem30 = self.cmr_listWidget_4.item(10)
+        ___qlistwidgetitem30 = self.cmr_listWidget_4.item(8)
         ___qlistwidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Camera No.31", None));
-        ___qlistwidgetitem31 = self.cmr_listWidget_4.item(11)
+        ___qlistwidgetitem31 = self.cmr_listWidget_4.item(9)
         ___qlistwidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Camera No.32", None));
         self.cmr_listWidget_4.setSortingEnabled(__sortingEnabled2)
 
@@ -789,10 +783,6 @@ class Ui_MainWindow(object):
         self.cmraBt_29.setText(QCoreApplication.translate("MainWindow", u"No.29", None))
         self.cmraBt_30.setText(QCoreApplication.translate("MainWindow", u"No.30", None))
         self.cmraBt_32.setText(QCoreApplication.translate("MainWindow", u"No.32", None))
-#if QT_CONFIG(tooltip)
-        self.timeEdit.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
-#endif // QT_CONFIG(tooltip)
-        self.timeEdit.setDisplayFormat(QCoreApplication.translate("MainWindow", u"AP HH:mm:ss", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">System</p><p align=\"center\">Monitoring</p></body></html>", None))
         self.allStart.setText(QCoreApplication.translate("MainWindow", u"Start", None))
         self.allStop.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
@@ -806,6 +796,7 @@ class Ui_MainWindow(object):
         self.functionBt_02.setText("")
         self.functionBt_01.setText(QCoreApplication.translate("MainWindow", u"32", None))
         self.functionBt_03.setText("")
+        self.timeedit.setText(QCoreApplication.translate("MainWindow", u"0000-00-00 00:00:00", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Camera Map</p></body></html>", None))
 
         __sortingEnabled3 = self.cmr_listWidget_5.isSortingEnabled()
@@ -875,11 +866,6 @@ class Ui_MainWindow(object):
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Alarm &amp; File List</p></body></html>", None))
         self.folferSelect_Bt.setText(QCoreApplication.translate("MainWindow", u"FOLDER SELECT", None))
         self.folferOpen_Bt.setText(QCoreApplication.translate("MainWindow", u"FOLDER OPEN", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Menu", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"New Item", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"New Item", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"New Item", None))
-
         self.splash_Scr.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt; font-weight:600;\">Splash Screen</span></p></body></html>", None))
         self.sens_label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">Sensitive</p></body></html>", None))
         self.foco_label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">Focos</p></body></html>", None))

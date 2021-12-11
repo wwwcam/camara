@@ -30,7 +30,7 @@ class saveSetting():
         self.setCamText()
 
 
-        
+
     def setLayerCorlr(self):
         for cam in self.camlayers[self.currentLayer]:
             if self.camSettings[self.currentLayer][cam]["ip"]:
@@ -60,6 +60,33 @@ class saveSetting():
                     self.savePath = self.settings['savepath']
                 else:
                     self.savePath = "c:/"
+
+                if 'selectedCams' in self.settings:
+                    self.currenListtLayer = self.settings['selectedCams']
+                    if self.currenListtLayer:
+                        for ci in self.currenListtLayer:
+                            if ci < 11:
+                                self.ui.cmr_listWidget.item(ci).setBackgroundColor(QColor(0,255,0,100))
+                            elif ci <22 :
+                                idx = ci-11 
+                                self.ui.cmr_listWidget_3.item(idx).setBackgroundColor(QColor(0,255,0,100))
+                            else:
+                                idx = ci-22 
+                                self.ui.cmr_listWidget_4.item(idx).setBackgroundColor(QColor(0,255,0,100))
+                else:
+                    self.currenListtLayer = [i for i in range(32)]
+                    for ci in self.currenListtLayer:
+                        if ci < 11:
+                            self.ui.cmr_listWidget.item(ci).setBackgroundColor(QColor(0,255,0,100))
+                        elif ci <22 :
+                            idx = ci-11 
+                            self.ui.cmr_listWidget_3.item(idx).setBackgroundColor(QColor(0,255,0,100))
+                        else:
+                            idx = ci-22 
+                            self.ui.cmr_listWidget_4.item(idx).setBackgroundColor(QColor(0,255,0,100))
+           
+                            
+
             self.setLayerCorlr()
 
                 
@@ -85,6 +112,7 @@ class saveSetting():
         self.camSettings[self.currentLayer][self.currentCam]["memo"] = self.setpanel.memo_textEdit_7.toPlainText().strip()
         self.settings['camsetting'] = self.camSettings
         self.settings['currentLayer'] = self.currentLayer
+        self.settings['selectedCams'] = self.currenListtLayer
         with open(self.setFileName, "wb") as f:
             pickle.dump(self.settings , f)
 

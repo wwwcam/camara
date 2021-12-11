@@ -35,9 +35,9 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.settingLayer.move(1650 , 10)
         self.settingLayer.hide()
         self.stopVideos = 0
+        self.currenListtLayer = [i for i in range(32)]
+
         self.currentLayer =0 
-        
-        
         self.pannel = Pannel(self.settingLayer , "./camera_setting.ui" , self)
 
 
@@ -49,8 +49,6 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.settings = {}
         self.currentLayer = 0
         self.loadSet()
-
-
         
 
         ################## 스플래시 스크린에 입체 그림자 적용, 잘 안됨##################
@@ -81,15 +79,63 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.fiveSecTimer.timeout.connect(self.tout2)## 스플래시 스크린 숨기기 함수를 따로 만들지 않음
         self.fiveSecTimer.start()
 
+        self.onesectimer = QTimer(self.ui)
+        self.onesectimer.setInterval(1000)
+        self.onesectimer.timeout.connect(self.onesec)## 스플래시 스크린 숨기기 함수를 따로 만들지 않음
+        self.onesectimer.start()
+
+
+        #self.setlistcolors()
+        self.showCameras = [self.cameras[cam] for cam in self.cameras]
         self.ui.folferSelect_Bt.clicked.connect(self.selectFolder)
+        self.ui.cmr_listWidget.currentItemChanged.connect(self.changelistColor)
 
         self.ui.closeEvent = self.closeEvent
-        
+
         ### 비디오 플레이를 위한 타이머 추가
         #self.vp1 = QTimer(self.ui)
         #self.vp1.setInterval(10)
         #self.vp1.timeout.connect(self.playV1)
         #self.vp1.start()
+
+    def onesec(self):
+        dt = datetime.datetime.now().isoformat()[:19].replace("T" , " ")
+        self.ui.timeedit.setText(dt)
+    def setlistcolors(self):
+        for i in range(11):
+            self.ui.cmr_listWidget.item(i).setBackgroundColor(QColor(0,0,0,100))
+        for i in range(11):
+            self.ui.cmr_listWidget_3.item(i).setBackgroundColor(QColor(0,0,0,100))
+        for i in range(10):
+            self.ui.cmr_listWidget_4.item(i).setBackgroundColor(QColor(0,0,0,100))
+                    
+    def changelistColor(self):
+        colors = []
+        self.currenListtLayer = []
+        self.cntLayers = [32 , 6,7,7,10,13]
+        for i in range(11):
+            green = self.ui.cmr_listWidget.item(i).backgroundColor().toRgb().green()
+            if green == 255:
+                colors.append(1)
+                self.currenListtLayer.append(i)
+        for i in range(11):
+            green = self.ui.cmr_listWidget_3.item(i).backgroundColor().toRgb().green()
+            if green == 255:
+                colors.append(1)
+                self.currenListtLayer.append(i+11)
+        for i in range(10):
+            green = self.ui.cmr_listWidget_4.item(i).backgroundColor().toRgb().green()
+            if green == 255:
+                colors.append(1)
+                self.currenListtLayer.append(i+22)
+
+        if self.currentLayer > 0:
+            if sum(colors) < self.cntLayers[self.currentLayer]:
+                green = self.ui.cmr_listWidget.currentItem().backgroundColor().toRgb().green()
+                if green == 255:
+                    self.ui.cmr_listWidget.currentItem().setBackgroundColor(QColor(0,0,0,100))
+                else:
+                    self.ui.cmr_listWidget.currentItem().setBackgroundColor(QColor(0,255,0,100))
 
 
     def selectFolder(self):

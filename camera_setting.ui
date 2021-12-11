@@ -31,23 +31,6 @@
    <property name="styleSheet">
     <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
    </property>
-   <widget class="QLabel" name="sens_label_7">
-    <property name="geometry">
-     <rect>
-      <x>31</x>
-      <y>344</y>
-      <width>65</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Sensitive&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="ip_lineEdit_7">
     <property name="geometry">
      <rect>
@@ -62,23 +45,6 @@ color: rgb(255, 255, 255);</string>
 color: rgb(0, 0, 0);</string>
     </property>
    </widget>
-   <widget class="QLabel" name="foco_label_7">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>372</y>
-      <width>43</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Focos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="camera_lineEdit_7">
     <property name="geometry">
      <rect>
@@ -91,19 +57,6 @@ color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="foco_horizontalSlider_7">
-    <property name="geometry">
-     <rect>
-      <x>102</x>
-      <y>372</y>
-      <width>150</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <widget class="QLabel" name="loca_label_7">
@@ -121,19 +74,6 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Location&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="sens_horizontalSlider_7">
-    <property name="geometry">
-     <rect>
-      <x>102</x>
-      <y>344</y>
-      <width>150</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <widget class="QTextEdit" name="memo_textEdit_7">
@@ -198,36 +138,6 @@ color: rgb(255, 255, 255);</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Memo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="zoom_label_7">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>316</y>
-      <width>43</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Zoom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="zoom_horizontalSlider_7">
-    <property name="geometry">
-     <rect>
-      <x>102</x>
-      <y>316</y>
-      <width>150</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QPushButton" name="iconBt_7">
     <property name="geometry">
      <rect>
@@ -290,6 +200,153 @@ color: rgb(255, 255, 255);</string>
      <string>Save</string>
     </property>
    </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>310</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="zoom_horizontalSlider_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>340</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="sens_horizontalSlider_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>370</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="foco_horizontalSlider_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>310</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Zoom</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Sensitive </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="foco_label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>43</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Focos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <tabstops>
@@ -306,5 +363,54 @@ color: rgb(255, 255, 255);</string>
  <resources>
   <include location="datas/image.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>zoom_horizontalSlider_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>87</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sens_horizontalSlider_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>foco_horizontalSlider_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_3</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>385</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

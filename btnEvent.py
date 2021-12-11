@@ -1,5 +1,15 @@
 import time
 import copy
+from PySide2.QtWidgets import QApplication, QMainWindow , QMessageBox ,QLabel ,QWidget, QSpinBox
+from PySide2 import QtUiTools
+from PySide2.QtCore import QTimer,QObject,Signal,QTime
+from PySide2.QtGui import QColor
+from PySide2 import QtGui ,QtWidgets ,QtCore
+from PySide2.QtWidgets import * 
+from PySide2.QtGui import * 
+from PySide2.QtCore import * 
+from multiprocessing import Process , Queue
+import multiprocessing
 class btns():
     def __init__(self , ui):
         self.ui = ui
@@ -152,14 +162,30 @@ class btns():
  
     def showall(self):
         self.currentLayer = 0
+        self.setlistcolors()
+        self.changelistColor()
         for cidx  , cam in enumerate(self.cameras):
             self.cameras[cam].active=True
             self.cameras[cam].show()
             self.cameras[cam].resize(240 , 138)
             self.cameras[cam].move( 10+240*(cidx%6) , 10+140*(cidx//6))
+        listwidget = self.ui.cmr_listWidget
+        items =  [listwidget.item(i) for i in range(listwidget.count())]
+        for item in items:
+            item.setBackground( QColor(0,200,0) )
+        listwidget = self.ui.cmr_listWidget_3
+        items =  [listwidget.item(i) for i in range(listwidget.count())]
+        for item in items:
+            item.setBackground( QColor(0,200,0) )
+        listwidget = self.ui.cmr_listWidget_4
+        items =  [listwidget.item(i) for i in range(listwidget.count())]
+        for item in items:
+            item.setBackground( QColor(0,200,0) )
 
     def showLayer1(self):
         self.currentLayer = 1
+        self.setlistcolors()
+        self.changelistColor()
         w0 = 480
         h0 = 280
         l = [
@@ -191,6 +217,8 @@ class btns():
 
     def showLayer2(self):
         self.currentLayer = 2
+        self.setlistcolors()
+        self.changelistColor()
         w0 = 1440/4
         h0 = 840/4
         l = [
@@ -220,6 +248,8 @@ class btns():
 
     def showLayer3(self):
         self.currentLayer = 3
+        self.setlistcolors()
+        self.changelistColor()
         w0 = 1440/4
         h0 = 840/4
         l = [
@@ -249,6 +279,8 @@ class btns():
 
     def showLayer4(self):
         self.currentLayer = 4
+        self.setlistcolors()
+        self.changelistColor()
         w0 = 1440/4
         h0 = 840/4
         l = [
@@ -281,6 +313,8 @@ class btns():
 
     def showLayer5(self):
         self.currentLayer = 5
+        self.setlistcolors()
+        self.changelistColor()
         w0 = 1440/4
         h0 = 840/4
         l = [
