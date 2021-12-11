@@ -3,6 +3,7 @@ import imutils
 import traceback
 import numpy as np
 import time
+import requests
 from PySide2.QtWidgets import QApplication, QMainWindow , QMessageBox ,QLabel ,QWidget, QSpinBox
 from PySide2 import QtUiTools
 from PySide2.QtCore import QTimer,QObject,Signal,QTime
@@ -79,9 +80,18 @@ def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem,sens,memory)
                     Q.put(result)
             return frameBuff,countMem,memory
 
+class getImage():
+    def __init__(self, ip):
+        self.ip = ip
+    def read(self):
+        return requests.get(self.ip).content
 
 def initCam(layer , cam , ip,Q , Q2 , savepath , sens):
-    video = cv2.VideoCapture(ip)
+    if ip.endswith(".jpg" ):
+        getimg = getImage(ip)
+        video = getimg
+    else:
+        video = cv2.VideoCapture(ip)
     frams = None
     loops = True
     frameBuff = []
