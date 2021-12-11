@@ -4,8 +4,18 @@ from PySide2.QtWidgets import *
 from PySide2 import QtUiTools
 
 class Pannel(QWidget):
-    def __init__(self, parent=None , path=None):
+    def __init__(self, base=None , path=None , root = None):
         QWidget.__init__(self)
-        self.ui = QtUiTools.QUiLoader(parent=parent).load(path ,parent  )
+        self.root= root
+        self.ui = QtUiTools.QUiLoader(parent=base).load(path ,base  )
         rMyIcon = QPixmap("./datas/images/setIcon.png")
         self.ui.iconBt_7.setIcon(QIcon(rMyIcon))
+        self.ui.sens_horizontalSlider_7.valueChanged.connect(self.sensChange)
+
+    def sensChange(self):
+        self.root.camSettings[self.root.currentLayer][self.root.currentCam]["sens"] = self.ui.sens_horizontalSlider_7.value()
+        val = self.root.camSettings[self.root.currentLayer][self.root.currentCam]["sens"] 
+        if self.root.currentCam in self.root.Qs:
+            self.root.Qs[self.root.currentCam][1].put("sens:"+str(val))
+        
+        

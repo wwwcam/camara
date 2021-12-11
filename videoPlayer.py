@@ -1,5 +1,6 @@
 import cv2 
 import imutils
+import traceback
 import numpy as np
 import time
 from PySide2.QtWidgets import QApplication, QMainWindow , QMessageBox ,QLabel ,QWidget, QSpinBox
@@ -15,93 +16,102 @@ import multiprocessing
     
 
 
-def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem):
-    #if self.video.get(cv2.CAP_PROP_POS_FRAMES) == self.video.get(cv2.CAP_PROP_FRAME_COUNT):
-    #    self.video.set(cv2.CAP_PROP_POS_FRAMES, 0)
-    #    self.contStack = []
+def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem,sens,memory):
+    conSize = 1005 - int((sens/100.0) * 1000) 
+    blurSize = 10 -int(10 * (sens/100.0))
     frd = None
     ret, frame = video.read()
     if type(frame) != type(None):
-        frame = imutils.resize(frame , width = 480)
-        if ret:
-            filterSize = 7
-            frameDist = 5
-            frameBuff.append(frame)
-            #if len(frameBuff) > frameDist:
-            #print("len" , len(frameBuff))
-            if len(frameBuff) >= frameDist:
-                fr1 = frameBuff[0]
-                fr1 = cv2.cvtColor(fr1, cv2.COLOR_BGR2GRAY)
-                fr2 = frameBuff[-1]
-                fr2 = cv2.cvtColor(fr2, cv2.COLOR_BGR2GRAY)
+        frame = imutils.resize(frame , width = 720)
+        frame = cv2.GaussianBlur(frame,(5,5),0)
+        if Q.empty():
+            if ret:
+                frameDist = 5
+                frameBuff.append(frame)
+                if len(frameBuff) >= frameDist:
+                    fr1 = frameBuff[0]
+                    fr1 = cv2.cvtColor(fr1, cv2.COLOR_BGR2GRAY)
+                    fr2 = frameBuff[-1]
+                    fr2 = cv2.cvtColor(fr2, cv2.COLOR_BGR2GRAY)
 
-                frd = cv2.absdiff(fr1, fr2)
-                (T, frd) = cv2.threshold(frd, 30, 255, cv2.THRESH_BINARY)
+                    frd = cv2.absdiff(fr1, fr2)
+                    (T, frd) = cv2.threshold(frd, 30, 255, cv2.THRESH_BINARY)
 
-                contours, hierarchy = cv2.findContours(frd, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)    
-                image_color = frameBuff[0].copy()
-                zeros = np.zeros(image_color.shape, np.uint8)    
-                for cnt in contours:
-                    (x, y, w, h) = cv2.boundingRect(cnt)
-                    area = cv2.contourArea(cnt)
-                    if 200<area < 5000:
-                        contStack.append(cnt)
-                #cv2.drawContours(zeros, contStack, -1, (0,0,255), 1)
-                cv2.fillPoly(zeros, pts =contStack, color=(0,255,255))
-                zGray = cv2.cvtColor(zeros, cv2.COLOR_BGR2GRAY)
-                (T, zThr) = cv2.threshold(zGray, 50, 255, cv2.THRESH_BINARY)
-                contours2, hierarchy = cv2.findContours(zThr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE) 
-                zeros2 = np.zeros(image_color.shape, np.uint8)   
-                cv2.fillPoly(zeros2, pts =contours2, color=(0,255,255))
-                tmpcnts = []
-                for cnt in contours2:
-                    (x, y, w, h) = cv2.boundingRect(cnt)
-                    area = cv2.contourArea(cnt)
-                    if 200<area < 5000:
-                        tmpcnts.append(cnt)
-                if len(tmpcnts):
-                    countMem[0] = True
-                if countMem[0]:
-                    countMem[1] = time.time()
-                    countMem[0] = False
-                if time.time() - countMem[1] > 5:
-                    print("contime")
-                    if countMem[0] == False and contStack:
-                        print("resetcon")
-                        contStack = tmpcnts = []
-                        countMem[0] = False
-                        zeros = np.zeros(image_color.shape, np.uint8)
-                        zeros2 = np.zeros(image_color.shape, np.uint8)     
+                    contours, hierarchy = cv2.findContours(frd, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)    
+                    image_color = frameBuff[0].copy()
+                    zeros = np.zeros(image_color.shape, np.uint8)    
+                    for cnt in contours:
+                        (x, y, w, h) = cv2.boundingRect(cnt)
+                        area = cv2.contourArea(cnt)
+                        if conSize < area < 5000:
+                            contStack.append(cnt)
+                    cv2.fillPoly(zeros, pts =contStack, color=(0,255,100))
+                    zGray = cv2.cvtColor(zeros, cv2.COLOR_BGR2GRAY)
+                    (T, zThr) = cv2.threshold(zGray, 50, 255, cv2.THRESH_BINARY)
+                    contours2, hierarchy = cv2.findContours(zThr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE) 
+                    zeros2 = np.zeros(image_color.shape, np.uint8)   
+                    cv2.fillPoly(zeros2, pts =contours2, color=(0,255,100))
+                    tmpcnts = []
+                    for cnt in contours2:
+                        (x, y, w, h) = cv2.boundingRect(cnt)
+                        area = cv2.contourArea(cnt)
+                        if conSize <area < 5000:
+                            tmpcnts.append(cnt)
+                    if len(tmpcnts):
+                        countMem[0] = True
+                    if countMem[0]:
                         countMem[1] = time.time()
+                        countMem[0] = False
+                    if time.time() - countMem[1] > 5:
+                        if countMem[0] == False and contStack:
+                            contStack = tmpcnts = []
+                            countMem[0] = False
+                            zeros = np.zeros(image_color.shape, np.uint8)
+                            zeros2 = np.zeros(image_color.shape, np.uint8)     
+                            countMem[1] = time.time()
 
 
-                contStack = tmpcnts
-                frameBuff = frameBuff[1:]
-                if Q.empty():
-                    Q.put(cv2.addWeighted(image_color, 0.8, zeros2, 0.3, 0))
-            return frameBuff,countMem
+                    contStack = tmpcnts
+                    frameBuff = frameBuff[1:]
+                    result = cv2.addWeighted(image_color, 0.8, zeros2, 0.3, 0)
+                    memory.append(result)
+                    memory = memory[-10:]
+                    Q.put(result)
+            return frameBuff,countMem,memory
 
 
-def initCam(layer , cam , ip,Q , Q2 , savepath):
+def initCam(layer , cam , ip,Q , Q2 , savepath , sens):
     video = cv2.VideoCapture(ip)
     frams = None
     loops = True
     frameBuff = []
     contStack = []
+    memory = []
     cnt = 0
     countMem = [ False , 0]
     while loops:
         cnt+=1
-        frameBuff,countMem = playVideo(cam  , video,frameBuff,contStack,Q,savepath,countMem)
+        try:
+            ret = playVideo(cam  , video,frameBuff,contStack,Q,savepath,countMem,sens,memory)
+            if ret:
+                frameBuff,countMem,memory = ret
+        except:
+            print(cam , traceback.format_exc())
      
         if Q2.empty() == False:
             for qi in range(Q2.qsize()):
-                if Q2.get() == "quit":
+                d = Q2.get()
+                if "quit" in d:
                     loops = False
                     Q.put(np.zeros((1,1,3)))
                     return
-        #if cnt > 40:
-        #    loops = False
+
+                if "sens:" in d:
+                    senstmp = int(d.split(":")[1])
+                    if sens != senstmp:
+                        frameBuff = []
+                        contStack = []
+                        sens = senstmp
 
 
 class vplayer():
@@ -141,7 +151,7 @@ class vplayer():
                 self.Qs[cam] = [Queue() , Queue()]
                 ip , name , loc , zoom , sens , focus , memo = self.loadCamSet(self.currentLayer ,cam )
                 if ip:
-                    self.ps[cam] = Process(target = initCam , args = (self.currentLayer ,cam , ip, self.Qs[cam][0] ,  self.Qs[cam][1] , self.savePath))
+                    self.ps[cam] = Process(target = initCam , args = (self.currentLayer ,cam , ip, self.Qs[cam][0] ,  self.Qs[cam][1] , self.savePath ,sens))
                     self.ps[cam].start()
 
     def allStop(self, cam):

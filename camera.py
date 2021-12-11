@@ -35,9 +35,10 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.settingLayer.move(1650 , 10)
         self.settingLayer.hide()
         self.stopVideos = 0
+        self.currentLayer =0 
         
         
-        self.pannel = Pannel(self.settingLayer , "./camera_setting.ui")
+        self.pannel = Pannel(self.settingLayer , "./camera_setting.ui" , self)
 
 
         vplayer.__init__(self )#vplayer 함수 로딩
@@ -46,7 +47,6 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         saveSetting.__init__(self)
         
         self.settings = {}
-        self.layers = []
         self.currentLayer = 0
         self.loadSet()
 
@@ -84,9 +84,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.ui.folferSelect_Bt.clicked.connect(self.selectFolder)
 
         self.ui.closeEvent = self.closeEvent
-
-
-
+        
         ### 비디오 플레이를 위한 타이머 추가
         #self.vp1 = QTimer(self.ui)
         #self.vp1.setInterval(10)

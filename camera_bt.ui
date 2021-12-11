@@ -916,9 +916,6 @@ font: 20pt &quot;HY태백B&quot;;</string>
      <property name="accelerated">
       <bool>true</bool>
      </property>
-     <property name="showGroupSeparator" stdset="0">
-      <bool>true</bool>
-     </property>
      <property name="date">
       <date>
        <year>2021</year>
@@ -934,6 +931,9 @@ font: 20pt &quot;HY태백B&quot;;</string>
      </property>
      <property name="timeSpec">
       <enum>Qt::LocalTime</enum>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QWidget" name="Map_3" native="true">
@@ -1294,7 +1294,7 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(180, 180, 180);
+      <string notr="true">background-color: rgb(125, 160, 225);
 font: 63 24pt &quot;Bahnschrift SemiBold Condensed&quot;;
 color: rgb(255, 255, 255);</string>
      </property>
@@ -1646,9 +1646,6 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
        <height>21</height>
       </rect>
      </property>
-     <property name="tabletTracking">
-      <bool>false</bool>
-     </property>
      <property name="acceptDrops">
       <bool>true</bool>
      </property>
@@ -1657,6 +1654,9 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
+     </property>
+     <property name="tabletTracking" stdset="0">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="folferOpen_Bt">

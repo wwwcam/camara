@@ -309,10 +309,10 @@ class Ui_MainWindow(object):
         self.timeEdit.setFrame(True)
         self.timeEdit.setReadOnly(True)
         self.timeEdit.setAccelerated(True)
-        self.timeEdit.setProperty("showGroupSeparator", True)
         self.timeEdit.setDate(QDate(2021, 12, 1))
         self.timeEdit.setCalendarPopup(True)
         self.timeEdit.setTimeSpec(Qt.LocalTime)
+        self.timeEdit.setProperty("showGroupSeparator", True)
         self.Map_3 = QWidget(self.widget_6)
         self.Map_3.setObjectName(u"Map_3")
         self.Map_3.setGeometry(QRect(10, 70, 1441, 61))
@@ -417,7 +417,7 @@ class Ui_MainWindow(object):
         font3.setItalic(False)
         font3.setWeight(7)
         self.functionBt_01.setFont(font3)
-        self.functionBt_01.setStyleSheet(u"background-color: rgb(180, 180, 180);\n"
+        self.functionBt_01.setStyleSheet(u"background-color: rgb(125, 160, 225);\n"
 "font: 63 24pt \"Bahnschrift SemiBold Condensed\";\n"
 "color: rgb(255, 255, 255);")
         self.functionBt_01.setIconSize(QSize(55, 48))
@@ -511,10 +511,10 @@ class Ui_MainWindow(object):
         self.folferAddres = QLineEdit(self.widget_8)
         self.folferAddres.setObjectName(u"folferAddres")
         self.folferAddres.setGeometry(QRect(10, 210, 441, 21))
-        self.folferAddres.setTabletTracking(False)
         self.folferAddres.setAcceptDrops(True)
         self.folferAddres.setStyleSheet(u"background-color: rgb(62, 70, 73);")
         self.folferAddres.setDragEnabled(True)
+        self.folferAddres.setProperty("tabletTracking", False)
         self.folferOpen_Bt = QPushButton(self.widget_8)
         self.folferOpen_Bt.setObjectName(u"folferOpen_Bt")
         self.folferOpen_Bt.setGeometry(QRect(240, 240, 211, 21))

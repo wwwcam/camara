@@ -26,6 +26,10 @@ class saveSetting():
             [],
             []
         ]
+        self.setLayerCorlr()
+        self.setCamText()
+
+
         
     def setLayerCorlr(self):
         for cam in self.camlayers[self.currentLayer]:

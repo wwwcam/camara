@@ -38,6 +38,14 @@ class btns():
         "cam32":{"ip":'' , "name":'' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''},}
         self.camSettings = [copy.deepcopy(tmp) for i in range(30)]
         self.dclickTime = [time.time() for i in range(37)]
+
+        self.ui.functionBt_01.clicked.connect(self.showall)
+        self.ui.functionBt_02.clicked.connect(self.showLayer1)
+        self.ui.functionBt_03.clicked.connect(self.showLayer2)
+        self.ui.functionBt_04.clicked.connect(self.showLayer3)
+        self.ui.functionBt_05.clicked.connect(self.showLayer4)
+        self.ui.functionBt_06.clicked.connect(self.showLayer5)
+
         self.ui.cmraBt_01.clicked.connect(self.fullscreen01)
         self.ui.cmraBt_02.clicked.connect(self.fullscreen02)
         self.ui.cmraBt_03.clicked.connect(self.fullscreen03)
@@ -79,6 +87,12 @@ class btns():
                         "cam24" : self.ui.cmraBt_24, "cam25" : self.ui.cmraBt_25, "cam26" : self.ui.cmraBt_26, "cam27" : self.ui.cmraBt_27, 
                         "cam28" : self.ui.cmraBt_28, "cam29" : self.ui.cmraBt_29, "cam30" : self.ui.cmraBt_30, "cam31" : self.ui.cmraBt_31, 
                         "cam32" : self.ui.cmraBt_32}
+
+        for cam in self.cameras:
+            self.cameras[cam].full = False
+            self.cameras[cam].active = True
+
+        self.fullscreens = [self.showall ,self.showLayer1 ,self.showLayer2 ]
         self.layers = {
             "6":[self.ui.cmraBt_01,
             self.ui.cmraBt_03,
@@ -94,7 +108,8 @@ class btns():
             self.ui.cmraBt_16,
             self.ui.cmraBt_19,
             self.ui.cmraBt_20,
-            self.ui.cmraBt_21
+            self.ui.cmraBt_21,
+            self.ui.cmraBt_22
             ],
             "7_2":
             [self.ui.cmraBt_01,
@@ -135,840 +150,537 @@ class btns():
 
         }
  
-      
+    def showall(self):
+        self.currentLayer = 0
+        for cidx  , cam in enumerate(self.cameras):
+            self.cameras[cam].active=True
+            self.cameras[cam].show()
+            self.cameras[cam].resize(240 , 138)
+            self.cameras[cam].move( 10+240*(cidx%6) , 10+140*(cidx//6))
+
+    def showLayer1(self):
+        self.currentLayer = 1
+        w0 = 480
+        h0 = 280
+        l = [
+            [0 , 0 , w0*2 , h0*2],
+            [w0*2 , h0*0 , w0*3 , h0*1],
+            [w0*2 , h0*1 , w0*3 , h0*2],
+            [w0*0 , h0*2 , w0*1 , h0*3],
+            [w0*1 , h0*2 , w0*2 , h0*3],
+            [w0*2 , h0*2 , w0*3 , h0*3],
+        ]
+        for cam in self.cameras:
+            self.cameras[cam].hide()
+            self.cameras[cam].active = False
+        for cidx  , cam in enumerate(self.layers["6"]):
+            cam.active=True
+            cam.show()
+            if cidx == 0:
+                x = l[cidx][0]
+                y = l[cidx][1]
+                w = l[cidx][2] - l[cidx][0]
+                h = l[cidx][3] - l[cidx][1]
+                cam.move(10,10)
+                cam.resize(w,h)
+            else:
+                x = l[cidx][0]
+                y = l[cidx][1]
+                cam.move(x+10,y+10)
+                cam.resize(w0,h0)
+
+    def showLayer2(self):
+        self.currentLayer = 2
+        w0 = 1440/4
+        h0 = 840/4
+        l = [
+            [0 , 0 , w0*3 , h0*3],
+
+            [w0*3 , h0*0 , w0*4 , h0*1],
+            [w0*3 , h0*1 , w0*4 , h0*2],
+            [w0*3 , h0*2 , w0*4 , h0*3],
+
+            [w0*0 , h0*3 , w0*1 , h0*4],
+            [w0*1 , h0*3 , w0*2 , h0*4],
+            [w0*2 , h0*3 , w0*3 , h0*4],
+            [w0*3 , h0*3 , w0*4 , h0*4],
+        ]
+        for cam in self.cameras:
+            self.cameras[cam].hide()
+            self.cameras[cam].active = False
+        for cidx  , cam in enumerate(self.layers["7_1"]):
+            cam.show()
+            cam.active = True
+            x = l[cidx][0]
+            y = l[cidx][1]
+            w = l[cidx][2] - l[cidx][0]
+            h = l[cidx][3] - l[cidx][1]
+            cam.move(x+10,y+10)
+            cam.resize(w,h)      
+
+    def showLayer3(self):
+        self.currentLayer = 3
+        w0 = 1440/4
+        h0 = 840/4
+        l = [
+            [0 , 0 , w0*2 , h0*2],
+            [w0*2 , h0*0 , w0*4 , h0*2],
+
+            [w0*0 , h0*2 , w0*1 , h0*3],
+            [w0*1 , h0*2 , w0*2 , h0*3],
+
+            [w0*2 , h0*2 , w0*4 , h0*4],
+
+            [w0*0 , h0*3 , w0*1 , h0*4],
+            [w0*1 , h0*3 , w0*2 , h0*4],
+        ]
+        for cam in self.cameras:
+            self.cameras[cam].hide()
+            self.cameras[cam].active = False
+        for cidx  , cam in enumerate(self.layers["7_2"]):
+            cam.show()
+            cam.active = True
+            x = l[cidx][0]
+            y = l[cidx][1]
+            w = l[cidx][2] - l[cidx][0]
+            h = l[cidx][3] - l[cidx][1]
+            cam.move(x+10,y+10)
+            cam.resize(w,h)      
+
+    def showLayer4(self):
+        self.currentLayer = 4
+        w0 = 1440/4
+        h0 = 840/4
+        l = [
+            [0 , 0 , w0*2 , h0*2],
+            [w0*2 , h0*0 , w0*4 , h0*2],
+
+            [w0*0 , h0*2 , w0*1 , h0*3],
+            [w0*1 , h0*2 , w0*2 , h0*3],
+            [w0*2 , h0*2 , w0*3 , h0*3],
+            [w0*3 , h0*2 , w0*4 , h0*3],
+
+            [w0*0 , h0*3 , w0*1 , h0*4],
+            [w0*1 , h0*3 , w0*2 , h0*4],
+            [w0*2 , h0*3 , w0*3 , h0*4],
+            [w0*3 , h0*3 , w0*4 , h0*4],
+        ]
+
+        for cam in self.cameras:
+            self.cameras[cam].hide()
+            self.cameras[cam].active = False
+        for cidx  , cam in enumerate(self.layers["10"]):
+            cam.show()
+            cam.active = True
+            x = l[cidx][0]
+            y = l[cidx][1]
+            w = l[cidx][2] - l[cidx][0]
+            h = l[cidx][3] - l[cidx][1]
+            cam.move(x+10,y+10)
+            cam.resize(w,h)  
+
+    def showLayer5(self):
+        self.currentLayer = 5
+        w0 = 1440/4
+        h0 = 840/4
+        l = [
+            [0 , 0 , w0*2 , h0*2],  
+            [w0*2 , h0*0 , w0*3 , h0*1],
+            [w0*3 , h0*0 , w0*4 , h0*1],
+
+            [w0*2 , h0*1 , w0*3 , h0*2],
+            [w0*3 , h0*1 , w0*4 , h0*2],
+
+            [w0*0 , h0*2 , w0*1 , h0*3],
+            [w0*1 , h0*2 , w0*2 , h0*3],
+            [w0*2 , h0*2 , w0*3 , h0*3],
+            [w0*3 , h0*2 , w0*4 , h0*3],
+
+            [w0*0 , h0*3 , w0*1 , h0*4],
+            [w0*1 , h0*3 , w0*2 , h0*4],
+            [w0*2 , h0*3 , w0*3 , h0*4],
+            [w0*3 , h0*3 , w0*4 , h0*4],
+        ]
+        for cam in self.cameras:
+            self.cameras[cam].hide()
+            self.cameras[cam].active = False
+        for cidx  , cam in enumerate(self.layers["13"]):
+            cam.show()
+            cam.active = True
+            x = l[cidx][0]
+            y = l[cidx][1]
+            w = l[cidx][2] - l[cidx][0]
+            h = l[cidx][3] - l[cidx][1]
+            cam.move(x+10,y+10)
+            cam.resize(w,h) 
+
+    def resizeCamers(self,cam ,camera):
+        if camera.full:
+            camera.full = False
+            for cam_ in self.cameras:
+                self.cameras[cam_].hide()
+            self.fullscreens[self.currentLayer]()
+            self.settingLayer.hide()
+        else:
+            camera.full = True
+            for cam_ in self.cameras:
+                if cam != cam_:
+                    self.cameras[cam_].hide()
+            camera.resize(1491 , 891)
+            camera.move(10,10)
+            self.settingLayer.show()
+
+
+
     def fullscreen01(self):
-        self.currentCam = 'cam01'
+        cam  =self.currentCam = 'cam01'
+        camera = self.cameras[cam]
         self.loadCameraSet()
         self.setLayerCorlr()
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_01.size().width() == 240:
-                self.ui.cmraBt_01.resize(1491 , 891)
-                self.ui.cmraBt_01.move(10,10)
-                for i in range(1,33):
-                    if i == 1 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_01.resize(240 , 138)
-                self.ui.cmraBt_01.move(10,10)
-                for i in range(1,33):
-                    if i == 1 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
+            self.resizeCamers(cam ,camera )
         self.dclickTime[1] = time.time()
         
 
     def fullscreen02(self):
-        self.currentCam = 'cam02'
+        cam  =self.currentCam = 'cam02'
+        camera = self.cameras[cam]
         self.loadCameraSet()
         self.setLayerCorlr()
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_02.size().width() == 240:
-                self.ui.cmraBt_02.resize(1491 , 891)
-                self.ui.cmraBt_02.move(10,10)
-                for i in range(1,33):
-                    if i == 2 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_02.resize(240 , 138)
-                self.ui.cmraBt_02.move(10+240*1,10)
-                for i in range(1,33):
-                    if i == 2 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
+            self.resizeCamers(cam ,camera )
         self.dclickTime[1] = time.time()
 
 
     def fullscreen03(self):
-        self.currentCam = 'cam03'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_03.size().width() == 240:
-                self.ui.cmraBt_03.resize(1491 , 891)
-                self.ui.cmraBt_03.move(10,10)
-                for i in range(1,33):
-                    if i == 3 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_03.resize(240 , 138)
-                self.ui.cmraBt_03.move(10+240*2,10)
-                for i in range(1,33):
-                    if i == 3 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam03'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen04(self):
-        self.currentCam = 'cam04'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_04.size().width() == 240:
-                self.ui.cmraBt_04.resize(1491 , 891)
-                self.ui.cmraBt_04.move(10,10)
-                for i in range(1,33):
-                    if i == 4 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_04.resize(240 , 138)
-                self.ui.cmraBt_04.move(10+240*3,10)
-                for i in range(1,33):
-                    if i == 4 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
+            cam  =self.currentCam = 'cam04'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
 
     def fullscreen05(self):
-        self.currentCam = 'cam05'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_05.size().width() == 240:
-                self.ui.cmraBt_05.resize(1491 , 891)
-                self.ui.cmraBt_05.move(10,10)
-                for i in range(1,33):
-                    if i == 5 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_05.resize(240 , 138)
-                self.ui.cmraBt_05.move(10+240*4,10)
-                for i in range(1,33):
-                    if i == 5 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam05'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen06(self):
-        self.currentCam = 'cam06'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_06.size().width() == 240:
-                self.ui.cmraBt_06.resize(1491 , 891)
-                self.ui.cmraBt_06.move(10,10)
-                for i in range(1,33):
-                    if i == 6 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_06.resize(240 , 138)
-                self.ui.cmraBt_06.move(10+240*5,10)
-                for i in range(1,33):
-                    if i == 6 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam06'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen07(self):
-        self.currentCam = 'cam07'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_07.size().width() == 240:
-                self.ui.cmraBt_07.resize(1491 , 891)
-                self.ui.cmraBt_07.move(10,10)
-                for i in range(1,33):
-                    if i == 7 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_07.resize(240 , 138)
-                self.ui.cmraBt_07.move(10+240*0,10+140*1)
-                for i in range(1,33):
-                    if i == 7 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam07'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen08(self):
-        self.currentCam = 'cam08'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_08.size().width() == 240:
-                self.ui.cmraBt_08.resize(1491 , 891)
-                self.ui.cmraBt_08.move(10,10)
-                for i in range(1,33):
-                    if i == 8 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_08.resize(240 , 138)
-                self.ui.cmraBt_08.move(10+240*1,10+140*1)
-                for i in range(1,33):
-                    if i == 8 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam08'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen09(self):
-        self.currentCam = 'cam09'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_09.size().width() == 240:
-                self.ui.cmraBt_09.resize(1491 , 891)
-                self.ui.cmraBt_09.move(10,10)
-                for i in range(1,33):
-                    if i == 9 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_09.resize(240 , 138)
-                self.ui.cmraBt_09.move(10+240*2,10+140*1)
-                for i in range(1,33):
-                    if i == 9 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam09'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen10(self):
-        self.currentCam = 'cam10'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_10.size().width() == 240:
-                self.ui.cmraBt_10.resize(1491 , 891)
-                self.ui.cmraBt_10.move(10,10)
-                for i in range(1,33):
-                    if i == 10 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_10.resize(240 , 138)
-                self.ui.cmraBt_10.move(10+240*3,10+140*1)
-                for i in range(1,33):
-                    if i == 10 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam10'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
 
     def fullscreen11(self):
-        self.currentCam = 'cam11'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_11.size().width() == 240:
-                self.ui.cmraBt_11.resize(1491 , 891)
-                self.ui.cmraBt_11.move(10,10)
-                for i in range(1,33):
-                    if i == 11 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_11.resize(240 , 138)
-                self.ui.cmraBt_11.move(10+240*4,10+140*1)
-                for i in range(1,33):
-                    if i == 11 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
+            cam  =self.currentCam = 'cam11'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
 
     def fullscreen12(self):
-        self.currentCam = 'cam12'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_12.size().width() == 240:
-                self.ui.cmraBt_12.resize(1491 , 891)
-                self.ui.cmraBt_12.move(10,10)
-                for i in range(1,33):
-                    if i == 12 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_12.resize(240 , 138)
-                self.ui.cmraBt_12.move(10+240*5,10+140*1)
-                for i in range(1,33):
-                    if i == 12 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam12'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen13(self):
-        self.currentCam = 'cam13'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_13.size().width() == 240:
-                self.ui.cmraBt_13.resize(1491 , 891)
-                self.ui.cmraBt_13.move(10,10)
-                for i in range(1,33):
-                    if i == 13 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_13.resize(240 , 138)
-                self.ui.cmraBt_13.move(10+240*0,10+140*2)
-                for i in range(1,33):
-                    if i == 13 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam13'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen14(self):
-        self.currentCam = 'cam14'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_14.size().width() == 240:
-                self.ui.cmraBt_14.resize(1491 , 891)
-                self.ui.cmraBt_14.move(10,10)
-                for i in range(1,33):
-                    if i == 14 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_14.resize(240 , 138)
-                self.ui.cmraBt_14.move(10+240*1,10+140*2)
-                for i in range(1,33):
-                    if i == 14 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam14'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen15(self):
-        self.currentCam = 'cam15'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_15.size().width() == 240:
-                self.ui.cmraBt_15.resize(1491 , 891)
-                self.ui.cmraBt_15.move(10,10)
-                for i in range(1,33):
-                    if i == 15 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_15.resize(240 , 138)
-                self.ui.cmraBt_15.move(10+240*2,10+140*2)
-                for i in range(1,33):
-                    if i == 15 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam15'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen16(self):
-        self.currentCam = 'cam16'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_16.size().width() == 240:
-                self.ui.cmraBt_16.resize(1491 , 891)
-                self.ui.cmraBt_16.move(10,10)
-                for i in range(1,33):
-                    if i == 16 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_16.resize(240 , 138)
-                self.ui.cmraBt_16.move(10+240*3,10+140*2)
-                for i in range(1,33):
-                    if i == 16 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam16'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen17(self):
-        self.currentCam = 'cam17'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_17.size().width() == 240:
-                self.ui.cmraBt_17.resize(1491 , 891)
-                self.ui.cmraBt_17.move(10,10)
-                for i in range(1,33):
-                    if i == 17 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_17.resize(240 , 138)
-                self.ui.cmraBt_17.move(10+240*4,10+140*2)
-                for i in range(1,33):
-                    if i == 17 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam17'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen18(self):
-        self.currentCam = 'cam18'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_18.size().width() == 240:
-                self.ui.cmraBt_18.resize(1491 , 891)
-                self.ui.cmraBt_18.move(10,10)
-                for i in range(1,33):
-                    if i == 18 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_18.resize(240 , 138)
-                self.ui.cmraBt_18.move(10+240*5,10+140*2)
-                for i in range(1,33):
-                    if i == 18 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam18'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen19(self):
-        self.currentCam = 'cam19'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_19.size().width() == 240:
-                self.ui.cmraBt_19.resize(1491 , 891)
-                self.ui.cmraBt_19.move(10,10)
-                for i in range(1,33):
-                    if i == 19 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_19.resize(240 , 138)
-                self.ui.cmraBt_19.move(10+240*0,10+140*3)
-                for i in range(1,33):
-                    if i == 19 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam19'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen20(self):
-        self.currentCam = 'cam20'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_20.size().width() == 240:
-                self.ui.cmraBt_20.resize(1491 , 891)
-                self.ui.cmraBt_20.move(10,10)
-                for i in range(1,33):
-                    if i == 20 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_20.resize(240 , 138)
-                self.ui.cmraBt_20.move(10+240*1,10+140*3)
-                for i in range(1,33):
-                    if i == 20 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam20'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen21(self):
-        self.currentCam = 'cam21'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_21.size().width() == 240:
-                self.ui.cmraBt_21.resize(1491 , 891)
-                self.ui.cmraBt_21.move(10,10)
-                for i in range(1,33):
-                    if i == 21 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_21.resize(240 , 138)
-                self.ui.cmraBt_21.move(10+240*2,10+140*3)
-                for i in range(1,33):
-                    if i == 21 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam21'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen22(self):
-        self.currentCam = 'cam22'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_22.size().width() == 240:
-                self.ui.cmraBt_22.resize(1491 , 891)
-                self.ui.cmraBt_22.move(10,10)
-                for i in range(1,33):
-                    if i == 22 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_22.resize(240 , 138)
-                self.ui.cmraBt_22.move(10+240*3,10+140*3)
-                for i in range(1,33):
-                    if i == 22 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam22'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen23(self):
-        self.currentCam = 'cam23'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_23.size().width() == 240:
-                self.ui.cmraBt_23.resize(1491 , 891)
-                self.ui.cmraBt_23.move(10,10)
-                for i in range(1,33):
-                    if i == 23 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_23.resize(240 , 138)
-                self.ui.cmraBt_23.move(10+240*4,10+140*3)
-                for i in range(1,33):
-                    if i == 23 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam23'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen24(self):
-        self.currentCam = 'cam24'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_24.size().width() == 240:
-                self.ui.cmraBt_24.resize(1491 , 891)
-                self.ui.cmraBt_24.move(10,10)
-                for i in range(1,33):
-                    if i == 24 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_24.resize(240 , 138)
-                self.ui.cmraBt_24.move(10+240*5,10+140*3)
-                for i in range(1,33):
-                    if i == 24 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam24'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen25(self):
-        self.currentCam = 'cam25'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_25.size().width() == 240:
-                self.ui.cmraBt_25.resize(1491 , 891)
-                self.ui.cmraBt_25.move(10,10)
-                for i in range(1,33):
-                    if i == 25 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_25.resize(240 , 138)
-                self.ui.cmraBt_25.move(10+240*0,10+140*4)
-                for i in range(1,33):
-                    if i == 25 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam25'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen26(self):
-        self.currentCam = 'cam26'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_26.size().width() == 240:
-                self.ui.cmraBt_26.resize(1491 , 891)
-                self.ui.cmraBt_26.move(10,10)
-                for i in range(1,33):
-                    if i == 26 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_26.resize(240 , 138)
-                self.ui.cmraBt_26.move(10+240*1,10+140*4)
-                for i in range(1,33):
-                    if i == 26 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam26'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen27(self):
-        self.currentCam = 'cam27'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_27.size().width() == 240:
-                self.ui.cmraBt_27.resize(1491 , 891)
-                self.ui.cmraBt_27.move(10,10)
-                for i in range(1,33):
-                    if i == 27 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_27.resize(240 , 138)
-                self.ui.cmraBt_27.move(10+240*2,10+140*4)
-                for i in range(1,33):
-                    if i == 27 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam27'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen28(self):
-        self.currentCam = 'cam28'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_28.size().width() == 240:
-                self.ui.cmraBt_28.resize(1491 , 891)
-                self.ui.cmraBt_28.move(10,10)
-                for i in range(1,33):
-                    if i == 28 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_28.resize(240 , 138)
-                self.ui.cmraBt_28.move(10+240*3,10+140*4)
-                for i in range(1,33):
-                    if i == 28 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam28'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen29(self):
-        self.currentCam = 'cam29'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_29.size().width() == 240:
-                self.ui.cmraBt_29.resize(1491 , 891)
-                self.ui.cmraBt_29.move(10,10)
-                for i in range(1,33):
-                    if i == 29 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_29.resize(240 , 138)
-                self.ui.cmraBt_29.move(10+240*4,10+140*4)
-                for i in range(1,33):
-                    if i == 29 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam29'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen30(self):
-        self.currentCam = 'cam30'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_30.size().width() == 240:
-                self.ui.cmraBt_30.resize(1491 , 891)
-                self.ui.cmraBt_30.move(10,10)
-                for i in range(1,33):
-                    if i == 30 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_30.resize(240 , 138)
-                self.ui.cmraBt_30.move(10+240*5,10+140*4)
-                for i in range(1,33):
-                    if i == 30 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam30'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
+
     def fullscreen31(self):
-        self.currentCam = 'cam31'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_31.size().width() == 240:
-                self.ui.cmraBt_31.resize(1491 , 891)
-                self.ui.cmraBt_31.move(10,10)
-                for i in range(1,33):
-                    if i == 31 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_31.resize(240 , 138)
-                self.ui.cmraBt_31.move(10+240*0,10+140*5)
-                for i in range(1,33):
-                    if i == 31 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
+            cam  =self.currentCam = 'cam31'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
 
     def fullscreen32(self):
-        self.currentCam = 'cam32'
-        self.loadCameraSet()
-        self.setLayerCorlr()
-        now = time.time()
-        if now - self.dclickTime[1]  < 0.3:
-            if self.ui.cmraBt_32.size().width() == 240:
-                self.ui.cmraBt_32.resize(1491 , 891)
-                self.ui.cmraBt_32.move(10,10)
-                for i in range(1,33):
-                    if i == 32 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.hide()'%i)
-                self.settingLayer.show()
-            else:
-                self.ui.cmraBt_32.resize(240 , 138)
-                self.ui.cmraBt_32.move(10+240*1,10+140*5)
-                for i in range(1,33):
-                    if i == 32 :
-                        pass
-                    else :
-                        exec('self.ui.cmraBt_%02d.show()'%i)
-                self.settingLayer.hide()
-        self.dclickTime[1] = time.time()
-    
+            cam  =self.currentCam = 'cam32'
+            camera = self.cameras[cam]
+            self.loadCameraSet()
+            self.setLayerCorlr()
+            now = time.time()
+            if now - self.dclickTime[1]  < 0.3:
+                self.resizeCamers(cam ,camera )
+            self.dclickTime[1] = time.time()
+
 
