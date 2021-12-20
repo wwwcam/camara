@@ -57,6 +57,9 @@ color: rgb(255, 255, 255);
      <property name="dragEnabled">
       <bool>true</bool>
      </property>
+     <property name="dragDropOverwriteMode">
+      <bool>true</bool>
+     </property>
      <item>
       <property name="text">
        <string>Camera No.1</string>
@@ -69,6 +72,9 @@ color: rgb(255, 255, 255);
          <blue>0</blue>
         </color>
        </brush>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
       </property>
      </item>
      <item>
@@ -147,9 +153,18 @@ color: rgb(255, 255, 255);
 
 </string>
      </property>
+     <property name="dragEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>true</bool>
+     </property>
      <item>
       <property name="text">
        <string>Camera No.12</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
       </property>
      </item>
      <item>
@@ -895,6 +910,40 @@ background-color: rgb(61, 63, 67);</string>
       <string>No.32</string>
      </property>
     </widget>
+    <zorder>cmraBt_01</zorder>
+    <zorder>cmraBt_02</zorder>
+    <zorder>cmraBt_03</zorder>
+    <zorder>cmraBt_04</zorder>
+    <zorder>cmraBt_05</zorder>
+    <zorder>cmraBt_06</zorder>
+    <zorder>cmraBt_07</zorder>
+    <zorder>cmraBt_13</zorder>
+    <zorder>cmraBt_19</zorder>
+    <zorder>cmraBt_25</zorder>
+    <zorder>cmraBt_31</zorder>
+    <zorder>cmraBt_08</zorder>
+    <zorder>cmraBt_09</zorder>
+    <zorder>cmraBt_10</zorder>
+    <zorder>cmraBt_11</zorder>
+    <zorder>cmraBt_12</zorder>
+    <zorder>cmraBt_14</zorder>
+    <zorder>cmraBt_15</zorder>
+    <zorder>cmraBt_16</zorder>
+    <zorder>cmraBt_17</zorder>
+    <zorder>cmraBt_18</zorder>
+    <zorder>cmraBt_20</zorder>
+    <zorder>cmraBt_21</zorder>
+    <zorder>cmraBt_22</zorder>
+    <zorder>cmraBt_23</zorder>
+    <zorder>cmraBt_24</zorder>
+    <zorder>cmraBt_26</zorder>
+    <zorder>cmraBt_27</zorder>
+    <zorder>cmraBt_28</zorder>
+    <zorder>cmraBt_29</zorder>
+    <zorder>cmraBt_30</zorder>
+    <zorder>cmraBt_32</zorder>
+    <zorder>replayWidget</zorder>
+    <zorder>replayWidget</zorder>
    </widget>
    <widget class="QWidget" name="widget_6" native="true">
     <property name="geometry">
@@ -1388,6 +1437,22 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Camera Map&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="loadmap">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>441</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(56, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_8" native="true">
@@ -1640,7 +1705,9 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
       <bool>true</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(62, 70, 73);</string>
+      <string notr="true">background-color: rgb(62, 70, 73);
+color: rgb(255, 255, 255);
+font: 75 11pt &quot;HY견고딕&quot;;</string>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
@@ -1720,6 +1787,54 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(56, 56, 56);</string>
     </property>
+    <widget class="QPushButton" name="showRealtime">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>RECORD</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showReplay">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>0</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>REPLAY</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showReplay_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>0</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Setting</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="splash_Scr">
     <property name="geometry">
@@ -2053,6 +2168,87 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
     <property name="text">
      <string>ㅁ</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="replayWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>0</y>
+      <width>1461</width>
+      <height>1001</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>1431</width>
+       <height>941</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(121, 121, 121);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>-10</y>
+       <width>501</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="loadReplay">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>load video</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startReplay">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopReplay">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>stop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="userLVDS">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>LVDS</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

@@ -11,20 +11,54 @@ from datetime import timedelta
 import subprocess
 import pickle
 import time
+import imutils
 import cv2
 import psutil
 import imutils
 import re
+import numpy as np
 import win32gui,win32com.client,win32con
 import traceback
 from Socket_Singleton import Socket_Singleton
 import threading
-import sys
+import sys,os
 from btnEvent import  btns
 from videoPlayer import vplayer
 from settingPanel import Pannel
 from saveSetting import saveSetting
+
+
+try:
+    os.mkdir("./save")
+except:
+    pass
+
+
+def imread(filename, flags=cv2.IMREAD_COLOR, dtype=np.uint8): 
+    try: 
+        n = np.fromfile(filename, dtype) 
+        img = cv2.imdecode(n, flags) 
+        return img
+    except: 
+        import traceback
+        return None
+
+def imwrite(filename, img, params=None): 
+    try: 
+        ext = os.path.splitext(filename)[1] 
+        result, n = cv2.imencode(ext, img, params) 
+        if result: 
+            with open(filename, mode='w+b') as f: 
+                n.tofile(f) 
+            return True 
+        else: 
+            return False 
+    except: 
+        import traceback
+        return None
+
 class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적용하였음.
+    
     def __init__(self, parent=None):
         QWidget.__init__(self)
         multiprocessing.freeze_support()
@@ -35,6 +69,10 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.settingLayer.move(1650 , 10)
         self.settingLayer.hide()
         self.stopVideos = 0
+        self.mapPath = None
+        self.btnClickTime = time.time()
+        self.btnClickCnt = 0
+        self.currentCam = None
         self.currenListtLayer = [i for i in range(32)]
 
         self.currentLayer =0 
@@ -43,12 +81,16 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
 
         vplayer.__init__(self )#vplayer 함수 로딩
         self.setFileName = "./datas/settings.pkl"
+        
         btns.__init__(self , self.ui)  
         saveSetting.__init__(self)
         
         self.settings = {}
         self.currentLayer = 0
         self.loadSet()
+        self.ui.cmr_listWidget_5.clear()
+
+        self.ui.folferAddres.setText(self.settings['savepath'])
         
 
         ################## 스플래시 스크린에 입체 그림자 적용, 잘 안됨##################
@@ -88,15 +130,38 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         #self.setlistcolors()
         self.showCameras = [self.cameras[cam] for cam in self.cameras]
         self.ui.folferSelect_Bt.clicked.connect(self.selectFolder)
+        #print(dir(self.ui))
+        self.ui.showRealtime.clicked.connect(self.Realtime)
+        self.ui.showReplay.clicked.connect(self.Replay)
+        self.ui.loadmap.clicked.connect(self.selectMap)
+        self.ui.folferOpen_Bt.clicked.connect(self.openSaveFolder)
         self.ui.cmr_listWidget.currentItemChanged.connect(self.changelistColor)
+        self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))
+
+        self.ui.widget_5.show()
+        self.ui.replayWidget.hide()
 
         self.ui.closeEvent = self.closeEvent
+
+
+
 
         ### 비디오 플레이를 위한 타이머 추가
         #self.vp1 = QTimer(self.ui)
         #self.vp1.setInterval(10)
         #self.vp1.timeout.connect(self.playV1)
         #self.vp1.start()
+
+    def openSaveFolder(self):
+        os.startfile(os.path.abspath(self.savePath))
+
+
+    def Realtime(self):
+        self.ui.widget_5.show()
+        self.ui.replayWidget.hide()
+    def Replay(self):
+        self.ui.widget_5.hide()
+        self.ui.replayWidget.show()
 
     def onesec(self):
         dt = datetime.datetime.now().isoformat()[:19].replace("T" , " ")
@@ -139,7 +204,34 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
 
 
     def selectFolder(self):
-        self.settings['savepath'] = self.savePath = QtWidgets.QFileDialog.getExistingDirectory(self.ui, '저장 폴더를 선택해 주세요' , self.savePath)
+        self.savePath = self.settings['savepath'] = self.savePath = QtWidgets.QFileDialog.getExistingDirectory(self.ui, '저장 폴더를 선택해 주세요' , self.savePath)
+        self.ui.folferAddres.setText(self.settings['savepath'])
+        self.saveSet()
+
+    def showBtnIcon(self , img , icon , size):
+        icon.setIconSize(QtCore.QSize(size[0],size[1]))
+        image = imread(img)
+        image = cv2.resize(image,[440,150], interpolation=cv2.INTER_AREA)
+        bytesPerLine = 3 * image.shape[1]
+        image = QtGui.QImage(image.data, image.shape[1], image.shape[0], bytesPerLine  , QtGui.QImage.Format_RGB888).rgbSwapped()
+        icon.setIcon(QPixmap.fromImage(image)) 
+
+    def selectMap(self):
+        if time.time() - self.btnClickTime < 0.3:
+            self.btnClickCnt+=1
+            if self.btnClickCnt > 5:
+                if self.mapPath:
+                    mapdir = os.path.dirname(self.mapPath)
+                else:
+                    mapdir = "c:/"
+                self.mapPath = self.settings['mapPath']  = QtWidgets.QFileDialog.getOpenFileName(self.ui, '지도파일을 선택해주세요. 크기는 440X150입니다' , mapdir , "JPEG (*.jpg *.jpeg);;PNG (*.png)")[0]
+                
+                self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))
+                  
+                self.saveSet()
+        else:
+            self.btnClickCnt = 0
+        self.btnClickTime = time.time()
 
 
 

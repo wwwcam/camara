@@ -52,6 +52,12 @@ class saveSetting():
             with open(self.setFileName, "rb") as f:
                 self.settings = pickle.load(f)
                 self.camSettings = self.settings['camsetting']
+
+                if 'mapPath' in  self.settings:
+                    self.mapPath = self.settings['mapPath']
+                else:
+                    self.mapPath = None
+
                 if 'currentLayer' in self.settings:
                     self.currentLayer = self.settings['currentLayer']
                 else:
@@ -59,7 +65,8 @@ class saveSetting():
                 if 'savepath' in self.settings:
                     self.savePath = self.settings['savepath']
                 else:
-                    self.savePath = "c:/"
+                    self.savePath = "./save"
+                    self.settings['savepath'] = self.savePath
 
                 if 'selectedCams' in self.settings:
                     self.currenListtLayer = self.settings['selectedCams']
@@ -89,6 +96,8 @@ class saveSetting():
 
             self.setLayerCorlr()
 
+        return self.settings
+
                 
 
     def loadCameraSet(self):
@@ -103,16 +112,19 @@ class saveSetting():
 
 
     def saveSet(self ):
-        self.camSettings[self.currentLayer][self.currentCam]["ip"] = self.setpanel.ip_lineEdit_7.text().strip()
-        self.camSettings[self.currentLayer][self.currentCam]["name"] = self.setpanel.camera_lineEdit_7.text().strip()
-        self.camSettings[self.currentLayer][self.currentCam]["location"] = self.setpanel.loca_lineEdit_7.text().strip()
-        self.camSettings[self.currentLayer][self.currentCam]["zoom"] = self.setpanel.zoom_horizontalSlider_7.value()
-        self.camSettings[self.currentLayer][self.currentCam]["sens"] = self.setpanel.sens_horizontalSlider_7.value()
-        self.camSettings[self.currentLayer][self.currentCam]["focus"] = self.setpanel.foco_horizontalSlider_7.value()
-        self.camSettings[self.currentLayer][self.currentCam]["memo"] = self.setpanel.memo_textEdit_7.toPlainText().strip()
+        if self.currentCam:
+            self.camSettings[self.currentLayer][self.currentCam]["ip"] = self.setpanel.ip_lineEdit_7.text().strip()
+            self.camSettings[self.currentLayer][self.currentCam]["name"] = self.setpanel.camera_lineEdit_7.text().strip()
+            self.camSettings[self.currentLayer][self.currentCam]["location"] = self.setpanel.loca_lineEdit_7.text().strip()
+            self.camSettings[self.currentLayer][self.currentCam]["zoom"] = self.setpanel.zoom_horizontalSlider_7.value()
+            self.camSettings[self.currentLayer][self.currentCam]["sens"] = self.setpanel.sens_horizontalSlider_7.value()
+            self.camSettings[self.currentLayer][self.currentCam]["focus"] = self.setpanel.foco_horizontalSlider_7.value()
+            self.camSettings[self.currentLayer][self.currentCam]["memo"] = self.setpanel.memo_textEdit_7.toPlainText().strip()
         self.settings['camsetting'] = self.camSettings
         self.settings['currentLayer'] = self.currentLayer
         self.settings['selectedCams'] = self.currenListtLayer
+        self.settings['savepath'] = self.savePath
+        self.settings['mapPath'] = self.mapPath
         with open(self.setFileName, "wb") as f:
             pickle.dump(self.settings , f)
 

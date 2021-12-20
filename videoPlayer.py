@@ -3,6 +3,7 @@ import imutils
 import traceback
 import numpy as np
 import time
+import random
 import requests
 from PySide2.QtWidgets import QApplication, QMainWindow , QMessageBox ,QLabel ,QWidget, QSpinBox
 from PySide2 import QtUiTools
@@ -16,8 +17,12 @@ from multiprocessing import Process , Queue
 import multiprocessing
     
 
+def saveVideo(cam , savepath , frames ):
+    width , height = frames[0][0].shape[1]*2 , frames[0][0].shape[0]
+    writer = cv2.VideoWriter('local_capture.mp4', cv2.VideoWriter_fourcc(*'VIDX'),25, (width, height))
 
-def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem,sens,memory):
+
+def playVideo(cam , video,frameBuff,errframes , contStack , Q,savepath,countMem,sens,memory,framCnt,errtime,writer):
     conSize = 1005 - int((sens/100.0) * 1000) 
     blurSize = 10 -int(10 * (sens/100.0))
     frd = None
@@ -58,6 +63,7 @@ def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem,sens,memory)
                         area = cv2.contourArea(cnt)
                         if conSize <area < 5000:
                             tmpcnts.append(cnt)
+                     
                     if len(tmpcnts):
                         countMem[0] = True
                     if countMem[0]:
@@ -67,7 +73,7 @@ def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem,sens,memory)
                         if countMem[0] == False and contStack:
                             contStack = tmpcnts = []
                             countMem[0] = False
-                            zeros = np.zeros(image_color.shape, np.uint8)
+                            #zeros = np.zeros(image_color.shape, np.uint8)
                             zeros2 = np.zeros(image_color.shape, np.uint8)     
                             countMem[1] = time.time()
 
@@ -78,7 +84,29 @@ def playVideo(cam , video,frameBuff,contStack , Q,savepath,countMem,sens,memory)
                     memory.append(result)
                     memory = memory[-10:]
                     Q.put(result)
-            return frameBuff,countMem,memory
+
+                    if len(tmpcnts) > 0:
+                        if errtime==-1:
+                            errtime= time.time()
+                            width , height = image_color[0].shape[1]*2 , image_color[0].shape[0]
+                            writer = cv2.VideoWriter(f'./test_{random.randint(0,9999)}.avi', cv2.VideoWriter_fourcc('M','J','P','G') ,25, (width, height))
+                            writer.write(result)
+                        else:
+                            
+                            if time.time() - errtime > 10:
+                            
+                                #saveVideo(cam , savepath , errframes )
+                                errtime =-1
+                                writer.release()
+                                frameBuff = frameBuff[-frameDist : ]
+                                contStack = []
+                                tmpcnts = []
+                                memory = []
+                                print( cam , "Saved")
+
+                        #errframes.append([image_color , result])
+
+            return frameBuff,countMem,memory , errtime ,writer
 
 class getImage():
     def __init__(self, ip):
@@ -96,15 +124,18 @@ def initCam(layer , cam , ip,Q , Q2 , savepath , sens):
     loops = True
     frameBuff = []
     contStack = []
+    writer = None
     memory = []
     cnt = 0
+    errtime = -1
     countMem = [ False , 0]
+    errframes = []
     while loops:
         cnt+=1
         try:
-            ret = playVideo(cam  , video,frameBuff,contStack,Q,savepath,countMem,sens,memory)
+            ret   = playVideo(cam  , video,frameBuff, errframes , contStack,Q,savepath,countMem,sens,memory , cnt , errtime,writer)
             if ret:
-                frameBuff,countMem,memory = ret
+                frameBuff,countMem,memory,errtime,writer = ret
         except:
             print(cam , traceback.format_exc())
      
