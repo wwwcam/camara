@@ -6,322 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2857</width>
+    <width>2167</width>
     <height>1769</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/images/AdobeStock_bg.jpeg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(62, 70, 73);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget_4" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>280</y>
-      <width>461</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);</string>
-    </property>
-    <widget class="QListWidget" name="cmr_listWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>141</width>
-       <height>181</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>굴림</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(46, 47, 49);
-font: 10pt &quot;굴림&quot;;
-color: rgb(255, 255, 255);
-
-</string>
-     </property>
-     <property name="dragEnabled">
-      <bool>true</bool>
-     </property>
-     <property name="dragDropOverwriteMode">
-      <bool>true</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>Camera No.1</string>
-      </property>
-      <property name="background">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>0</red>
-         <green>255</green>
-         <blue>0</blue>
-        </color>
-       </brush>
-      </property>
-      <property name="flags">
-       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.2</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.3</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.4</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.5</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.6</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.7</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.8</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.9</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.10</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.11</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QListWidget" name="cmr_listWidget_3">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>40</y>
-       <width>141</width>
-       <height>181</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>굴림</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(46, 47, 49);
-font: 10pt &quot;굴림&quot;;
-color: rgb(255, 255, 255);
-
-</string>
-     </property>
-     <property name="dragEnabled">
-      <bool>true</bool>
-     </property>
-     <property name="dragDropOverwriteMode">
-      <bool>true</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>Camera No.12</string>
-      </property>
-      <property name="flags">
-       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.13</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.14</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.15</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.16</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.17</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.18</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.19</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.20</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.21</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.22</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QListWidget" name="cmr_listWidget_4">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>40</y>
-       <width>141</width>
-       <height>181</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>굴림</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(46, 47, 49);
-font: 10pt &quot;굴림&quot;;
-color: rgb(255, 255, 255);
-
-</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>Camera No.23</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.24</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.25</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.26</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.27</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.28</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.29</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.30</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.31</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Camera No.32</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>441</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>맑은 고딕</family>
-       <pointsize>12</pointsize>
-       <weight>9</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(91, 91, 91);
-color: rgb(255, 255, 255);
-font: 75 12pt &quot;맑은 고딕&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Camera Map&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="widget_5" native="true">
     <property name="geometry">
      <rect>
@@ -332,7 +30,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);</string>
+     <string notr="true">background-color: rgb(2, 8, 8);</string>
     </property>
     <widget class="QPushButton" name="cmraBt_01">
      <property name="geometry">
@@ -349,7 +47,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.01</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_02">
@@ -367,7 +76,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.02</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_03">
@@ -385,7 +105,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.03</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_04">
@@ -403,7 +134,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.04</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_05">
@@ -421,7 +163,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.05</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_06">
@@ -439,7 +192,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.06</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_07">
@@ -457,7 +221,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.07</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_13">
@@ -475,7 +250,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.13</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_19">
@@ -493,7 +279,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.19</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_25">
@@ -511,7 +308,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.25</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_31">
@@ -529,7 +337,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.31</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_08">
@@ -547,7 +366,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.08</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_09">
@@ -565,7 +395,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.09</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_10">
@@ -583,7 +424,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.10</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_11">
@@ -601,7 +453,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.11</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_12">
@@ -619,7 +482,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.12</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_14">
@@ -637,7 +511,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.14</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_15">
@@ -655,7 +540,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.15</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_16">
@@ -673,7 +569,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.16</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_17">
@@ -691,7 +598,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.17</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_18">
@@ -709,7 +627,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.18</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_20">
@@ -727,7 +656,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.20</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_21">
@@ -745,7 +685,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.21</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_22">
@@ -763,7 +714,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.22</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_23">
@@ -781,7 +743,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.23</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_24">
@@ -799,7 +772,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.24</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_26">
@@ -817,7 +801,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.26</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_27">
@@ -835,7 +830,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.27</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_28">
@@ -853,7 +859,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.28</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_29">
@@ -871,7 +888,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.29</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_30">
@@ -889,7 +917,18 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.30</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="cmraBt_32">
@@ -907,43 +946,20 @@ color: rgb(255, 255, 255);
 background-color: rgb(61, 63, 67);</string>
      </property>
      <property name="text">
-      <string>No.32</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>:/icons/images/Adobe.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>240</width>
+       <height>138</height>
+      </size>
      </property>
     </widget>
-    <zorder>cmraBt_01</zorder>
-    <zorder>cmraBt_02</zorder>
-    <zorder>cmraBt_03</zorder>
-    <zorder>cmraBt_04</zorder>
-    <zorder>cmraBt_05</zorder>
-    <zorder>cmraBt_06</zorder>
-    <zorder>cmraBt_07</zorder>
-    <zorder>cmraBt_13</zorder>
-    <zorder>cmraBt_19</zorder>
-    <zorder>cmraBt_25</zorder>
-    <zorder>cmraBt_31</zorder>
-    <zorder>cmraBt_08</zorder>
-    <zorder>cmraBt_09</zorder>
-    <zorder>cmraBt_10</zorder>
-    <zorder>cmraBt_11</zorder>
-    <zorder>cmraBt_12</zorder>
-    <zorder>cmraBt_14</zorder>
-    <zorder>cmraBt_15</zorder>
-    <zorder>cmraBt_16</zorder>
-    <zorder>cmraBt_17</zorder>
-    <zorder>cmraBt_18</zorder>
-    <zorder>cmraBt_20</zorder>
-    <zorder>cmraBt_21</zorder>
-    <zorder>cmraBt_22</zorder>
-    <zorder>cmraBt_23</zorder>
-    <zorder>cmraBt_24</zorder>
-    <zorder>cmraBt_26</zorder>
-    <zorder>cmraBt_27</zorder>
-    <zorder>cmraBt_28</zorder>
-    <zorder>cmraBt_29</zorder>
-    <zorder>cmraBt_30</zorder>
-    <zorder>cmraBt_32</zorder>
-    <zorder>replayWidget</zorder>
-    <zorder>replayWidget</zorder>
    </widget>
    <widget class="QWidget" name="widget_6" native="true">
     <property name="geometry">
@@ -1182,6 +1198,17 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
      <property name="text">
       <string/>
      </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/Ado.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>55</width>
+       <height>48</height>
+      </size>
+     </property>
     </widget>
     <widget class="QPushButton" name="functionBt_08">
      <property name="geometry">
@@ -1207,6 +1234,17 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
      <property name="text">
       <string/>
      </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/Ado.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>55</width>
+       <height>48</height>
+      </size>
+     </property>
     </widget>
     <widget class="QPushButton" name="functionBt_10">
      <property name="geometry">
@@ -1227,10 +1265,21 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(147, 147, 147);</string>
+      <string notr="true">background-image: url(:/icons/images/Ado.jpeg);</string>
      </property>
      <property name="text">
       <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/Ado.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>55</width>
+       <height>48</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="functionBt_09">
@@ -1256,6 +1305,17 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
      </property>
      <property name="text">
       <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/Ado.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>55</width>
+       <height>48</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="functionBt_02">
@@ -1386,75 +1446,6 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widget_7" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>520</y>
-      <width>461</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);</string>
-    </property>
-    <widget class="QWidget" name="Map" native="true">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>441</width>
-       <height>171</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(58, 60, 64);</string>
-     </property>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>441</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>맑은 고딕</family>
-        <pointsize>12</pointsize>
-        <weight>9</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(91, 91, 91);
-color: rgb(255, 255, 255);
-font: 75 12pt &quot;맑은 고딕&quot;;</string>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Camera Map&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="loadmap">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>20</y>
-        <width>441</width>
-        <height>151</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(56, 56, 56);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QWidget" name="widget_8" native="true">
     <property name="geometry">
      <rect>
@@ -1465,7 +1456,7 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);</string>
+     <string notr="true">background-color: rgb(0, 10, 20);</string>
     </property>
     <widget class="QListWidget" name="cmr_listWidget_5">
      <property name="geometry">
@@ -1701,6 +1692,9 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
        <height>21</height>
       </rect>
      </property>
+     <property name="tabletTracking">
+      <bool>false</bool>
+     </property>
      <property name="acceptDrops">
       <bool>true</bool>
      </property>
@@ -1711,9 +1705,6 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
-     </property>
-     <property name="tabletTracking" stdset="0">
-      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="folferOpen_Bt">
@@ -1754,7 +1745,7 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);</string>
+     <string notr="true">background-color: rgb(1, 23, 43);</string>
     </property>
     <widget class="QCalendarWidget" name="calendarWidget">
      <property name="geometry">
@@ -1765,13 +1756,435 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
        <height>201</height>
       </rect>
      </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Light">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>69</red>
+           <green>70</green>
+           <blue>73</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Midlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>57</red>
+           <green>58</green>
+           <blue>61</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Dark">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Mid">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>30</red>
+           <green>31</green>
+           <blue>32</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="BrightText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Shadow">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="AlternateBase">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ToolTipBase">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>220</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ToolTipText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Light">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>69</red>
+           <green>70</green>
+           <blue>73</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Midlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>57</red>
+           <green>58</green>
+           <blue>61</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Dark">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Mid">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>30</red>
+           <green>31</green>
+           <blue>32</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="BrightText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Shadow">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="AlternateBase">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ToolTipBase">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>220</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ToolTipText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Light">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>69</red>
+           <green>70</green>
+           <blue>73</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Midlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>57</red>
+           <green>58</green>
+           <blue>61</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Dark">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Mid">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>30</red>
+           <green>31</green>
+           <blue>32</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="BrightText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>23</red>
+           <green>23</green>
+           <blue>24</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>1</red>
+           <green>72</green>
+           <blue>104</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Shadow">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="AlternateBase">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>46</red>
+           <green>47</green>
+           <blue>49</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ToolTipBase">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>220</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ToolTipText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
      <property name="font">
       <font>
+       <family>맑은 고딕</family>
        <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(91, 91, 91);</string>
+      <string notr="true">background-color: rgb(1, 72, 104);</string>
+     </property>
+     <property name="verticalHeaderFormat">
+      <enum>QCalendarWidget::NoVerticalHeader</enum>
      </property>
     </widget>
    </widget>
@@ -1785,7 +2198,7 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);</string>
+     <string notr="true">background-color: rgb(0, 10, 20);</string>
     </property>
     <widget class="QPushButton" name="showRealtime">
      <property name="geometry">
@@ -1796,11 +2209,34 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
        <height>41</height>
       </rect>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-image: url(:/icons/images/AdobeStock_2.jpeg);</string>
      </property>
      <property name="text">
-      <string>RECORD</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/AdobeStock_2.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>74</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="showReplay">
@@ -1812,11 +2248,25 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
        <height>41</height>
       </rect>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-image: url(:/icons/images/AdobeStock_3.jpeg);</string>
      </property>
      <property name="text">
-      <string>REPLAY</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/AdobeStock_3.jpeg</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>74</width>
+       <height>41</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="showReplay_2">
@@ -2172,19 +2622,25 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
    <widget class="QWidget" name="replayWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>530</x>
       <y>0</y>
       <width>1461</width>
-      <height>1001</height>
+      <height>861</height>
      </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/images/AdobeStock_bg.jpeg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 10, 20);</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>40</y>
+       <y>60</y>
        <width>1431</width>
-       <height>941</height>
+       <height>791</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2193,12 +2649,21 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
      <property name="text">
       <string/>
      </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="pixmap">
+      <pixmap>datas/images/lon.jpeg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QWidget" name="horizontalLayoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>-10</y>
+       <y>0</y>
        <width>501</width>
        <height>51</height>
       </rect>
@@ -2250,13 +2715,337 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
      </layout>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>461</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="datas/image.qrc">:/icons/images/map.jpeg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>461</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 10, 20);</string>
+    </property>
+    <widget class="QListWidget" name="cmr_listWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>141</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(46, 47, 49);
+font: 10pt &quot;굴림&quot;;
+color: rgb(255, 255, 255);
+
+</string>
+     </property>
+     <property name="dragEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Camera No.1</string>
+      </property>
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>255</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.11</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListWidget" name="cmr_listWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>40</y>
+       <width>141</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(46, 47, 49);
+font: 10pt &quot;굴림&quot;;
+color: rgb(255, 255, 255);
+
+</string>
+     </property>
+     <property name="dragEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Camera No.12</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.14</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.15</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.17</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.18</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.19</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.20</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.21</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.22</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListWidget" name="cmr_listWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>40</y>
+       <width>141</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>굴림</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(46, 47, 49);
+font: 10pt &quot;굴림&quot;;
+color: rgb(255, 255, 255);
+
+</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Camera No.23</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.24</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.25</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.26</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.27</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.28</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.29</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.30</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.31</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Camera No.32</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>441</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>맑은 고딕</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(91, 91, 91);
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;맑은 고딕&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Camera List&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2857</width>
+     <width>2167</width>
      <height>21</height>
     </rect>
    </property>
