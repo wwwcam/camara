@@ -1023,10 +1023,21 @@ background-color: rgb(61, 63, 67);</string>
        <item>
         <widget class="QPushButton" name="startReplay">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">background-color: rgb(51, 248, 255);</string>
          </property>
          <property name="text">
-          <string>start</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <activeon>datas/images/AdobeStock_3.png</activeon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>24</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -2297,34 +2308,34 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 10, 20);</string>
+     <string notr="true">background-color: rgb(0, 23, 41);</string>
     </property>
     <widget class="QPushButton" name="showRealtime">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>0</y>
+       <y>6</y>
        <width>71</width>
-       <height>41</height>
+       <height>32</height>
       </rect>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/icons/images/AdobeStock_2.jpeg);</string>
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
       <iconset>
-       <activeon>datas/images/AdobeStock_2.jpeg</activeon>
+       <activeon>datas/images/AdobeStock_2.png</activeon>
       </iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>74</width>
+       <width>65</width>
        <height>41</height>
       </size>
      </property>
@@ -2342,28 +2353,28 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>0</y>
+       <y>6</y>
        <width>71</width>
-       <height>41</height>
+       <height>32</height>
       </rect>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/icons/images/AdobeStock_3.jpeg);</string>
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
       <iconset>
-       <activeon>datas/images/AdobeStock_3.jpeg</activeon>
+       <activeon>datas/images/AdobeStock_3.png</activeon>
       </iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>74</width>
+       <width>65</width>
        <height>41</height>
       </size>
      </property>
@@ -2372,13 +2383,13 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>0</y>
+       <y>6</y>
        <width>71</width>
-       <height>41</height>
+       <height>32</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
      </property>
      <property name="text">
       <string>Setting</string>
