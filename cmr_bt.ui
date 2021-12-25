@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2002</width>
+    <height>1154</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="accessibleName">
+   <string notr="true"/>
+  </property>
+  <property name="accessibleDescription">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(10, 44, 45);</string>
+  </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhNone</set>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>80</y>
+      <width>1981</width>
+      <height>1051</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/icons/images/full00.png);</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="datas/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

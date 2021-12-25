@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2167</width>
-    <height>1769</height>
+    <width>1991</width>
+    <height>2384</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,8 +23,8 @@
    <widget class="QWidget" name="widget_5" native="true">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>0</y>
+      <x>420</x>
+      <y>20</y>
       <width>1461</width>
       <height>851</height>
      </rect>
@@ -963,7 +963,7 @@ background-color: rgb(61, 63, 67);</string>
     <widget class="QWidget" name="replayWidget" native="true">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>120</x>
        <y>50</y>
        <width>1461</width>
        <height>861</height>
@@ -1071,111 +1071,15 @@ background-color: rgb(61, 63, 67);</string>
    <widget class="QWidget" name="widget_6" native="true">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>860</y>
+      <x>420</x>
+      <y>880</y>
       <width>1461</width>
-      <height>141</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(0, 10, 20);</string>
     </property>
-    <widget class="QWidget" name="Map_3" native="true">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>1441</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 0, 0);</string>
-     </property>
-     <widget class="QLabel" name="label_11">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>0</y>
-        <width>121</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>맑은 고딕</family>
-        <pointsize>12</pointsize>
-        <weight>9</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(10, 44, 45);
-color: rgb(255, 255, 255);
-font: 75 12pt &quot;맑은 고딕&quot;;</string>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;System&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Monitoring&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="allStart">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>121</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(10, 44, 45);
-color: rgb(255, 255, 255);
-font: 75 20pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Start</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>datas/images/play.png</normaloff>datas/images/play.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>50</width>
-        <height>50</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="allStop">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>0</y>
-        <width>121</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(10, 44, 45);
-color: rgb(255, 255, 255);
-font: 75 20pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>datas/images/stop.png</normaloff>datas/images/stop.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>50</width>
-        <height>50</height>
-       </size>
-      </property>
-     </widget>
-    </widget>
     <widget class="QPushButton" name="functionBt_06">
      <property name="geometry">
       <rect>
@@ -1559,10 +1463,10 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
    <widget class="QWidget" name="widget_8" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>730</y>
-      <width>461</width>
-      <height>271</height>
+      <x>11</x>
+      <y>420</y>
+      <width>391</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1571,10 +1475,10 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
     <widget class="QListWidget" name="cmr_listWidget_5">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>441</width>
-       <height>151</height>
+       <x>250</x>
+       <y>60</y>
+       <width>131</width>
+       <height>191</height>
       </rect>
      </property>
      <property name="font">
@@ -1743,8 +1647,8 @@ color: rgb(255, 255, 255);
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
-       <width>441</width>
+       <y>20</y>
+       <width>351</width>
        <height>21</height>
       </rect>
      </property>
@@ -1770,9 +1674,9 @@ font: 75 12pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>240</y>
-       <width>221</width>
-       <height>21</height>
+       <y>310</y>
+       <width>171</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -1797,9 +1701,9 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>210</y>
-       <width>441</width>
-       <height>21</height>
+       <y>270</y>
+       <width>371</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="tabletTracking">
@@ -1821,9 +1725,9 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>240</y>
-       <width>211</width>
-       <height>21</height>
+       <y>310</y>
+       <width>141</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -1844,26 +1748,13 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
       <string>FOLDER OPEN</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="widget_10" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>461</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(1, 23, 43);</string>
-    </property>
     <widget class="QCalendarWidget" name="calendarWidget">
      <property name="geometry">
       <rect>
-       <x>11</x>
-       <y>10</y>
-       <width>441</width>
-       <height>201</height>
+       <x>10</x>
+       <y>60</y>
+       <width>231</width>
+       <height>191</height>
       </rect>
      </property>
      <property name="palette">
@@ -2284,7 +2175,7 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      <property name="font">
       <font>
        <family>맑은 고딕</family>
-       <pointsize>12</pointsize>
+       <pointsize>10</pointsize>
        <weight>75</weight>
        <bold>true</bold>
        <strikeout>false</strikeout>
@@ -2297,110 +2188,95 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
       <enum>QCalendarWidget::NoVerticalHeader</enum>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="widget_11" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>461</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 23, 41);</string>
-    </property>
-    <widget class="QPushButton" name="showRealtime">
+    <widget class="QPushButton" name="allStart">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>6</y>
-       <width>71</width>
-       <height>32</height>
+       <y>350</y>
+       <width>121</width>
+       <height>61</height>
       </rect>
      </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(51, 248, 255);</string>
+      <string notr="true">background-color: rgb(10, 44, 45);
+color: rgb(255, 255, 255);
+font: 75 20pt &quot;Agency FB&quot;;</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Start</string>
      </property>
      <property name="icon">
       <iconset>
-       <activeon>datas/images/AdobeStock_2.png</activeon>
-      </iconset>
+       <normaloff>datas/images/play.png</normaloff>datas/images/play.png</iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>65</width>
-       <height>41</height>
+       <width>50</width>
+       <height>50</height>
       </size>
      </property>
-     <property name="checkable">
-      <bool>false</bool>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
     </widget>
-    <widget class="QPushButton" name="showReplay">
+    <widget class="QPushButton" name="allStop">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>6</y>
-       <width>71</width>
-       <height>32</height>
+       <x>140</x>
+       <y>350</y>
+       <width>121</width>
+       <height>61</height>
       </rect>
      </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(51, 248, 255);</string>
+      <string notr="true">background-color: rgb(10, 44, 45);
+color: rgb(255, 255, 255);
+font: 75 20pt &quot;Agency FB&quot;;</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Stop</string>
      </property>
      <property name="icon">
       <iconset>
-       <activeon>datas/images/AdobeStock_3.png</activeon>
-      </iconset>
+       <normaloff>datas/images/stop.png</normaloff>datas/images/stop.png</iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>65</width>
-       <height>41</height>
+       <width>50</width>
+       <height>50</height>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="showReplay_2">
+    <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>6</y>
-       <width>71</width>
-       <height>32</height>
+       <x>280</x>
+       <y>350</y>
+       <width>101</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>맑은 고딕</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(51, 248, 255);</string>
+      <string notr="true">background-color: rgb(10, 44, 45);
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;맑은 고딕&quot;;</string>
      </property>
      <property name="text">
-      <string>Setting</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;System&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Monitoring&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
    <widget class="QLabel" name="splash_Scr">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>1040</y>
+      <x>50</x>
+      <y>1080</y>
       <width>1141</width>
       <height>671</height>
      </rect>
@@ -2420,8 +2296,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>1240</x>
-      <y>1050</y>
+      <x>1260</x>
+      <y>1070</y>
       <width>311</width>
       <height>631</height>
      </rect>
@@ -2680,8 +2556,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="functionBt_11">
     <property name="geometry">
      <rect>
-      <x>1570</x>
-      <y>1030</y>
+      <x>1590</x>
+      <y>1080</y>
       <width>55</width>
       <height>48</height>
      </rect>
@@ -2706,8 +2582,8 @@ font: 75 25pt &quot;나눔고딕 ExtraBold&quot;;</string>
    <widget class="QPushButton" name="stop_bt">
     <property name="geometry">
      <rect>
-      <x>1640</x>
-      <y>1030</y>
+      <x>1660</x>
+      <y>1080</y>
       <width>55</width>
       <height>51</height>
      </rect>
@@ -2729,24 +2605,30 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
      <string>ㅁ</string>
     </property>
    </widget>
-   <widget class="QWidget" name="widget_4" native="true">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>280</y>
-      <width>461</width>
-      <height>231</height>
+      <x>20</x>
+      <y>70</y>
+      <width>381</width>
+      <height>311</height>
      </rect>
     </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 10, 20);</string>
+     <string notr="true">image: url(:/icons/images/1map.png);</string>
     </property>
     <widget class="QListWidget" name="cmr_listWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>141</width>
+       <x>0</x>
+       <y>120</y>
+       <width>111</width>
        <height>181</height>
       </rect>
      </property>
@@ -2758,6 +2640,9 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
        <italic>false</italic>
        <bold>false</bold>
       </font>
+     </property>
+     <property name="toolTip">
+      <string notr="true"/>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(46, 47, 49);
@@ -2843,9 +2728,9 @@ color: rgb(255, 255, 255);
     <widget class="QListWidget" name="cmr_listWidget_3">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>40</y>
-       <width>141</width>
+       <x>130</x>
+       <y>130</y>
+       <width>111</width>
        <height>181</height>
       </rect>
      </property>
@@ -2933,9 +2818,9 @@ color: rgb(255, 255, 255);
     <widget class="QListWidget" name="cmr_listWidget_4">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>40</y>
-       <width>141</width>
+       <x>250</x>
+       <y>130</y>
+       <width>111</width>
        <height>181</height>
       </rect>
      </property>
@@ -3006,80 +2891,121 @@ color: rgb(255, 255, 255);
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>441</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>맑은 고딕</family>
-       <pointsize>12</pointsize>
-       <weight>9</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(91, 91, 91);
-color: rgb(255, 255, 255);
-font: 75 12pt &quot;맑은 고딕&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Camera List&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="widget_11" native="true">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>530</y>
-      <width>451</width>
-      <height>201</height>
+      <x>30</x>
+      <y>20</y>
+      <width>371</width>
+      <height>41</height>
      </rect>
     </property>
-    <widget class="QLabel" name="label_2">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 23, 41);</string>
+    </property>
+    <widget class="QPushButton" name="showReplay">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>461</width>
-       <height>201</height>
+       <x>90</x>
+       <y>6</y>
+       <width>71</width>
+       <height>32</height>
       </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
      </property>
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap>datas/images/1map.jpeg</pixmap>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/AdobeStock_3.png</activeon>
+      </iconset>
      </property>
-     <property name="scaledContents">
-      <bool>true</bool>
+     <property name="iconSize">
+      <size>
+       <width>65</width>
+       <height>41</height>
+      </size>
      </property>
     </widget>
-    <widget class="QListView" name="listView">
+    <widget class="QPushButton" name="showReplay_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>50</y>
-       <width>191</width>
-       <height>111</height>
+       <x>170</x>
+       <y>6</y>
+       <width>71</width>
+       <height>32</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
+     </property>
+     <property name="text">
+      <string>Setting</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showRealtime">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>71</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/AdobeStock_2.png</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>65</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>
+   <zorder>widget_6</zorder>
+   <zorder>splash_Scr</zorder>
+   <zorder>widget_9</zorder>
+   <zorder>functionBt_11</zorder>
+   <zorder>stop_bt</zorder>
+   <zorder>widget_5</zorder>
+   <zorder>widget_8</zorder>
+   <zorder>widget</zorder>
+   <zorder>widget_11</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2167</width>
+     <width>1991</width>
      <height>21</height>
     </rect>
    </property>

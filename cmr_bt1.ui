@@ -1,0 +1,3357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1921</width>
+    <height>1312</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1921</width>
+      <height>1001</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(9, 9, 9);</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>-3</x>
+       <y>0</y>
+       <width>1921</width>
+       <height>991</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>datas/images/ful0.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>60</y>
+       <width>341</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 52, 63);</string>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>341</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>datas/images/1map.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>88</x>
+        <y>20</y>
+        <width>167</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Camera List&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_01">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_02">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string comment="2" extracomment="2">2</string>
+      </property>
+      <property name="icon">
+       <iconset theme="2">
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+      <property name="popupMode">
+       <enum>QToolButton::DelayedPopup</enum>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::NoArrow</enum>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_03">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>60</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_04">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_05">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>60</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_06">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>60</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_07">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_08">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>100</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_09">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>100</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_10">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>100</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_11">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>100</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>11</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_12">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>100</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>12</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_13">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>13</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_14">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>140</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>14</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_15">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>140</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>15</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_16">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>140</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>16</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_17">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>140</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>17</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_18">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>140</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>18</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>19</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_20">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>180</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>20</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_21">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>180</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>21</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_22">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>180</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>22</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_23">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>180</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>23</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_24">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>180</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>24</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_25">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>25</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_26">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>220</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>26</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_27">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>220</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>27</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_28">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>220</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>28</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_29">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>220</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>29</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_30">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>220</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>30</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_31">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>31</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton_32">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>260</y>
+        <width>51</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>32</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/bt1.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="showRealtime">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>71</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/AdobeStock_2.png</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>65</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showReplay_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>10</y>
+       <width>71</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(51, 248, 255);
+color: rgb(255, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Setting</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showReplay">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>71</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(51, 248, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <activeon>datas/images/AdobeStock_3.png</activeon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>65</width>
+       <height>41</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_8" native="true">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>390</y>
+       <width>341</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 54, 66);</string>
+     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>-10</y>
+        <width>341</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>datas/images/1map.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>24</y>
+        <width>167</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Alarm &amp;amp; File List&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="calendarWidget">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>70</y>
+        <width>321</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>69</red>
+            <green>70</green>
+            <blue>73</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>57</red>
+            <green>58</green>
+            <blue>61</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>23</red>
+            <green>23</green>
+            <blue>24</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Mid">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>30</red>
+            <green>31</green>
+            <blue>32</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="BrightText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Shadow">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="AlternateBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>23</red>
+            <green>23</green>
+            <blue>24</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>220</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>69</red>
+            <green>70</green>
+            <blue>73</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>57</red>
+            <green>58</green>
+            <blue>61</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>23</red>
+            <green>23</green>
+            <blue>24</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Mid">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>30</red>
+            <green>31</green>
+            <blue>32</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="BrightText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Shadow">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="AlternateBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>23</red>
+            <green>23</green>
+            <blue>24</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>220</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Button">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>69</red>
+            <green>70</green>
+            <blue>73</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Midlight">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>57</red>
+            <green>58</green>
+            <blue>61</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>23</red>
+            <green>23</green>
+            <blue>24</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Mid">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>30</red>
+            <green>31</green>
+            <blue>32</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="BrightText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>52</green>
+            <blue>63</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Shadow">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="AlternateBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>46</red>
+            <green>47</green>
+            <blue>49</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipBase">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>220</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ToolTipText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::PreventContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="locale">
+       <locale language="English" country="AmericanSamoa"/>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="selectedDate">
+       <date>
+        <year>2021</year>
+        <month>12</month>
+        <day>26</day>
+       </date>
+      </property>
+      <property name="gridVisible">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QCalendarWidget::NoSelection</enum>
+      </property>
+      <property name="verticalHeaderFormat">
+       <enum>QCalendarWidget::NoVerticalHeader</enum>
+      </property>
+      <property name="navigationBarVisible">
+       <bool>true</bool>
+      </property>
+      <property name="dateEditEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="cmr_listWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>238</y>
+        <width>321</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 12, 23);
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Alaram No.1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaram No.10</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="folferAddres">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 12, 23);
+color: rgb(255, 255, 255);
+font: 75 11pt &quot;HY견고딕&quot;;</string>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="folferSelect_Bt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>410</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 10pt &quot;맑은 고딕&quot;;</string>
+      </property>
+      <property name="text">
+       <string>FOLDER SELECT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="folferOpen_Bt">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>410</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 10pt &quot;맑은 고딕&quot;;</string>
+      </property>
+      <property name="text">
+       <string>FOLDER OPEN</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="allStart">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>440</y>
+        <width>41</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 12, 23);
+color: rgb(255, 255, 255);
+font: 75 20pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/play.png</normaloff>datas/images/play.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="allStop">
+      <property name="geometry">
+       <rect>
+        <x>276</x>
+        <y>440</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 12, 23);
+color: rgb(255, 255, 255);
+font: 75 20pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/stop.png</normaloff>datas/images/stop.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>39</x>
+       <y>910</y>
+       <width>221</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>맑은 고딕</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(10, 44, 45);
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;맑은 고딕&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;System Monitoring&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>940</y>
+       <width>1261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 10, 20);</string>
+     </property>
+     <widget class="QPushButton" name="functionBt_06">
+      <property name="geometry">
+       <rect>
+        <x>464</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(147, 147, 147);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/13.png</normaloff>datas/images/13.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_05">
+      <property name="geometry">
+       <rect>
+        <x>373</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(180, 180, 180);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/10.png</normaloff>datas/images/10.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_04">
+      <property name="geometry">
+       <rect>
+        <x>283</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(180, 180, 180);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/7_1.png</normaloff>datas/images/7_1.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_07">
+      <property name="geometry">
+       <rect>
+        <x>554</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(147, 147, 147);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/Ado.jpeg</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_08">
+      <property name="geometry">
+       <rect>
+        <x>645</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(147, 147, 147);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/Ado.jpeg</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_10">
+      <property name="geometry">
+       <rect>
+        <x>826</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/icons/images/Ado.jpeg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/Ado.jpeg</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_09">
+      <property name="geometry">
+       <rect>
+        <x>735</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(147, 147, 147);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/Ado.jpeg</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_02">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(180, 180, 180);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/6.png</normaloff>datas/images/6.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_01">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold Condensed</family>
+        <pointsize>24</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>datas/images/32.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="functionBt_03">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>0</y>
+        <width>55</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>맑은 고딕</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(180, 180, 180);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>datas/images/7.png</normaloff>datas/images/7.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>48</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="timeedit">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>0</y>
+        <width>341</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+border: 3px solid rgb(100, 255, 100);
+font: 75 25pt &quot;맑은 고딕&quot;;</string>
+      </property>
+      <property name="text">
+       <string>0000-00-00 00:00:00</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>60</y>
+       <width>1441</width>
+       <height>801</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 47, 57);</string>
+     </property>
+     <widget class="QWidget" name="ca_widget_01" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>240</width>
+        <height>138</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QLabel" name="ca_label_01">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>240</width>
+         <height>138</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>datas/images/Adobe.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>241</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeon>datas/images/Adobe.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>240</width>
+         <height>138</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ca_widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>0</y>
+        <width>240</width>
+        <height>138</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QLabel" name="ca_label_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>240</width>
+         <height>138</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>datas/images/Adobe.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>241</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <activeon>datas/images/Adobe.png</activeon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>240</width>
+         <height>138</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ca_widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>240</width>
+        <height>138</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);
+image: url(:/icons/images/Adobe.png);</string>
+      </property>
+      <widget class="QToolButton" name="toolButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>241</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ca_widget_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>140</y>
+        <width>240</width>
+        <height>138</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);
+image: url(:/icons/images/Adobe.png);</string>
+      </property>
+      <widget class="QToolButton" name="toolButton_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>241</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="splash_Scr">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>1150</y>
+      <width>1141</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(56, 56, 56);
+font: 75 40pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt; font-weight:600;&quot;&gt;Splash Screen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="functionBt_11">
+    <property name="geometry">
+     <rect>
+      <x>1540</x>
+      <y>1180</y>
+      <width>55</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔고딕 ExtraBold</family>
+      <pointsize>25</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(147, 147, 147);
+font: 75 25pt &quot;나눔고딕 ExtraBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stop_bt">
+    <property name="geometry">
+     <rect>
+      <x>1610</x>
+      <y>1180</y>
+      <width>55</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔고딕 ExtraBold</family>
+      <pointsize>30</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(147, 147, 147);
+font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ㅁ</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_9" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>1170</y>
+      <width>311</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
+    </property>
+    <widget class="QLabel" name="sens_label_7">
+     <property name="geometry">
+      <rect>
+       <x>81</x>
+       <y>494</y>
+       <width>65</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Sensitive&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ip_lineEdit_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>376</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="foco_label_7">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>522</y>
+       <width>43</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Focos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="camera_lineEdit_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>403</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="foco_horizontalSlider_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>522</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="loca_label_7">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>430</y>
+       <width>63</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Location&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="sens_horizontalSlider_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>494</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="memo_textEdit_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>550</y>
+       <width>151</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ip_label_7">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>376</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Ip&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loca_lineEdit_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>430</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="memo_label_7">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>550</y>
+       <width>48</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Memo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="zoom_label_7">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>466</y>
+       <width>43</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Zoom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="zoom_horizontalSlider_7">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>466</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="iconBt_7">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>10</y>
+       <width>131</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;Agency FB&quot;;
+font: 16pt &quot;Agency FB&quot;;
+image: url(:/icons/images/settingTransPb.png)
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../.designer/backup/datas/images/settingTransPb.png</normaloff>../../../.designer/backup/datas/images/settingTransPb.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="camera__label_7">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>403</y>
+       <width>55</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Camera&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1921</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="datas/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

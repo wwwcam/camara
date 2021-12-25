@@ -1,13 +1,13 @@
 <RCC>
   <qresource prefix="icons">
+    <file>images/full00.png</file>
+    <file>images/full0.png</file>
+    <file>images/1map.png</file>
     <file>images/Ado.jpeg</file>
     <file>images/AdobeStock_3.jpeg</file>
-    <file>images/Adobe.jpeg</file>
-    <file>images/AdobeStock_2.jpeg</file>
     <file>images/AdobeStock_1.jpeg</file>
-    <file>images/AdobeStock_bg.jpeg</file>
     <file>images/6.png</file>
-    <file>images/map.jpeg</file>
+    <file>images/Adobe.png</file>
     <file>images/7.png</file>
     <file>images/7_1.png</file>
     <file>images/10.png</file>
