@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1921</width>
-    <height>1312</height>
+    <height>1885</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -138,7 +138,7 @@
     <widget class="QPushButton" name="showReplay_2">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>200</x>
        <y>10</y>
        <width>71</width>
        <height>32</height>
@@ -155,7 +155,7 @@ color: rgb(255, 0, 0);</string>
     <widget class="QPushButton" name="showReplay">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>110</x>
        <y>10</y>
        <width>71</width>
        <height>32</height>
@@ -888,6 +888,9 @@ color: rgb(255, 255, 255);
         <height>31</height>
        </rect>
       </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
       <property name="acceptDrops">
        <bool>true</bool>
       </property>
@@ -898,9 +901,6 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
       </property>
       <property name="dragEnabled">
        <bool>true</bool>
-      </property>
-      <property name="tabletTracking" stdset="0">
-       <bool>false</bool>
       </property>
      </widget>
      <widget class="QPushButton" name="folferSelect_Bt">
@@ -2320,76 +2320,6 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="ca_widget_29" native="true">
-      <property name="geometry">
-       <rect>
-        <x>485</x>
-        <y>690</y>
-        <width>240</width>
-        <height>138</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
-      </property>
-      <widget class="QLabel" name="ca_label_29">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>240</width>
-         <height>138</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>datas/images/Adobe.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="ca_widget_30" native="true">
-      <property name="geometry">
-       <rect>
-        <x>725</x>
-        <y>690</y>
-        <width>240</width>
-        <height>138</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
-      </property>
-      <widget class="QLabel" name="ca_label_30">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>240</width>
-         <height>138</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>datas/images/Adobe.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
      <widget class="QWidget" name="ca_widget_26" native="true">
       <property name="geometry">
        <rect>
@@ -2498,7 +2428,7 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
      <widget class="QWidget" name="ca_widget_32" native="true">
       <property name="geometry">
        <rect>
-        <x>245</x>
+        <x>725</x>
         <y>690</y>
         <width>240</width>
         <height>138</height>
@@ -2533,7 +2463,7 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
      <widget class="QWidget" name="ca_widget_31" native="true">
       <property name="geometry">
        <rect>
-        <x>5</x>
+        <x>485</x>
         <y>690</y>
         <width>240</width>
         <height>138</height>
@@ -2597,13 +2527,190 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
        <string/>
       </property>
      </widget>
+     <widget class="QWidget" name="ca_widget_30" native="true">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>690</y>
+        <width>240</width>
+        <height>138</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QLabel" name="ca_label_30">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>240</width>
+         <height>138</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>datas/images/Adobe.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="ca_widget_29" native="true">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>690</y>
+        <width>240</width>
+        <height>138</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QLabel" name="ca_label_29">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>240</width>
+         <height>138</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>datas/images/Adobe.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="replayWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>20</y>
+       <width>1461</width>
+       <height>861</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/images/AdobeStock_bg.jpeg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 10, 20);</string>
+     </property>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>1431</width>
+        <height>791</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(121, 121, 121);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="pixmap">
+       <pixmap>datas/images/lon.jpeg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>501</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="loadReplay_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>load video</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="startReplay_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(51, 248, 255);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <activeon>datas/images/AdobeStock_3.png</activeon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stopReplay_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>stop</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="userLVDS_2">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>LVDS</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="splash_Scr">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>1150</y>
+      <x>30</x>
+      <y>1040</y>
       <width>1141</width>
       <height>671</height>
      </rect>
@@ -2675,8 +2782,8 @@ font: 75 30pt &quot;나눔고딕 ExtraBold&quot;;</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>1210</x>
-      <y>1170</y>
+      <x>1200</x>
+      <y>1050</y>
       <width>311</width>
       <height>631</height>
      </rect>
