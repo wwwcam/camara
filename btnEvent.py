@@ -10,6 +10,46 @@ from PySide2.QtGui import *
 from PySide2.QtCore import * 
 from multiprocessing import Process , Queue
 import multiprocessing
+
+
+
+class DragBtn(QPushButton):
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if not (event.buttons() & Qt.LeftButton):
+            return
+        if (event.pos() - self.drag_start_position).manhattanLength() < QApplication.startDragDistance():
+            return
+        drag = QDrag(self)
+        mimedata = QMimeData()
+        mimedata.setText(self.text())
+        drag.setMimeData(mimedata)
+        pixmap = QPixmap(self.size())
+        painter = QPainter(pixmap)
+        painter.drawPixmap(self.rect(), self.grab())
+        painter.end()
+        drag.setPixmap(pixmap)
+        drag.setHotSpot(event.pos())
+        drag.exec_(Qt.CopyAction | Qt.MoveAction)
+
+class DropBtn(QPushButton):
+    def __init__(self, *args, **kwargs):
+        QPushButton.__init__(self, *args, **kwargs)
+        self.setAcceptDrops(True)
+
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasText():
+            event.acceptProposedAction()
+
+    def dropEvent(self, event):
+        pos = event.pos()
+        text = event.mimeData().text()
+        self.setText(text)
+        event.acceptProposedAction()
+        
 class btns():
     def __init__(self , ui):
         self.ui = ui
