@@ -74,24 +74,17 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.btnClickCnt = 0
         self.currentCam = None
         self.currenListtLayer = [i for i in range(32)]
-
         self.currentLayer =0 
         self.pannel = Pannel(self.settingLayer , "./camera_setting.ui" , self)
-
-
         vplayer.__init__(self )#vplayer 함수 로딩
         self.setFileName = "./datas/settings.pkl"
-        
         btns.__init__(self , self.ui)  
         saveSetting.__init__(self)
-        
         self.settings = {}
         self.currentLayer = 0
         self.loadSet()
         #self.ui.cmr_listWidget_5.clear()
-
         self.ui.folferAddres.setText(self.settings['savepath'])
-        
 
         ################## 스플래시 스크린에 입체 그림자 적용, 잘 안됨##################
         #self.pannel.ui.widget_9.setStyleSheet(u"background-color: rgba(0, 0, 0, 0);")
@@ -126,7 +119,6 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.onesectimer.timeout.connect(self.onesec)## 스플래시 스크린 숨기기 함수를 따로 만들지 않음
         self.onesectimer.start()
 
-
         #self.setlistcolors()
         self.showCameras = [self.cameras[cam] for cam in self.cameras]
         self.ui.folferSelect_Bt.clicked.connect(self.selectFolder)
@@ -137,14 +129,9 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.ui.folferOpen_Bt.clicked.connect(self.openSaveFolder)
         #self.ui.cmr_listWidget.currentItemChanged.connect(self.changelistColor)
         self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))
-
         self.ui.widget_3.show()
-        #self.ui.replayWidget.hide()
-
+        self.ui.replayWidget.hide()
         self.ui.closeEvent = self.closeEvent
-
-
-
 
         ### 비디오 플레이를 위한 타이머 추가
         #self.vp1 = QTimer(self.ui)
@@ -155,10 +142,10 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
     def openSaveFolder(self):
         os.startfile(os.path.abspath(self.savePath))
 
-
     def Realtime(self):
         self.ui.widget_5.show()
         self.ui.replayWidget.hide()
+
     def Replay(self):
         self.ui.widget_5.hide()
         self.ui.replayWidget.show()
@@ -166,6 +153,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
     def onesec(self):
         dt = datetime.datetime.now().isoformat()[:19].replace("T" , " ")
         self.ui.timeedit.setText(dt)
+
     def setlistcolors(self):
         return
         for i in range(11):
@@ -174,7 +162,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
             self.ui.cmr_listWidget_3.item(i).setBackgroundColor(QColor(0,0,0,100))
         for i in range(10):
             self.ui.cmr_listWidget_4.item(i).setBackgroundColor(QColor(0,0,0,100))
-                    
+
     def changelistColor(self):
         return
         colors = []
@@ -204,7 +192,6 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
                 else:
                     self.ui.cmr_listWidget.currentItem().setBackgroundColor(QColor(0,255,0,100))
 
-
     def selectFolder(self):
         self.savePath = self.settings['savepath'] = self.savePath = QtWidgets.QFileDialog.getExistingDirectory(self.ui, '저장 폴더를 선택해 주세요' , self.savePath)
         self.ui.folferAddres.setText(self.settings['savepath'])
@@ -228,19 +215,14 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
                 else:
                     mapdir = "c:/"
                 self.mapPath = self.settings['mapPath']  = QtWidgets.QFileDialog.getOpenFileName(self.ui, '지도파일을 선택해주세요. 크기는 440X150입니다' , mapdir , "JPEG (*.jpg *.jpeg);;PNG (*.png)")[0]
-                
-                self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))
-                  
+                self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))                  
                 self.saveSet()
         else:
             self.btnClickCnt = 0
         self.btnClickTime = time.time()
 
-
-
     def tout2(self):
         pass
-
 
     def videoLoop(self):
         for cam in self.Qs:
@@ -263,17 +245,13 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
                 btn.setIcon(QPixmap.fromImage(image))   
                 btn.setText('')
                 if btn.iconSize() != btn.size():
-                    btn.setIconSize(btn.size())
-            
+                    btn.setIconSize(btn.size())            
 
     def setupUi(self):
         pass
 
     def closeEvent(self,e):
         print("ok")
-            
-            
-    
 
 if __name__ == '__main__':
     import multiprocessing

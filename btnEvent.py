@@ -54,135 +54,359 @@ class btns():
     def __init__(self , ui):
         self.ui = ui
 
-        self.ui.cmraBt_01 = DropBtn(self.ui.ca_widget_01)
-        self.ui.cmraBt_01.resize(224,122)
-        self.ui.cmraBt_01.move(9,8)
-        self.ui.cmraBt_01.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_02 = DropBtn(self.ui.ca_widget_02)
-        self.ui.cmraBt_02.resize(224,122)
-        self.ui.cmraBt_02.move(9,8)
-        self.ui.cmraBt_02.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_03 = DropBtn(self.ui.ca_widget_03)
-        self.ui.cmraBt_03.resize(224,122)
-        self.ui.cmraBt_03.move(9,8)
-        self.ui.cmraBt_03.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_04 = DropBtn(self.ui.ca_widget_04)
-        self.ui.cmraBt_04.resize(224,122)
-        self.ui.cmraBt_04.move(9,8)
-        self.ui.cmraBt_04.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_05 = DropBtn(self.ui.ca_widget_05)
-        self.ui.cmraBt_05.resize(224,122)
-        self.ui.cmraBt_05.move(9,8)
-        self.ui.cmraBt_05.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_06 = DropBtn(self.ui.ca_widget_06)
-        self.ui.cmraBt_06.resize(224,122)
-        self.ui.cmraBt_06.move(9,8)
-        self.ui.cmraBt_06.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_07 = DropBtn(self.ui.ca_widget_07)
-        self.ui.cmraBt_07.resize(224,122)
-        self.ui.cmraBt_07.move(9,8)
-        self.ui.cmraBt_07.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_08 = DropBtn(self.ui.ca_widget_08)
-        self.ui.cmraBt_08.resize(224,122)
-        self.ui.cmraBt_08.move(9,8)
-        self.ui.cmraBt_08.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_09 = DropBtn(self.ui.ca_widget_09)
-        self.ui.cmraBt_09.resize(224,122)
-        self.ui.cmraBt_09.move(9,8)
-        self.ui.cmraBt_09.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_10 = DropBtn(self.ui.ca_widget_10)
-        self.ui.cmraBt_10.resize(224,122)
-        self.ui.cmraBt_10.move(9,8)
-        self.ui.cmraBt_10.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_11 = DropBtn(self.ui.ca_widget_11)
-        self.ui.cmraBt_11.resize(224,122)
-        self.ui.cmraBt_11.move(9,8)
-        self.ui.cmraBt_11.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_12 = DropBtn(self.ui.ca_widget_12)
-        self.ui.cmraBt_12.resize(224,122)
-        self.ui.cmraBt_12.move(9,8)
-        self.ui.cmraBt_12.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_13 = DropBtn(self.ui.ca_widget_13)
-        self.ui.cmraBt_13.resize(224,122)
-        self.ui.cmraBt_13.move(9,8)
-        self.ui.cmraBt_13.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_14 = DropBtn(self.ui.ca_widget_14)
-        self.ui.cmraBt_14.resize(224,122)
-        self.ui.cmraBt_14.move(9,8)
-        self.ui.cmraBt_14.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_15 = DropBtn(self.ui.ca_widget_15)
-        self.ui.cmraBt_15.resize(224,122)
-        self.ui.cmraBt_15.move(9,8)
-        self.ui.cmraBt_15.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_16 = DropBtn(self.ui.ca_widget_16)
-        self.ui.cmraBt_16.resize(224,122)
-        self.ui.cmraBt_16.move(9,8)
-        self.ui.cmraBt_16.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_17 = DropBtn(self.ui.ca_widget_17)
-        self.ui.cmraBt_17.resize(224,122)
-        self.ui.cmraBt_17.move(9,8)
-        self.ui.cmraBt_17.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_18 = DropBtn(self.ui.ca_widget_18)
-        self.ui.cmraBt_18.resize(224,122)
-        self.ui.cmraBt_18.move(9,8)
-        self.ui.cmraBt_18.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_19 = DropBtn(self.ui.ca_widget_19)
-        self.ui.cmraBt_19.resize(224,122)
-        self.ui.cmraBt_19.move(9,8)
-        self.ui.cmraBt_19.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_20 = DropBtn(self.ui.ca_widget_20)
-        self.ui.cmraBt_20.resize(224,122)
-        self.ui.cmraBt_20.move(9,8)
-        self.ui.cmraBt_20.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_21 = DropBtn(self.ui.ca_widget_21)
-        self.ui.cmraBt_21.resize(224,122)
-        self.ui.cmraBt_21.move(9,8)
-        self.ui.cmraBt_21.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_22 = DropBtn(self.ui.ca_widget_22)
-        self.ui.cmraBt_22.resize(224,122)
-        self.ui.cmraBt_22.move(9,8)
-        self.ui.cmraBt_22.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_23 = DropBtn(self.ui.ca_widget_23)
-        self.ui.cmraBt_23.resize(224,122)
-        self.ui.cmraBt_23.move(9,8)
-        self.ui.cmraBt_23.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_24 = DropBtn(self.ui.ca_widget_24)
-        self.ui.cmraBt_24.resize(224,122)
-        self.ui.cmraBt_24.move(9,8)
-        self.ui.cmraBt_24.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_25 = DropBtn(self.ui.ca_widget_25)
-        self.ui.cmraBt_25.resize(224,122)
-        self.ui.cmraBt_25.move(9,8)
-        self.ui.cmraBt_25.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_26 = DropBtn(self.ui.ca_widget_26)
-        self.ui.cmraBt_26.resize(224,122)
-        self.ui.cmraBt_26.move(9,8)
-        self.ui.cmraBt_26.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_27 = DropBtn(self.ui.ca_widget_27)
-        self.ui.cmraBt_27.resize(224,122)
-        self.ui.cmraBt_27.move(9,8)
-        self.ui.cmraBt_27.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_28 = DropBtn(self.ui.ca_widget_28)
-        self.ui.cmraBt_28.resize(224,122)
-        self.ui.cmraBt_28.move(9,8)
-        self.ui.cmraBt_28.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_29 = DropBtn(self.ui.ca_widget_29)
-        self.ui.cmraBt_29.resize(224,122)
-        self.ui.cmraBt_29.move(9,8)
-        self.ui.cmraBt_29.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_30 = DropBtn(self.ui.ca_widget_30)
-        self.ui.cmraBt_30.resize(224,122)
-        self.ui.cmraBt_30.move(9,8)
-        self.ui.cmraBt_30.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_31 = DropBtn(self.ui.ca_widget_31)
-        self.ui.cmraBt_31.resize(224,122)
-        self.ui.cmraBt_31.move(9,8)
-        self.ui.cmraBt_31.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
-        self.ui.cmraBt_32 = DropBtn(self.ui.ca_widget_32)
-        self.ui.cmraBt_32.resize(224,122)
-        self.ui.cmraBt_32.move(9,8)
-        self.ui.cmraBt_32.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_01 = DropBtn(self.ui.ca_widget_01)
+        self.ui.camVideo_01.resize(224,122)
+        self.ui.camVideo_01.move(9,8)
+        self.ui.camVideo_01.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_02 = DropBtn(self.ui.ca_widget_02)
+        self.ui.camVideo_02.resize(224,122)
+        self.ui.camVideo_02.move(9,8)
+        self.ui.camVideo_02.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_03 = DropBtn(self.ui.ca_widget_03)
+        self.ui.camVideo_03.resize(224,122)
+        self.ui.camVideo_03.move(9,8)
+        self.ui.camVideo_03.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_04 = DropBtn(self.ui.ca_widget_04)
+        self.ui.camVideo_04.resize(224,122)
+        self.ui.camVideo_04.move(9,8)
+        self.ui.camVideo_04.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_05 = DropBtn(self.ui.ca_widget_05)
+        self.ui.camVideo_05.resize(224,122)
+        self.ui.camVideo_05.move(9,8)
+        self.ui.camVideo_05.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_06 = DropBtn(self.ui.ca_widget_06)
+        self.ui.camVideo_06.resize(224,122)
+        self.ui.camVideo_06.move(9,8)
+        self.ui.camVideo_06.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_07 = DropBtn(self.ui.ca_widget_07)
+        self.ui.camVideo_07.resize(224,122)
+        self.ui.camVideo_07.move(9,8)
+        self.ui.camVideo_07.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_08 = DropBtn(self.ui.ca_widget_08)
+        self.ui.camVideo_08.resize(224,122)
+        self.ui.camVideo_08.move(9,8)
+        self.ui.camVideo_08.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_09 = DropBtn(self.ui.ca_widget_09)
+        self.ui.camVideo_09.resize(224,122)
+        self.ui.camVideo_09.move(9,8)
+        self.ui.camVideo_09.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_10 = DropBtn(self.ui.ca_widget_10)
+        self.ui.camVideo_10.resize(224,122)
+        self.ui.camVideo_10.move(9,8)
+        self.ui.camVideo_10.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_11 = DropBtn(self.ui.ca_widget_11)
+        self.ui.camVideo_11.resize(224,122)
+        self.ui.camVideo_11.move(9,8)
+        self.ui.camVideo_11.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_12 = DropBtn(self.ui.ca_widget_12)
+        self.ui.camVideo_12.resize(224,122)
+        self.ui.camVideo_12.move(9,8)
+        self.ui.camVideo_12.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_13 = DropBtn(self.ui.ca_widget_13)
+        self.ui.camVideo_13.resize(224,122)
+        self.ui.camVideo_13.move(9,8)
+        self.ui.camVideo_13.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_14 = DropBtn(self.ui.ca_widget_14)
+        self.ui.camVideo_14.resize(224,122)
+        self.ui.camVideo_14.move(9,8)
+        self.ui.camVideo_14.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_15 = DropBtn(self.ui.ca_widget_15)
+        self.ui.camVideo_15.resize(224,122)
+        self.ui.camVideo_15.move(9,8)
+        self.ui.camVideo_15.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_16 = DropBtn(self.ui.ca_widget_16)
+        self.ui.camVideo_16.resize(224,122)
+        self.ui.camVideo_16.move(9,8)
+        self.ui.camVideo_16.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_17 = DropBtn(self.ui.ca_widget_17)
+        self.ui.camVideo_17.resize(224,122)
+        self.ui.camVideo_17.move(9,8)
+        self.ui.camVideo_17.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_18 = DropBtn(self.ui.ca_widget_18)
+        self.ui.camVideo_18.resize(224,122)
+        self.ui.camVideo_18.move(9,8)
+        self.ui.camVideo_18.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_19 = DropBtn(self.ui.ca_widget_19)
+        self.ui.camVideo_19.resize(224,122)
+        self.ui.camVideo_19.move(9,8)
+        self.ui.camVideo_19.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_20 = DropBtn(self.ui.ca_widget_20)
+        self.ui.camVideo_20.resize(224,122)
+        self.ui.camVideo_20.move(9,8)
+        self.ui.camVideo_20.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_21 = DropBtn(self.ui.ca_widget_21)
+        self.ui.camVideo_21.resize(224,122)
+        self.ui.camVideo_21.move(9,8)
+        self.ui.camVideo_21.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_22 = DropBtn(self.ui.ca_widget_22)
+        self.ui.camVideo_22.resize(224,122)
+        self.ui.camVideo_22.move(9,8)
+        self.ui.camVideo_22.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_23 = DropBtn(self.ui.ca_widget_23)
+        self.ui.camVideo_23.resize(224,122)
+        self.ui.camVideo_23.move(9,8)
+        self.ui.camVideo_23.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_24 = DropBtn(self.ui.ca_widget_24)
+        self.ui.camVideo_24.resize(224,122)
+        self.ui.camVideo_24.move(9,8)
+        self.ui.camVideo_24.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_25 = DropBtn(self.ui.ca_widget_25)
+        self.ui.camVideo_25.resize(224,122)
+        self.ui.camVideo_25.move(9,8)
+        self.ui.camVideo_25.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_26 = DropBtn(self.ui.ca_widget_26)
+        self.ui.camVideo_26.resize(224,122)
+        self.ui.camVideo_26.move(9,8)
+        self.ui.camVideo_26.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_27 = DropBtn(self.ui.ca_widget_27)
+        self.ui.camVideo_27.resize(224,122)
+        self.ui.camVideo_27.move(9,8)
+        self.ui.camVideo_27.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_28 = DropBtn(self.ui.ca_widget_28)
+        self.ui.camVideo_28.resize(224,122)
+        self.ui.camVideo_28.move(9,8)
+        self.ui.camVideo_28.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_29 = DropBtn(self.ui.ca_widget_29)
+        self.ui.camVideo_29.resize(224,122)
+        self.ui.camVideo_29.move(9,8)
+        self.ui.camVideo_29.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_30 = DropBtn(self.ui.ca_widget_30)
+        self.ui.camVideo_30.resize(224,122)
+        self.ui.camVideo_30.move(9,8)
+        self.ui.camVideo_30.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_31 = DropBtn(self.ui.ca_widget_31)
+        self.ui.camVideo_31.resize(224,122)
+        self.ui.camVideo_31.move(9,8)
+        self.ui.camVideo_31.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+        self.ui.camVideo_32 = DropBtn(self.ui.ca_widget_32)
+        self.ui.camVideo_32.resize(224,122)
+        self.ui.camVideo_32.move(9,8)
+        self.ui.camVideo_32.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
 
+        self.ui.cmraBt_01 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_01.resize(51,30)
+        self.ui.cmraBt_01.move(int(20+50*0), int(60 + 40*0) )
+        self.ui.cmraBt_01.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_01.setIconSize(QSize(28,28))
+        self.ui.cmraBt_01.setText("01")
+        self.ui.cmraBt_01.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_02 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_02.resize(51,30)
+        self.ui.cmraBt_02.move(int(20+50*1), int(60 + 40*0) )
+        self.ui.cmraBt_02.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_02.setIconSize(QSize(28,28))
+        self.ui.cmraBt_02.setText("02")
+        self.ui.cmraBt_02.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_03 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_03.resize(51,30)
+        self.ui.cmraBt_03.move(int(20+50*2), int(60 + 40*0) )
+        self.ui.cmraBt_03.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_03.setIconSize(QSize(28,28))
+        self.ui.cmraBt_03.setText("03")
+        self.ui.cmraBt_03.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_04 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_04.resize(51,30)
+        self.ui.cmraBt_04.move(int(20+50*3), int(60 + 40*0) )
+        self.ui.cmraBt_04.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_04.setIconSize(QSize(28,28))
+        self.ui.cmraBt_04.setText("04")
+        self.ui.cmraBt_04.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_05 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_05.resize(51,30)
+        self.ui.cmraBt_05.move(int(20+50*4), int(60 + 40*0) )
+        self.ui.cmraBt_05.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_05.setIconSize(QSize(28,28))
+        self.ui.cmraBt_05.setText("05")
+        self.ui.cmraBt_05.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_06 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_06.resize(51,30)
+        self.ui.cmraBt_06.move(int(20+50*5), int(60 + 40*0) )
+        self.ui.cmraBt_06.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_06.setIconSize(QSize(28,28))
+        self.ui.cmraBt_06.setText("06")
+        self.ui.cmraBt_06.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_07 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_07.resize(51,30)
+        self.ui.cmraBt_07.move(int(20+50*0), int(60 + 40*1) )
+        self.ui.cmraBt_07.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_07.setIconSize(QSize(28,28))
+        self.ui.cmraBt_07.setText("07")
+        self.ui.cmraBt_07.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_08 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_08.resize(51,30)
+        self.ui.cmraBt_08.move(int(20+50*1), int(60 + 40*1) )
+        self.ui.cmraBt_08.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_08.setIconSize(QSize(28,28))
+        self.ui.cmraBt_08.setText("08")
+        self.ui.cmraBt_08.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_09 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_09.resize(51,30)
+        self.ui.cmraBt_09.move(int(20+50*2), int(60 + 40*1) )
+        self.ui.cmraBt_09.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_09.setIconSize(QSize(28,28))
+        self.ui.cmraBt_09.setText("09")
+        self.ui.cmraBt_09.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_10 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_10.resize(51,30)
+        self.ui.cmraBt_10.move(int(20+50*3), int(60 + 40*1) )
+        self.ui.cmraBt_10.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_10.setIconSize(QSize(28,28))
+        self.ui.cmraBt_10.setText("10")
+        self.ui.cmraBt_10.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_11 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_11.resize(51,30)
+        self.ui.cmraBt_11.move(int(20+50*4), int(60 + 40*1) )
+        self.ui.cmraBt_11.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_11.setIconSize(QSize(28,28))
+        self.ui.cmraBt_11.setText("11")
+        self.ui.cmraBt_11.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_12 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_12.resize(51,30)
+        self.ui.cmraBt_12.move(int(20+50*5), int(60 + 40*1) )
+        self.ui.cmraBt_12.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_12.setIconSize(QSize(28,28))
+        self.ui.cmraBt_12.setText("12")
+        self.ui.cmraBt_12.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_13 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_13.resize(51,30)
+        self.ui.cmraBt_13.move(int(20+50*0), int(60 + 40*2) )
+        self.ui.cmraBt_13.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_13.setIconSize(QSize(28,28))
+        self.ui.cmraBt_13.setText("13")
+        self.ui.cmraBt_13.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_14 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_14.resize(51,30)
+        self.ui.cmraBt_14.move(int(20+50*1), int(60 + 40*2) )
+        self.ui.cmraBt_14.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_14.setIconSize(QSize(28,28))
+        self.ui.cmraBt_14.setText("14")
+        self.ui.cmraBt_14.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_15 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_15.resize(51,30)
+        self.ui.cmraBt_15.move(int(20+50*2), int(60 + 40*2) )
+        self.ui.cmraBt_15.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_15.setIconSize(QSize(28,28))
+        self.ui.cmraBt_15.setText("15")
+        self.ui.cmraBt_15.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_16 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_16.resize(51,30)
+        self.ui.cmraBt_16.move(int(20+50*3), int(60 + 40*2) )
+        self.ui.cmraBt_16.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_16.setIconSize(QSize(28,28))
+        self.ui.cmraBt_16.setText("16")
+        self.ui.cmraBt_16.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_17 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_17.resize(51,30)
+        self.ui.cmraBt_17.move(int(20+50*4), int(60 + 40*2) )
+        self.ui.cmraBt_17.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_17.setIconSize(QSize(28,28))
+        self.ui.cmraBt_17.setText("17")
+        self.ui.cmraBt_17.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_18 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_18.resize(51,30)
+        self.ui.cmraBt_18.move(int(20+50*5), int(60 + 40*2) )
+        self.ui.cmraBt_18.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_18.setIconSize(QSize(28,28))
+        self.ui.cmraBt_18.setText("18")
+        self.ui.cmraBt_18.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_19 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_19.resize(51,30)
+        self.ui.cmraBt_19.move(int(20+50*0), int(60 + 40*3) )
+        self.ui.cmraBt_19.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_19.setIconSize(QSize(28,28))
+        self.ui.cmraBt_19.setText("19")
+        self.ui.cmraBt_19.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_20 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_20.resize(51,30)
+        self.ui.cmraBt_20.move(int(20+50*1), int(60 + 40*3) )
+        self.ui.cmraBt_20.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_20.setIconSize(QSize(28,28))
+        self.ui.cmraBt_20.setText("20")
+        self.ui.cmraBt_20.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_21 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_21.resize(51,30)
+        self.ui.cmraBt_21.move(int(20+50*2), int(60 + 40*3) )
+        self.ui.cmraBt_21.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_21.setIconSize(QSize(28,28))
+        self.ui.cmraBt_21.setText("21")
+        self.ui.cmraBt_21.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_22 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_22.resize(51,30)
+        self.ui.cmraBt_22.move(int(20+50*3), int(60 + 40*3) )
+        self.ui.cmraBt_22.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_22.setIconSize(QSize(28,28))
+        self.ui.cmraBt_22.setText("22")
+        self.ui.cmraBt_22.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_23 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_23.resize(51,30)
+        self.ui.cmraBt_23.move(int(20+50*4), int(60 + 40*3) )
+        self.ui.cmraBt_23.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_23.setIconSize(QSize(28,28))
+        self.ui.cmraBt_23.setText("23")
+        self.ui.cmraBt_23.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_24 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_24.resize(51,30)
+        self.ui.cmraBt_24.move(int(20+50*5), int(60 + 40*3) )
+        self.ui.cmraBt_24.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_24.setIconSize(QSize(28,28))
+        self.ui.cmraBt_24.setText("24")
+        self.ui.cmraBt_24.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_25 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_25.resize(51,30)
+        self.ui.cmraBt_25.move(int(20+50*0), int(60 + 40*4) )
+        self.ui.cmraBt_25.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_25.setIconSize(QSize(28,28))
+        self.ui.cmraBt_25.setText("25")
+        self.ui.cmraBt_25.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_26 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_26.resize(51,30)
+        self.ui.cmraBt_26.move(int(20+50*1), int(60 + 40*4) )
+        self.ui.cmraBt_26.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_26.setIconSize(QSize(28,28))
+        self.ui.cmraBt_26.setText("26")
+        self.ui.cmraBt_26.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_27 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_27.resize(51,30)
+        self.ui.cmraBt_27.move(int(20+50*2), int(60 + 40*4) )
+        self.ui.cmraBt_27.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_27.setIconSize(QSize(28,28))
+        self.ui.cmraBt_27.setText("27")
+        self.ui.cmraBt_27.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_28 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_28.resize(51,30)
+        self.ui.cmraBt_28.move(int(20+50*3), int(60 + 40*4) )
+        self.ui.cmraBt_28.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_28.setIconSize(QSize(28,28))
+        self.ui.cmraBt_28.setText("28")
+        self.ui.cmraBt_28.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_29 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_29.resize(51,30)
+        self.ui.cmraBt_29.move(int(20+50*4), int(60 + 40*4) )
+        self.ui.cmraBt_29.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_29.setIconSize(QSize(28,28))
+        self.ui.cmraBt_29.setText("29")
+        self.ui.cmraBt_29.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_30 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_30.resize(51,30)
+        self.ui.cmraBt_30.move(int(20+50*5), int(60 + 40*4) )
+        self.ui.cmraBt_30.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_30.setIconSize(QSize(28,28))
+        self.ui.cmraBt_30.setText("30")
+        self.ui.cmraBt_30.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_31 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_31.resize(51,30)
+        self.ui.cmraBt_31.move(int(20+50*0), int(60 + 40*5) )
+        self.ui.cmraBt_31.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_31.setIconSize(QSize(28,28))
+        self.ui.cmraBt_31.setText("31")
+        self.ui.cmraBt_31.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_32 = DragBtn(self.ui.widget_)
+        self.ui.cmraBt_32.resize(51,30)
+        self.ui.cmraBt_32.move(int(20+50*1), int(60 + 40*5) )
+        self.ui.cmraBt_32.setIcon(QPixmap(u"datas/images/bt1.png"))
+        self.ui.cmraBt_32.setIconSize(QSize(28,28))
+        self.ui.cmraBt_32.setText("32")
+        self.ui.cmraBt_32.setStyleSheet("color: rgb(255, 255, 255);")
         
         tmp = {
         "cam01":{"ip":'' , "name":'' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''},
@@ -227,47 +451,57 @@ class btns():
         self.ui.functionBt_05.clicked.connect(self.showLayer4)
         self.ui.functionBt_06.clicked.connect(self.showLayer5)
 
-        self.ui.cmraBt_01.clicked.connect(self.fullscreen01)
-        self.ui.cmraBt_02.clicked.connect(self.fullscreen02)
-        self.ui.cmraBt_03.clicked.connect(self.fullscreen03)
-        self.ui.cmraBt_04.clicked.connect(self.fullscreen04)
-        self.ui.cmraBt_05.clicked.connect(self.fullscreen05)
-        self.ui.cmraBt_06.clicked.connect(self.fullscreen06)
-        self.ui.cmraBt_07.clicked.connect(self.fullscreen07)
-        self.ui.cmraBt_08.clicked.connect(self.fullscreen08)
-        self.ui.cmraBt_09.clicked.connect(self.fullscreen09)
-        self.ui.cmraBt_10.clicked.connect(self.fullscreen10)
-        self.ui.cmraBt_11.clicked.connect(self.fullscreen11)
-        self.ui.cmraBt_12.clicked.connect(self.fullscreen12)
-        self.ui.cmraBt_13.clicked.connect(self.fullscreen13)
-        self.ui.cmraBt_14.clicked.connect(self.fullscreen14)
-        self.ui.cmraBt_15.clicked.connect(self.fullscreen15)
-        self.ui.cmraBt_16.clicked.connect(self.fullscreen16)
-        self.ui.cmraBt_17.clicked.connect(self.fullscreen17)
-        self.ui.cmraBt_18.clicked.connect(self.fullscreen18)
-        self.ui.cmraBt_19.clicked.connect(self.fullscreen19)
-        self.ui.cmraBt_20.clicked.connect(self.fullscreen20)
-        self.ui.cmraBt_21.clicked.connect(self.fullscreen21)
-        self.ui.cmraBt_22.clicked.connect(self.fullscreen22)
-        self.ui.cmraBt_23.clicked.connect(self.fullscreen23)
-        self.ui.cmraBt_24.clicked.connect(self.fullscreen24)
-        self.ui.cmraBt_25.clicked.connect(self.fullscreen25)
-        self.ui.cmraBt_26.clicked.connect(self.fullscreen26)
-        self.ui.cmraBt_27.clicked.connect(self.fullscreen27)
-        self.ui.cmraBt_28.clicked.connect(self.fullscreen28)
-        self.ui.cmraBt_29.clicked.connect(self.fullscreen29)
-        self.ui.cmraBt_30.clicked.connect(self.fullscreen30)
-        self.ui.cmraBt_31.clicked.connect(self.fullscreen31)
-        self.ui.cmraBt_32.clicked.connect(self.fullscreen32)
-        self.cameras = {"cam01" : self.ui.cmraBt_01, "cam02" : self.ui.cmraBt_02, "cam03" : self.ui.cmraBt_03, 
-                        "cam04" : self.ui.cmraBt_04, "cam05" : self.ui.cmraBt_05, "cam06" : self.ui.cmraBt_06, "cam07" : self.ui.cmraBt_07, 
-                        "cam08" : self.ui.cmraBt_08, "cam09" : self.ui.cmraBt_09, "cam10" : self.ui.cmraBt_10, "cam11" : self.ui.cmraBt_11, 
-                        "cam12" : self.ui.cmraBt_12, "cam13" : self.ui.cmraBt_13, "cam14" : self.ui.cmraBt_14, "cam15" : self.ui.cmraBt_15, 
-                        "cam16" : self.ui.cmraBt_16, "cam17" : self.ui.cmraBt_17, "cam18" : self.ui.cmraBt_18, "cam19" : self.ui.cmraBt_19, 
-                        "cam20" : self.ui.cmraBt_20, "cam21" : self.ui.cmraBt_21, "cam22" : self.ui.cmraBt_22, "cam23" : self.ui.cmraBt_23, 
-                        "cam24" : self.ui.cmraBt_24, "cam25" : self.ui.cmraBt_25, "cam26" : self.ui.cmraBt_26, "cam27" : self.ui.cmraBt_27, 
-                        "cam28" : self.ui.cmraBt_28, "cam29" : self.ui.cmraBt_29, "cam30" : self.ui.cmraBt_30, "cam31" : self.ui.cmraBt_31, 
-                        "cam32" : self.ui.cmraBt_32}
+        self.ui.camVideo_01.clicked.connect(self.fullscreen01)
+        self.ui.camVideo_02.clicked.connect(self.fullscreen02)
+        self.ui.camVideo_03.clicked.connect(self.fullscreen03)
+        self.ui.camVideo_04.clicked.connect(self.fullscreen04)
+        self.ui.camVideo_05.clicked.connect(self.fullscreen05)
+        self.ui.camVideo_06.clicked.connect(self.fullscreen06)
+        self.ui.camVideo_07.clicked.connect(self.fullscreen07)
+        self.ui.camVideo_08.clicked.connect(self.fullscreen08)
+        self.ui.camVideo_09.clicked.connect(self.fullscreen09)
+        self.ui.camVideo_10.clicked.connect(self.fullscreen10)
+        self.ui.camVideo_11.clicked.connect(self.fullscreen11)
+        self.ui.camVideo_12.clicked.connect(self.fullscreen12)
+        self.ui.camVideo_13.clicked.connect(self.fullscreen13)
+        self.ui.camVideo_14.clicked.connect(self.fullscreen14)
+        self.ui.camVideo_15.clicked.connect(self.fullscreen15)
+        self.ui.camVideo_16.clicked.connect(self.fullscreen16)
+        self.ui.camVideo_17.clicked.connect(self.fullscreen17)
+        self.ui.camVideo_18.clicked.connect(self.fullscreen18)
+        self.ui.camVideo_19.clicked.connect(self.fullscreen19)
+        self.ui.camVideo_20.clicked.connect(self.fullscreen20)
+        self.ui.camVideo_21.clicked.connect(self.fullscreen21)
+        self.ui.camVideo_22.clicked.connect(self.fullscreen22)
+        self.ui.camVideo_23.clicked.connect(self.fullscreen23)
+        self.ui.camVideo_24.clicked.connect(self.fullscreen24)
+        self.ui.camVideo_25.clicked.connect(self.fullscreen25)
+        self.ui.camVideo_26.clicked.connect(self.fullscreen26)
+        self.ui.camVideo_27.clicked.connect(self.fullscreen27)
+        self.ui.camVideo_28.clicked.connect(self.fullscreen28)
+        self.ui.camVideo_29.clicked.connect(self.fullscreen29)
+        self.ui.camVideo_30.clicked.connect(self.fullscreen30)
+        self.ui.camVideo_31.clicked.connect(self.fullscreen31)
+        self.ui.camVideo_32.clicked.connect(self.fullscreen32)
+        self.cameras = {"cam01" : self.ui.camVideo_01, "cam02" : self.ui.camVideo_02, "cam03" : self.ui.camVideo_03, 
+                        "cam04" : self.ui.camVideo_04, "cam05" : self.ui.camVideo_05, "cam06" : self.ui.camVideo_06, "cam07" : self.ui.camVideo_07, 
+                        "cam08" : self.ui.camVideo_08, "cam09" : self.ui.camVideo_09, "cam10" : self.ui.camVideo_10, "cam11" : self.ui.camVideo_11, 
+                        "cam12" : self.ui.camVideo_12, "cam13" : self.ui.camVideo_13, "cam14" : self.ui.camVideo_14, "cam15" : self.ui.camVideo_15, 
+                        "cam16" : self.ui.camVideo_16, "cam17" : self.ui.camVideo_17, "cam18" : self.ui.camVideo_18, "cam19" : self.ui.camVideo_19, 
+                        "cam20" : self.ui.camVideo_20, "cam21" : self.ui.camVideo_21, "cam22" : self.ui.camVideo_22, "cam23" : self.ui.camVideo_23, 
+                        "cam24" : self.ui.camVideo_24, "cam25" : self.ui.camVideo_25, "cam26" : self.ui.camVideo_26, "cam27" : self.ui.camVideo_27, 
+                        "cam28" : self.ui.camVideo_28, "cam29" : self.ui.camVideo_29, "cam30" : self.ui.camVideo_30, "cam31" : self.ui.camVideo_31, 
+                        "cam32" : self.ui.camVideo_32}
+        
+        self.camWidgets = {"cam01" : self.ui.widget_01, "cam02" : self.ui.widget_02, "cam03" : self.ui.widget_03, 
+                        "cam04" : self.ui.widget_04, "cam05" : self.ui.widget_05, "cam06" : self.ui.widget_06, "cam07" : self.ui.widget_07, 
+                        "cam08" : self.ui.widget_08, "cam09" : self.ui.widget_09, "cam10" : self.ui.widget_10, "cam11" : self.ui.widget_11, 
+                        "cam12" : self.ui.widget_12, "cam13" : self.ui.widget_13, "cam14" : self.ui.widget_14, "cam15" : self.ui.widget_15, 
+                        "cam16" : self.ui.widget_16, "cam17" : self.ui.widget_17, "cam18" : self.ui.widget_18, "cam19" : self.ui.widget_19, 
+                        "cam20" : self.ui.widget_20, "cam21" : self.ui.widget_21, "cam22" : self.ui.widget_22, "cam23" : self.ui.widget_23, 
+                        "cam24" : self.ui.widget_24, "cam25" : self.ui.widget_25, "cam26" : self.ui.widget_26, "cam27" : self.ui.widget_27, 
+                        "cam28" : self.ui.widget_28, "cam29" : self.ui.widget_29, "cam30" : self.ui.widget_30, "cam31" : self.ui.widget_31, 
+                        "cam32" : self.ui.widget_32}
 
         for cam in self.cameras:
             self.cameras[cam].full = False
@@ -275,58 +509,58 @@ class btns():
 
         self.fullscreens = [self.showall ,self.showLayer1 ,self.showLayer2 ]
         self.layers = {
-            "6":[self.ui.cmraBt_01,
-            self.ui.cmraBt_03,
-            self.ui.cmraBt_09,
-            self.ui.cmraBt_13,
-            self.ui.cmraBt_14,
-            self.ui.cmraBt_15
+            "6":[self.ui.camVideo_01,
+            self.ui.camVideo_03,
+            self.ui.camVideo_09,
+            self.ui.camVideo_13,
+            self.ui.camVideo_14,
+            self.ui.camVideo_15
             ],
             "7_1":
-            [self.ui.cmraBt_01,
-            self.ui.cmraBt_04,
-            self.ui.cmraBt_10,
-            self.ui.cmraBt_16,
-            self.ui.cmraBt_19,
-            self.ui.cmraBt_20,
-            self.ui.cmraBt_21,
-            self.ui.cmraBt_22
+            [self.ui.camVideo_01,
+            self.ui.camVideo_04,
+            self.ui.camVideo_10,
+            self.ui.camVideo_16,
+            self.ui.camVideo_19,
+            self.ui.camVideo_20,
+            self.ui.camVideo_21,
+            self.ui.camVideo_22
             ],
             "7_2":
-            [self.ui.cmraBt_01,
-            self.ui.cmraBt_03,
-            self.ui.cmraBt_13,
-            self.ui.cmraBt_14,
-            self.ui.cmraBt_15,
-            self.ui.cmraBt_19,
-            self.ui.cmraBt_20
+            [self.ui.camVideo_01,
+            self.ui.camVideo_03,
+            self.ui.camVideo_13,
+            self.ui.camVideo_14,
+            self.ui.camVideo_15,
+            self.ui.camVideo_19,
+            self.ui.camVideo_20
             ],
             "10":
-            [self.ui.cmraBt_01,
-            self.ui.cmraBt_03,
-            self.ui.cmraBt_13,
-            self.ui.cmraBt_14,
-            self.ui.cmraBt_15,
-            self.ui.cmraBt_16,
-            self.ui.cmraBt_19,
-            self.ui.cmraBt_20,
-            self.ui.cmraBt_21,
-            self.ui.cmraBt_22,
+            [self.ui.camVideo_01,
+            self.ui.camVideo_03,
+            self.ui.camVideo_13,
+            self.ui.camVideo_14,
+            self.ui.camVideo_15,
+            self.ui.camVideo_16,
+            self.ui.camVideo_19,
+            self.ui.camVideo_20,
+            self.ui.camVideo_21,
+            self.ui.camVideo_22,
             ],
             "13":
-            [self.ui.cmraBt_01,
-            self.ui.cmraBt_03,
-            self.ui.cmraBt_04,
-            self.ui.cmraBt_07,
-            self.ui.cmraBt_08,
-            self.ui.cmraBt_13,
-            self.ui.cmraBt_14,
-            self.ui.cmraBt_15,
-            self.ui.cmraBt_16,
-            self.ui.cmraBt_19,
-            self.ui.cmraBt_20,
-            self.ui.cmraBt_21,
-            self.ui.cmraBt_22,
+            [self.ui.camVideo_01,
+            self.ui.camVideo_03,
+            self.ui.camVideo_04,
+            self.ui.camVideo_07,
+            self.ui.camVideo_08,
+            self.ui.camVideo_13,
+            self.ui.camVideo_14,
+            self.ui.camVideo_15,
+            self.ui.camVideo_16,
+            self.ui.camVideo_19,
+            self.ui.camVideo_20,
+            self.ui.camVideo_21,
+            self.ui.camVideo_22,
             ],
 
         }
@@ -339,7 +573,9 @@ class btns():
             self.cameras[cam].active=True
             self.cameras[cam].show()
             self.cameras[cam].resize(240 , 138)
+            self.camWidgets[cam].resize(240 , 138)
             self.cameras[cam].move( 10+240*(cidx%6) , 10+140*(cidx//6))
+
         """listwidget = self.ui.cmr_listWidget
         items =  [listwidget.item(i) for i in range(listwidget.count())]
         for item in items:
