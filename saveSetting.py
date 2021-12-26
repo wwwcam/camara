@@ -18,7 +18,7 @@ import os
 class saveSetting():
     def __init__(self):
         self.setpanel = self.pannel.ui
-        self.emptyCam = 'font: 75 14pt "맑은 고딕";color: rgb(255, 255, 255);background-color: rgb(61, 63, 67);'
+        self.emptyCam = 'font: 75 14pt "맑은 고딕";color: rgb(255, 255, 255);background-color: rgba(61, 63, 67,200);'
         self.setpanel.saveButton.clicked.connect(self.saveSet)
         self.camlayers = [
             ["cam%02d"%i for i in range(1,33)],
@@ -34,7 +34,7 @@ class saveSetting():
     def setLayerCorlr(self):
         for cam in self.camlayers[self.currentLayer]:
             if self.camSettings[self.currentLayer][cam]["ip"]:
-                self.cameras[cam].setStyleSheet('font: 75 14pt "맑은 고딕";color: rgb(255, 255, 255);background-color: rgb(5, 40, 60);')
+                self.cameras[cam].setStyleSheet('font: 75 14pt "맑은 고딕";color: rgb(255, 255, 255);background-color: rgba(5, 40, 60 , 100);')
             else:
                 self.cameras[cam].setStyleSheet(self.emptyCam)
 
