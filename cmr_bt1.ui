@@ -888,9 +888,6 @@ color: rgb(255, 255, 255);
         <height>31</height>
        </rect>
       </property>
-      <property name="tabletTracking">
-       <bool>false</bool>
-      </property>
       <property name="acceptDrops">
        <bool>true</bool>
       </property>
@@ -901,6 +898,9 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
       </property>
       <property name="dragEnabled">
        <bool>true</bool>
+      </property>
+      <property name="tabletTracking" stdset="0">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QPushButton" name="folferSelect_Bt">
@@ -2582,6 +2582,19 @@ font: 75 25pt &quot;맑은 고딕&quot;;</string>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadmap">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>605</y>
+        <width>461</width>
+        <height>206</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>

@@ -62,7 +62,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
     def __init__(self, parent=None):
         QWidget.__init__(self)
         multiprocessing.freeze_support()
-        self.ui = QtUiTools.QUiLoader(parent=self).load("./camera_bt.ui" ,self  )
+        self.ui = QtUiTools.QUiLoader(parent=self).load("./cmr_bt1.ui" ,self  )
         self.settingLayer = QWidget(self.ui)
         self.settingLayer.resize(259 , 850)
         self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
@@ -88,7 +88,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.settings = {}
         self.currentLayer = 0
         self.loadSet()
-        self.ui.cmr_listWidget_5.clear()
+        #self.ui.cmr_listWidget_5.clear()
 
         self.ui.folferAddres.setText(self.settings['savepath'])
         
@@ -135,11 +135,11 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.ui.showReplay.clicked.connect(self.Replay)
         self.ui.loadmap.clicked.connect(self.selectMap)
         self.ui.folferOpen_Bt.clicked.connect(self.openSaveFolder)
-        self.ui.cmr_listWidget.currentItemChanged.connect(self.changelistColor)
+        #self.ui.cmr_listWidget.currentItemChanged.connect(self.changelistColor)
         self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))
 
-        self.ui.widget_5.show()
-        self.ui.replayWidget.hide()
+        self.ui.widget_3.show()
+        #self.ui.replayWidget.hide()
 
         self.ui.closeEvent = self.closeEvent
 
@@ -167,6 +167,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         dt = datetime.datetime.now().isoformat()[:19].replace("T" , " ")
         self.ui.timeedit.setText(dt)
     def setlistcolors(self):
+        return
         for i in range(11):
             self.ui.cmr_listWidget.item(i).setBackgroundColor(QColor(0,0,0,100))
         for i in range(11):
@@ -175,6 +176,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
             self.ui.cmr_listWidget_4.item(i).setBackgroundColor(QColor(0,0,0,100))
                     
     def changelistColor(self):
+        return
         colors = []
         self.currenListtLayer = []
         self.cntLayers = [32 , 6,7,7,10,13]
@@ -210,11 +212,12 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
 
     def showBtnIcon(self , img , icon , size):
         icon.setIconSize(QtCore.QSize(size[0],size[1]))
-        image = imread(img)
-        image = cv2.resize(image,[440,150], interpolation=cv2.INTER_AREA)
-        bytesPerLine = 3 * image.shape[1]
-        image = QtGui.QImage(image.data, image.shape[1], image.shape[0], bytesPerLine  , QtGui.QImage.Format_RGB888).rgbSwapped()
-        icon.setIcon(QPixmap.fromImage(image)) 
+        if os.path.isfile(img):
+            image = imread(img)
+            image = cv2.resize(image,[440,150], interpolation=cv2.INTER_AREA)
+            bytesPerLine = 3 * image.shape[1]
+            image = QtGui.QImage(image.data, image.shape[1], image.shape[0], bytesPerLine  , QtGui.QImage.Format_RGB888).rgbSwapped()
+            icon.setIcon(QPixmap.fromImage(image)) 
 
     def selectMap(self):
         if time.time() - self.btnClickTime < 0.3:

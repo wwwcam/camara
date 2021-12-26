@@ -68,8 +68,11 @@ class saveSetting():
                     self.savePath = "./save"
                     self.settings['savepath'] = self.savePath
 
+                """
+
                 if 'selectedCams' in self.settings:
                     self.currenListtLayer = self.settings['selectedCams']
+                    
                     if self.currenListtLayer:
                         for ci in self.currenListtLayer:
                             if ci < 11:
@@ -90,7 +93,7 @@ class saveSetting():
                             self.ui.cmr_listWidget_3.item(idx).setBackgroundColor(QColor(0,255,0,100))
                         else:
                             idx = ci-22 
-                            self.ui.cmr_listWidget_4.item(idx).setBackgroundColor(QColor(0,255,0,100))
+                            self.ui.cmr_listWidget_4.item(idx).setBackgroundColor(QColor(0,255,0,100))"""
            
                             
 
