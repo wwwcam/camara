@@ -64,9 +64,9 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         multiprocessing.freeze_support()
         self.ui = QtUiTools.QUiLoader(parent=self).load("./cmr_bt1.ui" ,self  )
         self.settingLayer = QWidget(self.ui)
-        self.settingLayer.resize(259 , 850)
+        self.settingLayer.resize(259 , 831)
         self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
-        self.settingLayer.move(1650 , 10)
+        self.settingLayer.move(1567 , 80)
         self.settingLayer.hide()
         self.stopVideos = 0
         self.mapPath = None

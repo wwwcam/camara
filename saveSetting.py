@@ -104,7 +104,6 @@ class saveSetting():
                 
 
     def loadCameraSet(self):
-        #print('''self.camSettings[self.currentLayer][self.currentCam]["ip"]'''  ,self.camSettings[self.currentLayer][self.currentCam]["ip"])
         self.setpanel.ip_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["ip"])
         self.setpanel.camera_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["name"])
         self.setpanel.loca_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["location"])
