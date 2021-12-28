@@ -89,8 +89,9 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 64, 93);</string>
+       <string notr="true">background-color: rgb(0, 68, 97);
+font: 25pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Camera List&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -274,6 +275,7 @@ background-color: rgb(0, 64, 93);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 68, 97);
+font: 18pt &quot;Agency FB&quot;;
 color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
@@ -706,10 +708,11 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="font">
        <font>
+        <family>Agency FB</family>
         <pointsize>8</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <strikeout>false</strikeout>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="focusPolicy">
@@ -726,7 +729,8 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 52, 63);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 75 8pt &quot;Agency FB&quot;;</string>
       </property>
       <property name="locale">
        <locale language="English" country="AmericanSamoa"/>
@@ -768,11 +772,16 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>8</pointsize>
+        <family>Agency FB</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 12, 23);
+font: 14pt &quot;Agency FB&quot;;
 color: rgb(255, 255, 255);
 
 </string>
@@ -1303,11 +1312,14 @@ color: rgb(255, 255, 255);
       </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);
-border: 3px solid rgb(100, 255, 100);
-font: 75 23pt &quot;맑은 고딕&quot;;</string>
+border: 3px solid rgb(1, 255, 255);
+font: 30pt &quot;Agency FB&quot;;</string>
       </property>
       <property name="text">
-       <string>0000-00-00 00:00:00</string>
+       <string>1234-56-78 12:34:56</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -2489,8 +2501,9 @@ font: 75 23pt &quot;맑은 고딕&quot;;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 64, 93);</string>
+      <string notr="true">background-color: rgb(0, 68, 97);
+font: 18pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Camera Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -2558,7 +2571,8 @@ background-color: rgb(0, 64, 93);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
        </property>
        <property name="text">
         <string>LVDS</string>
@@ -2838,8 +2852,8 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
      </property>
      <property name="font">
       <font>
-       <family>맑은 고딕</family>
-       <pointsize>10</pointsize>
+       <family>Agency FB</family>
+       <pointsize>15</pointsize>
        <weight>9</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -2848,7 +2862,7 @@ font: 75 20pt &quot;Agency FB&quot;;</string>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 52, 63);
 color: rgb(255, 255, 255);
-font: 75 10pt &quot;맑은 고딕&quot;;</string>
+font: 75 15pt &quot;Agency FB&quot;;</string>
      </property>
      <property name="text">
       <string>FOLDER OPEN</string>
@@ -2865,8 +2879,8 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      </property>
      <property name="font">
       <font>
-       <family>맑은 고딕</family>
-       <pointsize>10</pointsize>
+       <family>Agency FB</family>
+       <pointsize>15</pointsize>
        <weight>9</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -2875,7 +2889,7 @@ font: 75 10pt &quot;맑은 고딕&quot;;</string>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 52, 63);
 color: rgb(255, 255, 255);
-font: 75 10pt &quot;맑은 고딕&quot;;</string>
+font: 75 15pt &quot;Agency FB&quot;;</string>
      </property>
      <property name="text">
       <string>FOLDER SELECT</string>

@@ -485,7 +485,7 @@ class btns():
         self.ui.camVideo_32.clicked.connect(self.fullscreen32)
 
         self.ui.cmraBt_01.clicked.connect(self.showSetting01)
-        self.ui.cmraBt_02.clicked.connect(self.showSetting02)
+        '''self.ui.cmraBt_02.clicked.connect(self.showSetting02)
         self.ui.cmraBt_03.clicked.connect(self.showSetting03)
         self.ui.cmraBt_04.clicked.connect(self.showSetting04)
         self.ui.cmraBt_05.clicked.connect(self.showSetting05)
@@ -515,7 +515,7 @@ class btns():
         self.ui.cmraBt_29.clicked.connect(self.showSetting29)
         self.ui.cmraBt_30.clicked.connect(self.showSetting30)
         self.ui.cmraBt_31.clicked.connect(self.showSetting31)
-        self.ui.cmraBt_32.clicked.connect(self.showSetting32)
+        self.ui.cmraBt_32.clicked.connect(self.showSetting32)'''
 
         self.cameras = {"cam01" : self.ui.camVideo_01, "cam02" : self.ui.camVideo_02, "cam03" : self.ui.camVideo_03, 
                         "cam04" : self.ui.camVideo_04, "cam05" : self.ui.camVideo_05, "cam06" : self.ui.camVideo_06, "cam07" : self.ui.camVideo_07, 
@@ -646,7 +646,13 @@ class btns():
             item.setBackground( QColor(0,200,0) )"""
 
     def showSetting01(self):
-        pass
+        now = time.time()
+        if now - self.dclickTime[2]  < 0.3:
+            self.settingLayer.show()
+            self.settingLayer.resize(259 , 831)
+            self.settingLayer.move(1567 , 80)
+        self.dclickTime[2] = time.time()
+
 
 #showSetting17
 
@@ -844,6 +850,8 @@ class btns():
             self.camDropLabels[cam].hide()
             widget.show()
             self.settingLayer.show()
+            self.settingLayer.resize(259 , 831)
+            self.settingLayer.move(1567 , 80)
 
 
 
