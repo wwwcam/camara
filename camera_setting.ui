@@ -34,22 +34,8 @@
    <widget class="QLineEdit" name="ip_lineEdit_7">
     <property name="geometry">
      <rect>
-      <x>102</x>
-      <y>226</y>
-      <width>150</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="camera_lineEdit_7">
-    <property name="geometry">
-     <rect>
-      <x>102</x>
-      <y>253</y>
+      <x>100</x>
+      <y>255</y>
       <width>150</width>
       <height>20</height>
      </rect>
@@ -93,9 +79,9 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="ip_label_7">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>226</y>
-      <width>16</width>
+      <x>20</x>
+      <y>255</y>
+      <width>71</width>
       <height>21</height>
      </rect>
     </property>
@@ -104,13 +90,13 @@ color: rgb(0, 0, 0);</string>
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Ip&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Address&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="loca_lineEdit_7">
     <property name="geometry">
      <rect>
-      <x>102</x>
+      <x>100</x>
       <y>280</y>
       <width>150</width>
       <height>20</height>
@@ -171,7 +157,7 @@ font: 16pt &quot;Agency FB&quot;;</string>
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>253</y>
+      <y>230</y>
       <width>55</width>
       <height>21</height>
      </rect>
@@ -347,11 +333,27 @@ color: rgb(255, 255, 255);</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Focos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLabel" name="camera_lineEdit_7">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>225</y>
+      <width>151</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;맑은 고딕&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <tabstops>
   <tabstop>ip_lineEdit_7</tabstop>
-  <tabstop>camera_lineEdit_7</tabstop>
   <tabstop>loca_lineEdit_7</tabstop>
   <tabstop>zoom_horizontalSlider_7</tabstop>
   <tabstop>sens_horizontalSlider_7</tabstop>
@@ -364,6 +366,22 @@ color: rgb(255, 255, 255);</string>
   <include location="datas/image.qrc"/>
  </resources>
  <connections>
+  <connection>
+   <sender>foco_horizontalSlider_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_3</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>385</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>zoom_horizontalSlider_7</sender>
    <signal>valueChanged(int)</signal>
@@ -393,22 +411,6 @@ color: rgb(255, 255, 255);</string>
     <hint type="destinationlabel">
      <x>95</x>
      <y>358</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>foco_horizontalSlider_7</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>label_3</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>144</x>
-     <y>382</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>92</x>
-     <y>385</y>
     </hint>
    </hints>
   </connection>

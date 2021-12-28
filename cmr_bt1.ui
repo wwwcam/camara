@@ -173,9 +173,6 @@ color: rgb(255, 255, 255);</string>
        <height>32</height>
       </rect>
      </property>
-     <property name="tabletTracking">
-      <bool>true</bool>
-     </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
      </property>
@@ -230,6 +227,9 @@ color: rgb(255, 255, 255);</string>
       <bool>true</bool>
      </property>
      <property name="flat">
+      <bool>true</bool>
+     </property>
+     <property name="tabletTracking" stdset="0">
       <bool>true</bool>
      </property>
     </widget>
@@ -1328,8 +1328,8 @@ font: 30pt &quot;Agency FB&quot;;</string>
       <rect>
        <x>450</x>
        <y>70</y>
-       <width>1451</width>
-       <height>841</height>
+       <width>1460</width>
+       <height>850</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1684,6 +1684,8 @@ font: 30pt &quot;Agency FB&quot;;</string>
         <bool>true</bool>
        </property>
       </widget>
+      <zorder>ca_label_08</zorder>
+      <zorder>replayWidget</zorder>
      </widget>
      <widget class="QWidget" name="ca_widget_10" native="true">
       <property name="geometry">
@@ -2460,7 +2462,7 @@ font: 30pt &quot;Agency FB&quot;;</string>
      <property name="geometry">
       <rect>
        <x>440</x>
-       <y>50</y>
+       <y>60</y>
        <width>1461</width>
        <height>861</height>
       </rect>
@@ -2700,9 +2702,6 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
        <property name="mouseTracking">
         <bool>true</bool>
        </property>
-       <property name="tabletTracking">
-        <bool>true</bool>
-       </property>
        <property name="focusPolicy">
         <enum>Qt::WheelFocus</enum>
        </property>
@@ -2725,6 +2724,9 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
          <width>40</width>
          <height>40</height>
         </size>
+       </property>
+       <property name="tabletTracking" stdset="0">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
@@ -2851,9 +2853,6 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
        <height>21</height>
       </rect>
      </property>
-     <property name="tabletTracking">
-      <bool>false</bool>
-     </property>
      <property name="acceptDrops">
       <bool>true</bool>
      </property>
@@ -2864,6 +2863,9 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
+     </property>
+     <property name="tabletTracking" stdset="0">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QWidget" name="loadmap_wg" native="true">

@@ -52,6 +52,12 @@ class saveSetting():
             with open(self.setFileName, "rb") as f:
                 self.settings = pickle.load(f)
                 self.camSettings = self.settings['camsetting']
+                if 'camBaseSet' in self.settings:
+                    self.camBaseSettings = self.settings['camBaseSet']
+                else:
+                    self.camBaseSettings = {}
+                    for i in range(32):
+                        self.camBaseSettings[i] = {"ip":'' , "name":'' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''}
 
                 if 'mapPath' in  self.settings:
                     self.mapPath = self.settings['mapPath']
@@ -68,49 +74,29 @@ class saveSetting():
                     self.savePath = "./save"
                     self.settings['savepath'] = self.savePath
 
-                """
-
-                if 'selectedCams' in self.settings:
-                    self.currenListtLayer = self.settings['selectedCams']
-                    
-                    if self.currenListtLayer:
-                        for ci in self.currenListtLayer:
-                            if ci < 11:
-                                self.ui.cmr_listWidget.item(ci).setBackgroundColor(QColor(0,255,0,100))
-                            elif ci <22 :
-                                idx = ci-11 
-                                self.ui.cmr_listWidget_3.item(idx).setBackgroundColor(QColor(0,255,0,100))
-                            else:
-                                idx = ci-22 
-                                self.ui.cmr_listWidget_4.item(idx).setBackgroundColor(QColor(0,255,0,100))
-                else:
-                    self.currenListtLayer = [i for i in range(32)]
-                    for ci in self.currenListtLayer:
-                        if ci < 11:
-                            self.ui.cmr_listWidget.item(ci).setBackgroundColor(QColor(0,255,0,100))
-                        elif ci <22 :
-                            idx = ci-11 
-                            self.ui.cmr_listWidget_3.item(idx).setBackgroundColor(QColor(0,255,0,100))
-                        else:
-                            idx = ci-22 
-                            self.ui.cmr_listWidget_4.item(idx).setBackgroundColor(QColor(0,255,0,100))"""
-           
-                            
-
             self.setLayerCorlr()
 
         return self.settings
 
                 
 
-    def loadCameraSet(self):
-        self.setpanel.ip_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["ip"])
-        self.setpanel.camera_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["name"])
-        self.setpanel.loca_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["location"])
-        self.setpanel.zoom_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["zoom"])
-        self.setpanel.sens_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["sens"])
-        self.setpanel.foco_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["focus"])
-        self.setpanel.memo_textEdit_7.setPlainText(self.camSettings[self.currentLayer][self.currentCam]["memo"])
+    def loadCameraSet(self , base = False):
+        if base:
+            self.setpanel.ip_lineEdit_7.setText(self.camBaseSettings[self.baseCamNum]["ip"])
+            self.setpanel.camera_lineEdit_7.setText(self.camBaseSettings[self.baseCamNum]["name"])
+            self.setpanel.loca_lineEdit_7.setText(self.camBaseSettings[self.baseCamNum]["location"])
+            self.setpanel.zoom_horizontalSlider_7.setValue(self.camBaseSettings[self.baseCamNum]["zoom"])
+            self.setpanel.sens_horizontalSlider_7.setValue(self.camBaseSettings[self.baseCamNum]["sens"])
+            self.setpanel.foco_horizontalSlider_7.setValue(self.camBaseSettings[self.baseCamNum]["focus"])
+            self.setpanel.memo_textEdit_7.setPlainText(self.camBaseSettings[self.baseCamNum]["memo"])
+        else:
+            self.setpanel.ip_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["ip"])
+            self.setpanel.camera_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["name"])
+            self.setpanel.loca_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["location"])
+            self.setpanel.zoom_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["zoom"])
+            self.setpanel.sens_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["sens"])
+            self.setpanel.foco_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["focus"])
+            self.setpanel.memo_textEdit_7.setPlainText(self.camSettings[self.currentLayer][self.currentCam]["memo"])
 
 
     def saveSet(self ):

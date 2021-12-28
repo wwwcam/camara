@@ -14,9 +14,18 @@ import multiprocessing
 
 
 class DragBtn(QPushButton):
+    def __init__(self, *args, **kwargs):
+        QPushButton.__init__(self, *args, **kwargs)
+        self.clickTime = time.time()
+        self.setData = {}
+
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
             self.drag_start_position = event.pos()
+        if time.time()  - self.clickTime < 0.3:
+            self.func(base=True)
+        self.clickTime = time.time()
+        self.parent.baseCamNum = int(self.idx)
 
     def mouseMoveEvent(self, event):
         if not (event.buttons() & Qt.LeftButton):
@@ -47,6 +56,7 @@ class DropBtn(QPushButton):
     def dropEvent(self, event):
         pos = event.pos()
         text = event.mimeData().text()
+        #print(dir(event.mimeData()))
         self.setText(text)
         event.acceptProposedAction()
 
@@ -54,9 +64,11 @@ class btns():
     def __init__(self , ui):
         self.ui = ui
 
+
         self.ui.camVideo_01 = DropBtn(self.ui.ca_widget_01)
         self.ui.camVideo_01.resize(224,122)
         self.ui.camVideo_01.move(9,8)
+
         self.ui.camVideo_01.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
         self.ui.camVideo_02 = DropBtn(self.ui.ca_widget_02)
         self.ui.camVideo_02.resize(224,122)
@@ -183,230 +195,326 @@ class btns():
         self.ui.camVideo_32.move(9,8)
         self.ui.camVideo_32.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
 
-        self.ui.cmraBt_01 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_01 = DragBtn(self.ui.dragCamBase )
+        self.ui.cmraBt_01.func = self.showSetting
         self.ui.cmraBt_01.resize(51,30)
+        self.ui.cmraBt_01.parent = self
         self.ui.cmraBt_01.move(int(20+50*0), int(60 + 40*0) )
         self.ui.cmraBt_01.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_01.setIconSize(QSize(28,28))
         self.ui.cmraBt_01.setText("01")
         self.ui.cmraBt_01.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_01.idx=self.ui.cmraBt_01.text()
         self.ui.cmraBt_02 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_02.func = self.showSetting
         self.ui.cmraBt_02.resize(51,30)
+        self.ui.cmraBt_02.parent = self
         self.ui.cmraBt_02.move(int(20+50*1), int(60 + 40*0) )
         self.ui.cmraBt_02.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_02.setIconSize(QSize(28,28))
         self.ui.cmraBt_02.setText("02")
         self.ui.cmraBt_02.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_02.idx=self.ui.cmraBt_02.text()
         self.ui.cmraBt_03 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_03.func = self.showSetting
         self.ui.cmraBt_03.resize(51,30)
+        self.ui.cmraBt_03.parent = self
         self.ui.cmraBt_03.move(int(20+50*2), int(60 + 40*0) )
         self.ui.cmraBt_03.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_03.setIconSize(QSize(28,28))
         self.ui.cmraBt_03.setText("03")
         self.ui.cmraBt_03.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_03.idx=self.ui.cmraBt_03.text()
         self.ui.cmraBt_04 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_04.func = self.showSetting
         self.ui.cmraBt_04.resize(51,30)
+        self.ui.cmraBt_04.parent = self
         self.ui.cmraBt_04.move(int(20+50*3), int(60 + 40*0) )
         self.ui.cmraBt_04.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_04.setIconSize(QSize(28,28))
         self.ui.cmraBt_04.setText("04")
         self.ui.cmraBt_04.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_04.idx=self.ui.cmraBt_04.text()
         self.ui.cmraBt_05 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_05.func = self.showSetting
         self.ui.cmraBt_05.resize(51,30)
+        self.ui.cmraBt_05.parent = self
         self.ui.cmraBt_05.move(int(20+50*4), int(60 + 40*0) )
         self.ui.cmraBt_05.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_05.setIconSize(QSize(28,28))
         self.ui.cmraBt_05.setText("05")
         self.ui.cmraBt_05.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_05.idx=self.ui.cmraBt_05.text()
         self.ui.cmraBt_06 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_06.func = self.showSetting
         self.ui.cmraBt_06.resize(51,30)
+        self.ui.cmraBt_06.parent = self
         self.ui.cmraBt_06.move(int(20+50*5), int(60 + 40*0) )
         self.ui.cmraBt_06.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_06.setIconSize(QSize(28,28))
         self.ui.cmraBt_06.setText("06")
         self.ui.cmraBt_06.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_06.idx=self.ui.cmraBt_06.text()
         self.ui.cmraBt_07 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_07.func = self.showSetting
         self.ui.cmraBt_07.resize(51,30)
+        self.ui.cmraBt_07.parent = self
         self.ui.cmraBt_07.move(int(20+50*0), int(60 + 40*1) )
         self.ui.cmraBt_07.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_07.setIconSize(QSize(28,28))
         self.ui.cmraBt_07.setText("07")
         self.ui.cmraBt_07.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_07.idx=self.ui.cmraBt_07.text()
         self.ui.cmraBt_08 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_08.func = self.showSetting
         self.ui.cmraBt_08.resize(51,30)
+        self.ui.cmraBt_08.parent = self
         self.ui.cmraBt_08.move(int(20+50*1), int(60 + 40*1) )
         self.ui.cmraBt_08.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_08.setIconSize(QSize(28,28))
         self.ui.cmraBt_08.setText("08")
         self.ui.cmraBt_08.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_08.idx=self.ui.cmraBt_08.text()
         self.ui.cmraBt_09 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_09.func = self.showSetting
         self.ui.cmraBt_09.resize(51,30)
+        self.ui.cmraBt_09.parent = self
         self.ui.cmraBt_09.move(int(20+50*2), int(60 + 40*1) )
         self.ui.cmraBt_09.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_09.setIconSize(QSize(28,28))
         self.ui.cmraBt_09.setText("09")
         self.ui.cmraBt_09.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_09.idx=self.ui.cmraBt_09.text()
         self.ui.cmraBt_10 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_10.func = self.showSetting
         self.ui.cmraBt_10.resize(51,30)
+        self.ui.cmraBt_10.parent = self
         self.ui.cmraBt_10.move(int(20+50*3), int(60 + 40*1) )
         self.ui.cmraBt_10.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_10.setIconSize(QSize(28,28))
         self.ui.cmraBt_10.setText("10")
         self.ui.cmraBt_10.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_10.idx=self.ui.cmraBt_10.text()
         self.ui.cmraBt_11 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_11.func = self.showSetting
         self.ui.cmraBt_11.resize(51,30)
+        self.ui.cmraBt_11.parent = self
         self.ui.cmraBt_11.move(int(20+50*4), int(60 + 40*1) )
         self.ui.cmraBt_11.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_11.setIconSize(QSize(28,28))
         self.ui.cmraBt_11.setText("11")
         self.ui.cmraBt_11.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_11.idx=self.ui.cmraBt_11.text()
         self.ui.cmraBt_12 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_12.func = self.showSetting
         self.ui.cmraBt_12.resize(51,30)
+        self.ui.cmraBt_12.parent = self
         self.ui.cmraBt_12.move(int(20+50*5), int(60 + 40*1) )
         self.ui.cmraBt_12.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_12.setIconSize(QSize(28,28))
         self.ui.cmraBt_12.setText("12")
         self.ui.cmraBt_12.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_12.idx=self.ui.cmraBt_12.text()
         self.ui.cmraBt_13 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_13.func = self.showSetting
         self.ui.cmraBt_13.resize(51,30)
+        self.ui.cmraBt_13.parent = self
         self.ui.cmraBt_13.move(int(20+50*0), int(60 + 40*2) )
         self.ui.cmraBt_13.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_13.setIconSize(QSize(28,28))
         self.ui.cmraBt_13.setText("13")
         self.ui.cmraBt_13.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_13.idx=self.ui.cmraBt_13.text()
         self.ui.cmraBt_14 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_14.func = self.showSetting
         self.ui.cmraBt_14.resize(51,30)
+        self.ui.cmraBt_14.parent = self
         self.ui.cmraBt_14.move(int(20+50*1), int(60 + 40*2) )
         self.ui.cmraBt_14.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_14.setIconSize(QSize(28,28))
         self.ui.cmraBt_14.setText("14")
         self.ui.cmraBt_14.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_14.idx=self.ui.cmraBt_14.text()
         self.ui.cmraBt_15 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_15.func = self.showSetting
         self.ui.cmraBt_15.resize(51,30)
+        self.ui.cmraBt_15.parent = self
         self.ui.cmraBt_15.move(int(20+50*2), int(60 + 40*2) )
         self.ui.cmraBt_15.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_15.setIconSize(QSize(28,28))
         self.ui.cmraBt_15.setText("15")
         self.ui.cmraBt_15.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_15.idx=self.ui.cmraBt_15.text()
         self.ui.cmraBt_16 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_16.func = self.showSetting
         self.ui.cmraBt_16.resize(51,30)
+        self.ui.cmraBt_16.parent = self
         self.ui.cmraBt_16.move(int(20+50*3), int(60 + 40*2) )
         self.ui.cmraBt_16.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_16.setIconSize(QSize(28,28))
         self.ui.cmraBt_16.setText("16")
         self.ui.cmraBt_16.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_16.idx=self.ui.cmraBt_16.text()
         self.ui.cmraBt_17 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_17.func = self.showSetting
         self.ui.cmraBt_17.resize(51,30)
+        self.ui.cmraBt_17.parent = self
         self.ui.cmraBt_17.move(int(20+50*4), int(60 + 40*2) )
         self.ui.cmraBt_17.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_17.setIconSize(QSize(28,28))
         self.ui.cmraBt_17.setText("17")
         self.ui.cmraBt_17.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_17.idx=self.ui.cmraBt_17.text()
         self.ui.cmraBt_18 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_18.func = self.showSetting
         self.ui.cmraBt_18.resize(51,30)
+        self.ui.cmraBt_18.parent = self
         self.ui.cmraBt_18.move(int(20+50*5), int(60 + 40*2) )
         self.ui.cmraBt_18.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_18.setIconSize(QSize(28,28))
         self.ui.cmraBt_18.setText("18")
         self.ui.cmraBt_18.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_18.idx=self.ui.cmraBt_18.text()
         self.ui.cmraBt_19 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_19.func = self.showSetting
         self.ui.cmraBt_19.resize(51,30)
+        self.ui.cmraBt_19.parent = self
         self.ui.cmraBt_19.move(int(20+50*0), int(60 + 40*3) )
         self.ui.cmraBt_19.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_19.setIconSize(QSize(28,28))
         self.ui.cmraBt_19.setText("19")
         self.ui.cmraBt_19.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_19.idx=self.ui.cmraBt_19.text()
         self.ui.cmraBt_20 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_20.func = self.showSetting
         self.ui.cmraBt_20.resize(51,30)
+        self.ui.cmraBt_20.parent = self
         self.ui.cmraBt_20.move(int(20+50*1), int(60 + 40*3) )
         self.ui.cmraBt_20.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_20.setIconSize(QSize(28,28))
         self.ui.cmraBt_20.setText("20")
         self.ui.cmraBt_20.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_20.idx=self.ui.cmraBt_20.text()
         self.ui.cmraBt_21 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_21.func = self.showSetting
         self.ui.cmraBt_21.resize(51,30)
+        self.ui.cmraBt_21.parent = self
         self.ui.cmraBt_21.move(int(20+50*2), int(60 + 40*3) )
         self.ui.cmraBt_21.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_21.setIconSize(QSize(28,28))
         self.ui.cmraBt_21.setText("21")
         self.ui.cmraBt_21.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_21.idx=self.ui.cmraBt_21.text()
         self.ui.cmraBt_22 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_22.func = self.showSetting
         self.ui.cmraBt_22.resize(51,30)
+        self.ui.cmraBt_22.parent = self
         self.ui.cmraBt_22.move(int(20+50*3), int(60 + 40*3) )
         self.ui.cmraBt_22.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_22.setIconSize(QSize(28,28))
         self.ui.cmraBt_22.setText("22")
         self.ui.cmraBt_22.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_22.idx=self.ui.cmraBt_22.text()
         self.ui.cmraBt_23 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_23.func = self.showSetting
         self.ui.cmraBt_23.resize(51,30)
+        self.ui.cmraBt_23.parent = self
         self.ui.cmraBt_23.move(int(20+50*4), int(60 + 40*3) )
         self.ui.cmraBt_23.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_23.setIconSize(QSize(28,28))
         self.ui.cmraBt_23.setText("23")
         self.ui.cmraBt_23.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_23.idx=self.ui.cmraBt_23.text()
         self.ui.cmraBt_24 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_24.func = self.showSetting
         self.ui.cmraBt_24.resize(51,30)
+        self.ui.cmraBt_24.parent = self
         self.ui.cmraBt_24.move(int(20+50*5), int(60 + 40*3) )
         self.ui.cmraBt_24.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_24.setIconSize(QSize(28,28))
         self.ui.cmraBt_24.setText("24")
         self.ui.cmraBt_24.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_24.idx=self.ui.cmraBt_24.text()
         self.ui.cmraBt_25 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_25.func = self.showSetting
         self.ui.cmraBt_25.resize(51,30)
+        self.ui.cmraBt_25.parent = self
         self.ui.cmraBt_25.move(int(20+50*0), int(60 + 40*4) )
         self.ui.cmraBt_25.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_25.setIconSize(QSize(28,28))
         self.ui.cmraBt_25.setText("25")
         self.ui.cmraBt_25.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_25.idx=self.ui.cmraBt_25.text()
         self.ui.cmraBt_26 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_26.func = self.showSetting
         self.ui.cmraBt_26.resize(51,30)
+        self.ui.cmraBt_26.parent = self
         self.ui.cmraBt_26.move(int(20+50*1), int(60 + 40*4) )
         self.ui.cmraBt_26.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_26.setIconSize(QSize(28,28))
         self.ui.cmraBt_26.setText("26")
         self.ui.cmraBt_26.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_26.idx=self.ui.cmraBt_26.text()
         self.ui.cmraBt_27 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_27.func = self.showSetting
         self.ui.cmraBt_27.resize(51,30)
+        self.ui.cmraBt_27.parent = self
         self.ui.cmraBt_27.move(int(20+50*2), int(60 + 40*4) )
         self.ui.cmraBt_27.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_27.setIconSize(QSize(28,28))
         self.ui.cmraBt_27.setText("27")
         self.ui.cmraBt_27.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_27.idx=self.ui.cmraBt_27.text()
         self.ui.cmraBt_28 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_28.func = self.showSetting
         self.ui.cmraBt_28.resize(51,30)
+        self.ui.cmraBt_28.parent = self
         self.ui.cmraBt_28.move(int(20+50*3), int(60 + 40*4) )
         self.ui.cmraBt_28.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_28.setIconSize(QSize(28,28))
         self.ui.cmraBt_28.setText("28")
         self.ui.cmraBt_28.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_28.idx=self.ui.cmraBt_28.text()
         self.ui.cmraBt_29 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_29.func = self.showSetting
         self.ui.cmraBt_29.resize(51,30)
+        self.ui.cmraBt_29.parent = self
         self.ui.cmraBt_29.move(int(20+50*4), int(60 + 40*4) )
         self.ui.cmraBt_29.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_29.setIconSize(QSize(28,28))
         self.ui.cmraBt_29.setText("29")
         self.ui.cmraBt_29.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_29.idx=self.ui.cmraBt_29.text()
         self.ui.cmraBt_30 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_30.func = self.showSetting
         self.ui.cmraBt_30.resize(51,30)
+        self.ui.cmraBt_30.parent = self
         self.ui.cmraBt_30.move(int(20+50*5), int(60 + 40*4) )
         self.ui.cmraBt_30.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_30.setIconSize(QSize(28,28))
         self.ui.cmraBt_30.setText("30")
         self.ui.cmraBt_30.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_30.idx=self.ui.cmraBt_30.text()
         self.ui.cmraBt_31 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_31.func = self.showSetting
         self.ui.cmraBt_31.resize(51,30)
+        self.ui.cmraBt_31.parent = self
         self.ui.cmraBt_31.move(int(20+50*0), int(60 + 40*5) )
         self.ui.cmraBt_31.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_31.setIconSize(QSize(28,28))
         self.ui.cmraBt_31.setText("31")
         self.ui.cmraBt_31.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_31.idx=self.ui.cmraBt_31.text()
         self.ui.cmraBt_32 = DragBtn(self.ui.dragCamBase)
+        self.ui.cmraBt_32.func = self.showSetting
         self.ui.cmraBt_32.resize(51,30)
+        self.ui.cmraBt_32.parent = self
         self.ui.cmraBt_32.move(int(20+50*1), int(60 + 40*5) )
         self.ui.cmraBt_32.setIcon(QPixmap(u"datas/images/bt1.png"))
         self.ui.cmraBt_32.setIconSize(QSize(28,28))
         self.ui.cmraBt_32.setText("32")
         self.ui.cmraBt_32.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ui.cmraBt_32.idx=self.ui.cmraBt_32.text()
         
         tmp = {
         "cam01":{"ip":'' , "name":'' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''},
@@ -484,38 +592,8 @@ class btns():
         self.ui.camVideo_31.clicked.connect(self.fullscreen31)
         self.ui.camVideo_32.clicked.connect(self.fullscreen32)
 
-        self.ui.cmraBt_01.clicked.connect(self.showSetting01)
-        '''self.ui.cmraBt_02.clicked.connect(self.showSetting02)
-        self.ui.cmraBt_03.clicked.connect(self.showSetting03)
-        self.ui.cmraBt_04.clicked.connect(self.showSetting04)
-        self.ui.cmraBt_05.clicked.connect(self.showSetting05)
-        self.ui.cmraBt_06.clicked.connect(self.showSetting06)
-        self.ui.cmraBt_07.clicked.connect(self.showSetting07)
-        self.ui.cmraBt_08.clicked.connect(self.showSetting08)
-        self.ui.cmraBt_09.clicked.connect(self.showSetting09)
-        self.ui.cmraBt_10.clicked.connect(self.showSetting10)
-        self.ui.cmraBt_11.clicked.connect(self.showSetting11)
-        self.ui.cmraBt_12.clicked.connect(self.showSetting12)
-        self.ui.cmraBt_13.clicked.connect(self.showSetting13)
-        self.ui.cmraBt_14.clicked.connect(self.showSetting14)
-        self.ui.cmraBt_15.clicked.connect(self.showSetting15)
-        self.ui.cmraBt_16.clicked.connect(self.showSetting16)
-        self.ui.cmraBt_17.clicked.connect(self.showSetting17)
-        self.ui.cmraBt_18.clicked.connect(self.showSetting18)
-        self.ui.cmraBt_19.clicked.connect(self.showSetting19)
-        self.ui.cmraBt_20.clicked.connect(self.showSetting20)
-        self.ui.cmraBt_21.clicked.connect(self.showSetting21)
-        self.ui.cmraBt_22.clicked.connect(self.showSetting22)
-        self.ui.cmraBt_23.clicked.connect(self.showSetting23)
-        self.ui.cmraBt_24.clicked.connect(self.showSetting24)
-        self.ui.cmraBt_25.clicked.connect(self.showSetting25)
-        self.ui.cmraBt_26.clicked.connect(self.showSetting26)
-        self.ui.cmraBt_27.clicked.connect(self.showSetting27)
-        self.ui.cmraBt_28.clicked.connect(self.showSetting28)
-        self.ui.cmraBt_29.clicked.connect(self.showSetting29)
-        self.ui.cmraBt_30.clicked.connect(self.showSetting30)
-        self.ui.cmraBt_31.clicked.connect(self.showSetting31)
-        self.ui.cmraBt_32.clicked.connect(self.showSetting32)'''
+        
+        
 
         self.cameras = {"cam01" : self.ui.camVideo_01, "cam02" : self.ui.camVideo_02, "cam03" : self.ui.camVideo_03, 
                         "cam04" : self.ui.camVideo_04, "cam05" : self.ui.camVideo_05, "cam06" : self.ui.camVideo_06, "cam07" : self.ui.camVideo_07, 
@@ -631,6 +709,11 @@ class btns():
             self.camDropWidgets[cam].resize(231 , 131)
             self.camDropWidgets[cam].move( 10+231*(cidx%6) , 10+131*(cidx//6))
             self.camDropWidgets[cam].show()
+            pixmap = QtGui.QPixmap("./datas/images/full0.png")
+            pixmap.scaled(231, 131)
+            self.camDropLabels[cam].resize(231 , 131)
+            self.camDropLabels[cam].move(0,0)
+            self.camDropLabels[cam].setPixmap(pixmap)
 
         """listwidget = self.ui.cmr_listWidget
         items =  [listwidget.item(i) for i in range(listwidget.count())]
@@ -645,13 +728,23 @@ class btns():
         for item in items:
             item.setBackground( QColor(0,200,0) )"""
 
-    def showSetting01(self):
+    def showSetting(self , base = False):
         now = time.time()
-        if now - self.dclickTime[2]  < 0.3:
+        if self.settingLayer.isHidden():
+            self.loadCameraSet(base = base)
             self.settingLayer.show()
             self.settingLayer.resize(259 , 831)
+            self.settingLayer.move(500-76 , 80-10)
+            self.settingLayer.setStyleSheet('background-color: rgba(0, 52, 63, 255);')
+            if base:
+                self.inBaseSet = True
+        else:
+            self.settingLayer.hide()
+            self.settingLayer.resize(259 , 831)
             self.settingLayer.move(1567 , 80)
-        self.dclickTime[2] = time.time()
+            self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
+            if base:
+                self.inBaseSet = False
 
 
 #showSetting17
@@ -827,6 +920,7 @@ class btns():
         widget = widgets[cam]
         if camera.full:
             camera.full = False
+            self.inFullScreenMode = False
             for cam_ in self.cameras:
                 self.cameras[cam_].hide()
                 widgets[cam_].hide()
@@ -844,9 +938,6 @@ class btns():
             camera.show()
             widget.resize(1411 , 831)
             widget.move(10,10)
-            #pixmap = QtGui.QPixmap("./datas/images/full0.png")
-            #pixmap.scaled(1411, 831)
-            #widget.setPixmap(pixmap)
             self.camDropLabels[cam].hide()
             widget.show()
             self.settingLayer.show()
@@ -857,10 +948,11 @@ class btns():
 
     def fullscreen01(self):
         self.currentCam = 'cam01'
-        self.loadCameraSet()
+        self.loadCameraSet()        
         self.setLayerCorlr()
         now = time.time()
         if now - self.dclickTime[1]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[1] = time.time()
 
@@ -873,6 +965,7 @@ class btns():
         self.setLayerCorlr()
         now = time.time()
         if now - self.dclickTime[2]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[2] = time.time()
 
@@ -880,8 +973,10 @@ class btns():
         self.currentCam = 'cam03'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[3]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[3] = time.time()
 
@@ -889,8 +984,10 @@ class btns():
         self.currentCam = 'cam04'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[4]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[4] = time.time()
 
@@ -898,8 +995,10 @@ class btns():
         self.currentCam = 'cam05'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[5]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[5] = time.time()
 
@@ -907,8 +1006,10 @@ class btns():
         self.currentCam = 'cam06'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[6]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[6] = time.time()
 
@@ -916,8 +1017,10 @@ class btns():
         self.currentCam = 'cam07'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[7]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[7] = time.time()
 
@@ -925,8 +1028,10 @@ class btns():
         self.currentCam = 'cam08'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[8]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[8] = time.time()
 
@@ -934,8 +1039,10 @@ class btns():
         self.currentCam = 'cam09'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[9]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[9] = time.time()
 
@@ -943,8 +1050,10 @@ class btns():
         self.currentCam = 'cam10'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[10]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[10] = time.time()
 
@@ -952,8 +1061,10 @@ class btns():
         self.currentCam = 'cam11'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[11]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[11] = time.time()
 
@@ -961,8 +1072,10 @@ class btns():
         self.currentCam = 'cam12'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[12]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[12] = time.time()
 
@@ -970,8 +1083,10 @@ class btns():
         self.currentCam = 'cam13'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[13]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[13] = time.time()
 
@@ -979,8 +1094,10 @@ class btns():
         self.currentCam = 'cam14'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[14]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[14] = time.time()
 
@@ -988,8 +1105,10 @@ class btns():
         self.currentCam = 'cam15'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[15]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[15] = time.time()
 
@@ -997,8 +1116,10 @@ class btns():
         self.currentCam = 'cam16'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[16]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[16] = time.time()
 
@@ -1006,8 +1127,10 @@ class btns():
         self.currentCam = 'cam17'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[17]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[17] = time.time()
 
@@ -1015,8 +1138,10 @@ class btns():
         self.currentCam = 'cam18'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[18]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[18] = time.time()
 
@@ -1024,8 +1149,10 @@ class btns():
         self.currentCam = 'cam19'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[19]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[19] = time.time()
 
@@ -1033,8 +1160,10 @@ class btns():
         self.currentCam = 'cam20'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[20]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[20] = time.time()
 
@@ -1042,8 +1171,10 @@ class btns():
         self.currentCam = 'cam21'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[21]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[21] = time.time()
 
@@ -1051,8 +1182,10 @@ class btns():
         self.currentCam = 'cam22'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[22]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[22] = time.time()
 
@@ -1060,8 +1193,10 @@ class btns():
         self.currentCam = 'cam23'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[23]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[23] = time.time()
 
@@ -1069,8 +1204,10 @@ class btns():
         self.currentCam = 'cam24'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[24]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[24] = time.time()
 
@@ -1078,8 +1215,10 @@ class btns():
         self.currentCam = 'cam25'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[25]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[25] = time.time()
 
@@ -1087,8 +1226,10 @@ class btns():
         self.currentCam = 'cam26'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[26]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[26] = time.time()
 
@@ -1096,8 +1237,10 @@ class btns():
         self.currentCam = 'cam27'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[27]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[27] = time.time()
 
@@ -1105,8 +1248,10 @@ class btns():
         self.currentCam = 'cam28'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[28]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[28] = time.time()
 
@@ -1114,8 +1259,10 @@ class btns():
         self.currentCam = 'cam29'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[29]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[29] = time.time()
 
@@ -1123,8 +1270,10 @@ class btns():
         self.currentCam = 'cam30'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[30]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[30] = time.time()
 
@@ -1132,8 +1281,10 @@ class btns():
         self.currentCam = 'cam31'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[31]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[31] = time.time()
 
@@ -1141,7 +1292,9 @@ class btns():
         self.currentCam = 'cam32'
         self.loadCameraSet()
         self.setLayerCorlr()
+        
         now = time.time()
         if now - self.dclickTime[32]  < 0.3:
+            self.inFullScreenMode = True
             self.resizeCamers(self.currentCam   , self.camDropWidgets)
         self.dclickTime[32] = time.time()

@@ -27,13 +27,8 @@ class Ui_Form(object):
         self.widget_9.setStyleSheet(u"background-color: rgba(0, 0, 0, 0);")
         self.ip_lineEdit_7 = QLineEdit(self.widget_9)
         self.ip_lineEdit_7.setObjectName(u"ip_lineEdit_7")
-        self.ip_lineEdit_7.setGeometry(QRect(102, 226, 150, 20))
+        self.ip_lineEdit_7.setGeometry(QRect(100, 255, 150, 20))
         self.ip_lineEdit_7.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);")
-        self.camera_lineEdit_7 = QLineEdit(self.widget_9)
-        self.camera_lineEdit_7.setObjectName(u"camera_lineEdit_7")
-        self.camera_lineEdit_7.setGeometry(QRect(102, 253, 150, 20))
-        self.camera_lineEdit_7.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);")
         self.loca_label_7 = QLabel(self.widget_9)
         self.loca_label_7.setObjectName(u"loca_label_7")
@@ -47,12 +42,12 @@ class Ui_Form(object):
 "color: rgb(0, 0, 0);")
         self.ip_label_7 = QLabel(self.widget_9)
         self.ip_label_7.setObjectName(u"ip_label_7")
-        self.ip_label_7.setGeometry(QRect(80, 226, 16, 21))
+        self.ip_label_7.setGeometry(QRect(20, 255, 71, 21))
         self.ip_label_7.setStyleSheet(u"font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";\n"
 "color: rgb(255, 255, 255);")
         self.loca_lineEdit_7 = QLineEdit(self.widget_9)
         self.loca_lineEdit_7.setObjectName(u"loca_lineEdit_7")
-        self.loca_lineEdit_7.setGeometry(QRect(102, 280, 150, 20))
+        self.loca_lineEdit_7.setGeometry(QRect(100, 280, 150, 20))
         self.loca_lineEdit_7.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);")
         self.memo_label_7 = QLabel(self.widget_9)
@@ -73,7 +68,7 @@ class Ui_Form(object):
         self.iconBt_7.setIconSize(QSize(200, 200))
         self.camera__label_7 = QLabel(self.widget_9)
         self.camera__label_7.setObjectName(u"camera__label_7")
-        self.camera__label_7.setGeometry(QRect(40, 253, 55, 21))
+        self.camera__label_7.setGeometry(QRect(40, 230, 55, 21))
         self.camera__label_7.setStyleSheet(u"font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";\n"
 "color: rgb(255, 255, 255);")
         self.saveButton = QPushButton(self.widget_9)
@@ -154,8 +149,12 @@ class Ui_Form(object):
         self.foco_label_7.setGeometry(QRect(30, 370, 43, 22))
         self.foco_label_7.setStyleSheet(u"font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";\n"
 "color: rgb(255, 255, 255);")
-        QWidget.setTabOrder(self.ip_lineEdit_7, self.camera_lineEdit_7)
-        QWidget.setTabOrder(self.camera_lineEdit_7, self.loca_lineEdit_7)
+        self.camera_lineEdit_7 = QLabel(self.widget_9)
+        self.camera_lineEdit_7.setObjectName(u"camera_lineEdit_7")
+        self.camera_lineEdit_7.setGeometry(QRect(100, 225, 151, 26))
+        self.camera_lineEdit_7.setStyleSheet(u"font: 75 12pt \"\ub9d1\uc740 \uace0\ub515\";\n"
+"color: rgb(255, 255, 255);")
+        QWidget.setTabOrder(self.ip_lineEdit_7, self.loca_lineEdit_7)
         QWidget.setTabOrder(self.loca_lineEdit_7, self.zoom_horizontalSlider_7)
         QWidget.setTabOrder(self.zoom_horizontalSlider_7, self.sens_horizontalSlider_7)
         QWidget.setTabOrder(self.sens_horizontalSlider_7, self.foco_horizontalSlider_7)
@@ -164,9 +163,9 @@ class Ui_Form(object):
         QWidget.setTabOrder(self.saveButton, self.iconBt_7)
 
         self.retranslateUi(Form)
+        self.foco_horizontalSlider_7.valueChanged.connect(self.label_3.setNum)
         self.zoom_horizontalSlider_7.valueChanged.connect(self.label.setNum)
         self.sens_horizontalSlider_7.valueChanged.connect(self.label_2.setNum)
-        self.foco_horizontalSlider_7.valueChanged.connect(self.label_3.setNum)
 
         QMetaObject.connectSlotsByName(Form)
     # setupUi
@@ -174,7 +173,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.loca_label_7.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"right\">Location</p><p><br/></p></body></html>", None))
-        self.ip_label_7.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"right\">Ip</p></body></html>", None))
+        self.ip_label_7.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"right\">Address</p></body></html>", None))
         self.memo_label_7.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"right\">Memo</p></body></html>", None))
         self.iconBt_7.setText("")
         self.camera__label_7.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"right\">Camera</p></body></html>", None))
@@ -185,5 +184,6 @@ class Ui_Form(object):
         self.label_4.setText(QCoreApplication.translate("Form", u"Zoom", None))
         self.label_5.setText(QCoreApplication.translate("Form", u"Sensitive ", None))
         self.foco_label_7.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"right\">Focos</p></body></html>", None))
+        self.camera_lineEdit_7.setText("")
     # retranslateUi
 
