@@ -18,6 +18,6 @@ class Pannel(QWidget):
         else:
             val  =self.root.camSettings[self.root.currentLayer][self.root.currentCam]["sens"] = self.ui.sens_horizontalSlider_7.value()
             if self.root.currentCam in self.root.Qs:
-                self.root.Qs[self.root.currentCam][1].put("sens:"+str(val))
+                self.root.Qs[self.root.currentCam][1].put(( "sens:"+str(val) , False , "")) 
         
         

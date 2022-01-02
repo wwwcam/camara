@@ -74,7 +74,7 @@ class Ui_Form(object):
         self.saveButton = QPushButton(self.widget_9)
         self.saveButton.setObjectName(u"saveButton")
         self.saveButton.setGeometry(QRect(10, 480, 81, 23))
-        self.saveButton.setStyleSheet(u"background-color: rgba(43, 128, 255,100);")
+        self.saveButton.setStyleSheet(u"background-color: rgba(43, 140, 255,200);")
         self.horizontalLayoutWidget = QWidget(self.widget_9)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
         self.horizontalLayoutWidget.setGeometry(QRect(80, 310, 171, 24))

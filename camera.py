@@ -70,13 +70,15 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.settingLayer.hide()
         self.stopVideos = 0
         self.baseCamNum = 0
+        self.allStoped = True
+        
         self.mapPath = None
         self.inBaseSet = False
         self.btnClickTime = time.time()
         self.btnClickCnt = 0
         self.currentCam = None
         self.currenListtLayer = [i for i in range(32)]
-        self.currentLayer =0 
+        self.currentLayer = 0 
         self.pannel = Pannel(self.settingLayer , "./camera_setting.ui" , self)
         vplayer.__init__(self )#vplayer 함수 로딩
         self.setFileName = "./datas/settings.pkl"
@@ -84,9 +86,25 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         saveSetting.__init__(self)
         self.settings = {}
         self.currentLayer = 0
+
+        self.camBaseSettings = {}
+        for i in range(50):
+            self.camBaseSettings[i] = {"ip":'' , "name":f'cam{i:02d}' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''}
+        self.settings['camsetting'] = self.camBaseSettings
         self.loadSet()
-        #self.ui.cmr_listWidget_5.clear()
-        self.ui.folferAddres.setText(self.settings['savepath'])
+        
+        self.ui.cmr_listWidget_5.clear()
+        if 'savepath' in self.settings:
+            if os.path.isdir(self.settings['savepath']):
+                self.ui.folferAddres.setText(self.settings['savepath'])
+            else:
+                self.ui.folferAddres.setText(os.path.abspath("./"))
+                self.settings['savepath'] = os.path.abspath("./")
+
+        else:
+            self.ui.folferAddres.setText(os.path.abspath("./"))
+            self.settings['savepath'] = os.path.abspath("./")
+
         self.inFullScreenMode = False
 
         ################## 스플래시 스크린에 입체 그림자 적용, 잘 안됨##################
@@ -122,6 +140,11 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.onesectimer.timeout.connect(self.onesec)## 스플래시 스크린 숨기기 함수를 따로 만들지 않음
         self.onesectimer.start()
 
+        self.ui.gsetLayer.hide()
+        self.ui.showReplay_2.clicked.connect(self.ui.gsetLayer.show)
+        self.ui.gsetClose.clicked.connect(self.ui.gsetLayer.hide)
+
+
         #self.setlistcolors()
         self.showCameras = [self.cameras[cam] for cam in self.cameras]
         self.ui.folferSelect_Bt.clicked.connect(self.selectFolder)
@@ -146,11 +169,13 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         os.startfile(os.path.abspath(self.savePath))
 
     def Realtime(self):
-        self.ui.widget_5.show()
+        self.allStop(noask=True)
+        self.ui.widget_3.show()
         self.ui.replayWidget.hide()
 
     def Replay(self):
-        self.ui.widget_5.hide()
+        self.allStop(noask=True)
+        self.ui.widget_3.hide()
         self.ui.replayWidget.show()
 
     def onesec(self):
@@ -214,15 +239,17 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         self.saveSet()
 
     def showBtnIcon(self , img , icon , size):
-        icon.setIconSize(QtCore.QSize(size[0],size[1]))
-        if os.path.isfile(img):
-            image = imread(img)
-            image = cv2.resize(image,[440,150], interpolation=cv2.INTER_AREA)
-            bytesPerLine = 3 * image.shape[1]
-            image = QtGui.QImage(image.data, image.shape[1], image.shape[0], bytesPerLine  , QtGui.QImage.Format_RGB888).rgbSwapped()
-            icon.setIcon(QPixmap.fromImage(image)) 
+        if img:
+            icon.setIconSize(QtCore.QSize(size[0],size[1]))
+            if os.path.isfile(img):
+                image = imread(img)
+                image = cv2.resize(image,dsize=(371,141), interpolation=cv2.INTER_AREA)
+                bytesPerLine = 3 * image.shape[1]
+                image = QtGui.QImage(image.data, image.shape[1], image.shape[0], bytesPerLine  , QtGui.QImage.Format_RGB888).rgbSwapped()
+                icon.setIcon(QPixmap.fromImage(image)) 
 
     def selectMap(self):
+        print("ok",time.time() - self.btnClickTime)
         if time.time() - self.btnClickTime < 0.3:
             self.btnClickCnt+=1
             if self.btnClickCnt > 5:
@@ -230,8 +257,9 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
                     mapdir = os.path.dirname(self.mapPath)
                 else:
                     mapdir = "c:/"
-                self.mapPath = self.settings['mapPath']  = QtWidgets.QFileDialog.getOpenFileName(self.ui, '지도파일을 선택해주세요. 크기는 440X150입니다' , mapdir , "JPEG (*.jpg *.jpeg);;PNG (*.png)")[0]
-                self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))                  
+                self.mapPath = self.settings['mapPath']  = QtWidgets.QFileDialog.getOpenFileName(self.ui, '지도파일을 선택해주세요' , mapdir , "JPEG (*.jpg *.jpeg);;PNG (*.png)")[0]
+                if self.mapPath and os.path.isfile(self.mapPath):
+                    self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))                  
                 self.saveSet()
         else:
             self.btnClickCnt = 0
@@ -267,7 +295,11 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
             #if q[0].qsize() > 1:
                 #print("q[0].qsize()" , q[0].qsize())
             for idx in range(q[0].qsize()):
-                cvimg = q[0].get()
+                qv = q[0].get()
+                if len(qv) == 3:
+                    cvimg , alarm , name = qv
+                else:
+                    print(qv)
             if type(cvimg) != type(None):
                 if cvimg.shape == (1,1,3):
                     self.setLayerCorlr()
@@ -280,7 +312,13 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
                 btn.setIcon(QPixmap.fromImage(image))   
                 btn.setText('')
                 if btn.iconSize() != btn.size():
-                    btn.setIconSize(btn.size())            
+                    btn.setIconSize(btn.size()) 
+                btn.alarm.setText("   " + name)   
+                if alarm:
+                    btn.alarm.setStyleSheet("background-color: rgba(255, 50, 100, 100);") 
+                   
+                else:
+                    btn.alarm.setStyleSheet("background-color: rgba(255, 255, 255, 100);")  
 
     def setupUi(self):
         pass

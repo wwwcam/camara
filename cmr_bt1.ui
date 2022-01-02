@@ -173,6 +173,9 @@ color: rgb(255, 255, 255);</string>
        <height>32</height>
       </rect>
      </property>
+     <property name="tabletTracking">
+      <bool>true</bool>
+     </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
      </property>
@@ -227,9 +230,6 @@ color: rgb(255, 255, 255);</string>
       <bool>true</bool>
      </property>
      <property name="flat">
-      <bool>true</bool>
-     </property>
-     <property name="tabletTracking" stdset="0">
       <bool>true</bool>
      </property>
     </widget>
@@ -749,7 +749,7 @@ font: 75 8pt &quot;Agency FB&quot;;</string>
        <bool>true</bool>
       </property>
       <property name="selectionMode">
-       <enum>QCalendarWidget::NoSelection</enum>
+       <enum>QCalendarWidget::SingleSelection</enum>
       </property>
       <property name="verticalHeaderFormat">
        <enum>QCalendarWidget::NoVerticalHeader</enum>
@@ -785,6 +785,12 @@ font: 14pt &quot;Agency FB&quot;;
 color: rgb(255, 255, 255);
 
 </string>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::DragDrop</enum>
+      </property>
+      <property name="defaultDropAction">
+       <enum>Qt::LinkAction</enum>
       </property>
       <item>
        <property name="text">
@@ -1684,8 +1690,6 @@ font: 30pt &quot;Agency FB&quot;;</string>
         <bool>true</bool>
        </property>
       </widget>
-      <zorder>ca_label_08</zorder>
-      <zorder>replayWidget</zorder>
      </widget>
      <widget class="QWidget" name="ca_widget_10" native="true">
       <property name="geometry">
@@ -2702,6 +2706,9 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
        <property name="mouseTracking">
         <bool>true</bool>
        </property>
+       <property name="tabletTracking">
+        <bool>true</bool>
+       </property>
        <property name="focusPolicy">
         <enum>Qt::WheelFocus</enum>
        </property>
@@ -2724,9 +2731,6 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
          <width>40</width>
          <height>40</height>
         </size>
-       </property>
-       <property name="tabletTracking" stdset="0">
-        <bool>true</bool>
        </property>
       </widget>
      </widget>
@@ -2853,6 +2857,9 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
        <height>21</height>
       </rect>
      </property>
+     <property name="tabletTracking">
+      <bool>false</bool>
+     </property>
      <property name="acceptDrops">
       <bool>true</bool>
      </property>
@@ -2863,9 +2870,6 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
-     </property>
-     <property name="tabletTracking" stdset="0">
-      <bool>false</bool>
      </property>
     </widget>
     <widget class="QWidget" name="loadmap_wg" native="true">
@@ -2883,14 +2887,14 @@ font: 75 11pt &quot;HY견고딕&quot;;</string>
      <widget class="QPushButton" name="loadmap">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>411</width>
-        <height>181</height>
+        <x>20</x>
+        <y>30</y>
+        <width>371</width>
+        <height>141</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(10, 44, 45);</string>
+       <string notr="true">background-color: rgba(10, 44, 45,50);</string>
       </property>
       <property name="text">
        <string/>
@@ -2931,6 +2935,189 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Camera Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <zorder>label_6</zorder>
+     <zorder>label_7</zorder>
+     <zorder>loadmap</zorder>
+    </widget>
+    <widget class="QWidget" name="gsetLayer" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>441</width>
+       <height>931</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>441</width>
+        <height>931</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(121, 121, 121);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="pixmap">
+       <pixmap>datas/images/lon.jpeg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>361</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string> User ID</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>80</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255 , 255 , 0);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>admin</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>361</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string> User Password</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>120</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255 , 255 , 0);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>admin</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>361</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>  Save interval(Sec)</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>245</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="value">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>160</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="gsetClose">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>820</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Close</string>
       </property>
      </widget>
     </widget>

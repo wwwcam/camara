@@ -57,7 +57,8 @@ class saveSetting():
                 else:
                     self.camBaseSettings = {}
                     for i in range(32):
-                        self.camBaseSettings[i] = {"ip":'' , "name":'' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''}
+                        self.camBaseSettings[i] = {"ip":'' , "name":f'cam{i+1:02d}' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''}
+                
 
                 if 'mapPath' in  self.settings:
                     self.mapPath = self.settings['mapPath']
@@ -90,13 +91,14 @@ class saveSetting():
             self.setpanel.foco_horizontalSlider_7.setValue(self.camBaseSettings[self.baseCamNum]["focus"])
             self.setpanel.memo_textEdit_7.setPlainText(self.camBaseSettings[self.baseCamNum]["memo"])
         else:
-            self.setpanel.ip_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["ip"])
-            self.setpanel.camera_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["name"])
-            self.setpanel.loca_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["location"])
-            self.setpanel.zoom_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["zoom"])
-            self.setpanel.sens_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["sens"])
-            self.setpanel.foco_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["focus"])
-            self.setpanel.memo_textEdit_7.setPlainText(self.camSettings[self.currentLayer][self.currentCam]["memo"])
+            if self.currentCam:
+                self.setpanel.ip_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["ip"])
+                self.setpanel.camera_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["name"])
+                self.setpanel.loca_lineEdit_7.setText(self.camSettings[self.currentLayer][self.currentCam]["location"])
+                self.setpanel.zoom_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["zoom"])
+                self.setpanel.sens_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["sens"])
+                self.setpanel.foco_horizontalSlider_7.setValue(self.camSettings[self.currentLayer][self.currentCam]["focus"])
+                self.setpanel.memo_textEdit_7.setPlainText(self.camSettings[self.currentLayer][self.currentCam]["memo"])
 
 
     def saveSet(self , base=False ):

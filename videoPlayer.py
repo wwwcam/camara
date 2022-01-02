@@ -15,14 +15,34 @@ from PySide2.QtGui import *
 from PySide2.QtCore import * 
 from multiprocessing import Process , Queue
 import multiprocessing
-    
+import os
+
+
+
 
 def saveVideo(cam , savepath , frames ):
+    print("save video start")
     width , height = frames[0][0].shape[1]*2 , frames[0][0].shape[0]
-    writer = cv2.VideoWriter('local_capture.mp4', cv2.VideoWriter_fourcc(*'VIDX'),25, (width, height))
+    lc = time.localtime()
+    today = f"{lc[0]:02d}{lc[1]:02d}{lc[2]:02d}"
+    now = f"{lc[3]:02d}{lc[4]:02d}{lc[5]:02d}"
+    if os.path.isdir(savepath) == False:
+        os.mkdir(savepath)
+    if os.path.isdir(savepath+"/"+cam) == False:
+        os.mkdir(savepath+"/"+cam)
+    if os.path.isdir(savepath+"/" + cam + "/" +today) == False:
+        os.mkdir(savepath+"/" + cam + "/" +today)
+    fullsavename = os.path.abspath(savepath+"/" + cam + "/" +today+"/"+now+".avi")
+    writer = cv2.VideoWriter(fullsavename, cv2.VideoWriter_fourcc('M','J','P','G'), int(round(len(frames)/10)) , (width, height))
+    print("frames" , len(frames),int(round(len(frames)/10)))
+    for ff in frames:
+        img = cv2.hconcat((ff[0],ff[1]))
+        writer.write(img)
+    writer.release()
 
 
-def playVideo(cam , video,frameBuff,errframes , contStack , Q,savepath,countMem,sens,memory,framCnt,errtime,writer):
+
+def playVideo(cam , name , video,frameBuff,errframes , contStack , Q,savepath,countMem,sens,memory,framCnt,errtime,writer):
     conSize = 1005 - int((sens/100.0) * 1000) 
     blurSize = 10 -int(10 * (sens/100.0))
     frd = None
@@ -83,30 +103,38 @@ def playVideo(cam , video,frameBuff,errframes , contStack , Q,savepath,countMem,
                     result = cv2.addWeighted(image_color, 0.8, zeros2, 0.3, 0)
                     memory.append(result)
                     memory = memory[-10:]
-                    Q.put(result)
+                    if name.strip() == '':
+                        savename = cam
+                    else:
+                        savename = name.strip()
+                    if len(tmpcnts) > 0:
+                        Q.put( (result , True,savename))
+                    else:
+                        Q.put( (result , False,savename) )
 
                     if len(tmpcnts) > 0:
                         if errtime==-1:
                             errtime= time.time()
                             width , height = image_color[0].shape[1]*2 , image_color[0].shape[0]
-                            writer = cv2.VideoWriter(f'./test_{random.randint(0,9999)}.avi', cv2.VideoWriter_fourcc('M','J','P','G') ,25, (width, height))
-                            writer.write(result)
+                            #writer = cv2.VideoWriter(f'./test_{random.randint(0,9999)}.avi', cv2.VideoWriter_fourcc('M','J','P','G') ,25, (width, height))
+                            #writer.write(result)
                         else:
                             
                             if time.time() - errtime > 10:
-                            
-                                #saveVideo(cam , savepath , errframes )
+                                
+                                
+                                saveVideo(savename , savepath , errframes )
+                                errframes = []
                                 errtime =-1
-                                writer.release()
+                                #writer.release()
                                 frameBuff = frameBuff[-frameDist : ]
                                 contStack = []
                                 tmpcnts = []
                                 memory = []
-                                print( cam , "Saved")
 
-                        #errframes.append([image_color , result])
+                        errframes.append([image_color , result])
 
-            return frameBuff,countMem,memory , errtime ,writer
+            return frameBuff,countMem,memory , errtime ,writer,errframes
 
 class getImage():
     def __init__(self, ip):
@@ -114,7 +142,7 @@ class getImage():
     def read(self):
         return requests.get(self.ip).content
 
-def initCam(layer , cam , ip,Q , Q2 , savepath , sens):
+def initCam(layer , cam , name ,ip,Q , Q2 , savepath , sens):
     if ip.endswith(".jpg" ):
         getimg = getImage(ip)
         video = getimg
@@ -133,18 +161,18 @@ def initCam(layer , cam , ip,Q , Q2 , savepath , sens):
     while loops:
         cnt+=1
         try:
-            ret   = playVideo(cam  , video,frameBuff, errframes , contStack,Q,savepath,countMem,sens,memory , cnt , errtime,writer)
+            ret   = playVideo(cam  , name , video,frameBuff, errframes , contStack,Q,savepath,countMem,sens,memory , cnt , errtime,writer)
             if ret:
-                frameBuff,countMem,memory,errtime,writer = ret
+                frameBuff,countMem,memory,errtime,writer,errframes = ret
         except:
-            print(cam , traceback.format_exc())
+            print(cv2.CAP_FFMPEG , traceback.format_exc())
      
         if Q2.empty() == False:
             for qi in range(Q2.qsize()):
                 d = Q2.get()
                 if "quit" in d:
                     loops = False
-                    Q.put(np.zeros((1,1,3)))
+                    Q.put( (np.zeros((1,1,3)) , False , cam))
                     return
 
                 if "sens:" in d:
@@ -181,10 +209,15 @@ class vplayer():
         memo = self.camSettings[layer][cam]["memo"]
         return ip , name , loc , zoom , sens , focus , memo
 
-    def allStart(self):
-        reply = QMessageBox.question(self.ui, 'Message', '모니터링을 시작하시겠습니까?',
-                        QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+    def allStart(self, noask = False):
+        
+        if noask == False:
+            reply = QMessageBox.question(self.ui, 'Message', '모니터링을 시작하시겠습니까?',
+                            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        else:
+            reply = QMessageBox.Yes
         if reply == QMessageBox.Yes:
+            self.allStoped = False
             for cam in self.cameras:
                 if cam in self.ps:
                     if self.ps[cam].is_alive ():
@@ -192,17 +225,23 @@ class vplayer():
                 self.Qs[cam] = [Queue() , Queue()]
                 ip , name , loc , zoom , sens , focus , memo = self.loadCamSet(self.currentLayer ,cam )
                 if ip:
-                    self.ps[cam] = Process(target = initCam , args = (self.currentLayer ,cam , ip, self.Qs[cam][0] ,  self.Qs[cam][1] , self.savePath ,sens))
+                    self.ps[cam] = Process(target = initCam , args = (self.currentLayer ,cam , name , ip, self.Qs[cam][0] ,  self.Qs[cam][1] , self.savePath ,sens))
                     self.ps[cam].start()
 
-    def allStop(self, cam):
-        reply = QMessageBox.question(self.ui, 'Message', '모니터링을 종료하시겠습니까?',
-                        QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+    def allStop(self , noask = False):
+
+        if noask == False:
+            reply = QMessageBox.question(self.ui, 'Message', '모니터링을 종료하시겠습니까?',
+                            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        else:
+            reply = QMessageBox.Yes
+
         if reply == QMessageBox.Yes:
+            self.allStoped = True
             for cam in self.cameras:
                 if cam in self.ps:
                     if self.ps[cam].is_alive ():
-                        self.Qs[cam][1].put("quit")
+                        self.Qs[cam][1].put(("quit" , False , ""))
                         self.stopVideos = 1
                         name = self.camSettings[self.currentLayer][cam]["name"]
                         btn = self.cameras[cam]
@@ -212,8 +251,6 @@ class vplayer():
                         else:
                             btn.setText(name)
                         #self.ps[cam].terminate()
-
-
 
 
     def playV1(self):

@@ -26,7 +26,8 @@ class DragBtn(QPushButton):
         if time.time()  - self.clickTime < 0.3:
             self.func(base=True)
         self.clickTime = time.time()
-        self.parent.baseCamNum = int(self.idx)
+        self.parent.baseCamNum = int(self.idx)-1
+        print("self.idx" , self.idx)
 
     def mouseMoveEvent(self, event):
         if not (event.buttons() & Qt.LeftButton):
@@ -56,9 +57,11 @@ class DropBtn(QPushButton):
 
     def dropEvent(self, event):
 
+        print("self.parent.baseCamNum2" ,self.parent.baseCamNum)
         self.parent.camSettings[self.parent.currentLayer][self.num]["ip"] = self.parent.camBaseSettings[self.parent.baseCamNum]["ip"]
-        self.parent.camSettings[self.parent.currentLayer][self.num]["name"] = self.parent.camBaseSettings[self.parent.baseCamNum]["name"]
-        self.parent.camSettings[self.parent.currentLayer][self.num]["location"] = self.parent.camBaseSettings[self.parent.baseCamNum]["location"]
+        name = self.parent.camSettings[self.parent.currentLayer][self.num]["name"] = self.parent.camBaseSettings[self.parent.baseCamNum]["name"]
+        loc = self.parent.camSettings[self.parent.currentLayer][self.num]["location"] = self.parent.camBaseSettings[self.parent.baseCamNum]["location"]
+        print("name" , name , "loc" , loc)
         self.parent.camSettings[self.parent.currentLayer][self.num]["zoom"] = self.parent.camBaseSettings[self.parent.baseCamNum]["zoom"]
         self.parent.camSettings[self.parent.currentLayer][self.num]["sens"] = self.parent.camBaseSettings[self.parent.baseCamNum]["sens"]
         self.parent.camSettings[self.parent.currentLayer][self.num]["focus"] = self.parent.camBaseSettings[self.parent.baseCamNum]["focus"]
@@ -66,11 +69,16 @@ class DropBtn(QPushButton):
         self.parent.settings['camsetting'] = self.parent.camSettings
         with open(self.parent.setFileName, "wb") as f:
             pickle.dump(self.parent.settings , f)
+        self.parent.currentCam = self.num
+
         self.parent.loadCameraSet()
         pos = event.pos()
         text = event.mimeData().text()
         #print(dir(event.mimeData()))
-        self.setText(text)
+        if loc.strip():
+            self.setText(loc)
+        else:
+            self.setText(name)
         event.acceptProposedAction()
 
 class btns():
@@ -211,6 +219,12 @@ class btns():
         for bidx in range(1 , 33):
             exec(f'''self.ui.camVideo_{bidx:02d}.parent = self''')
             exec(f'''self.ui.camVideo_{bidx:02d}.num = "cam{bidx:02d}"''')
+            exec(f'''self.ui.camVideo_{bidx:02d}.alarm = QLabel(self.ui.ca_widget_{bidx:02d})''')
+            exec(f'''self.ui.camVideo_{bidx:02d}.alarm.move(0,0)''')
+            exec(f'''self.ui.camVideo_{bidx:02d}.alarm.resize(240,21)''')
+            exec(f'''self.ui.camVideo_{bidx:02d}.alarm.setStyleSheet("background-color: rgba(255, 255, 255, 50);")''')
+
+
 
         self.ui.cmraBt_01 = DragBtn(self.ui.dragCamBase )
         self.ui.cmraBt_01.func = self.showSetting
@@ -657,93 +671,60 @@ class btns():
             self.cameras[cam].full = False
             self.cameras[cam].active = True
 
-        self.fullscreens = [self.showall ,self.showLayer1 ,self.showLayer2 ]
+        self.fullscreens = [self.showall ,self.showLayer1 ,self.showLayer2 ,self.showLayer3,self.showLayer4,self.showLayer5]
         self.layers = {
-            "6":[self.ui.camVideo_01,
-            self.ui.camVideo_03,
-            self.ui.camVideo_09,
-            self.ui.camVideo_13,
-            self.ui.camVideo_14,
-            self.ui.camVideo_15
-            ],
+            "6":['cam01','cam03','cam09','cam13','cam14','cam15'],
+
             "7_1":
-            [self.ui.camVideo_01,
-            self.ui.camVideo_04,
-            self.ui.camVideo_10,
-            self.ui.camVideo_16,
-            self.ui.camVideo_19,
-            self.ui.camVideo_20,
-            self.ui.camVideo_21,
-            self.ui.camVideo_22
+            ['cam01',
+            'cam04',
+            'cam10',
+            'cam16',
+            'cam19',
+            'cam20',
+            'cam21',
+            'cam22'
             ],
             "7_2":
-            [self.ui.camVideo_01,
-            self.ui.camVideo_03,
-            self.ui.camVideo_13,
-            self.ui.camVideo_14,
-            self.ui.camVideo_15,
-            self.ui.camVideo_19,
-            self.ui.camVideo_20
+            ['cam01',
+            'cam03',
+            'cam13',
+            'cam14',
+            'cam15',
+            'cam19',
+            'cam20'
             ],
             "10":
-            [self.ui.camVideo_01,
-            self.ui.camVideo_03,
-            self.ui.camVideo_13,
-            self.ui.camVideo_14,
-            self.ui.camVideo_15,
-            self.ui.camVideo_16,
-            self.ui.camVideo_19,
-            self.ui.camVideo_20,
-            self.ui.camVideo_21,
-            self.ui.camVideo_22,
+            ['cam01',
+            'cam03',
+            'cam13',
+            'cam14',
+            'cam15',
+            'cam16',
+            'cam19',
+            'cam20',
+            'cam21',
+            'cam22',
             ],
             "13":
-            [self.ui.camVideo_01,
-            self.ui.camVideo_03,
-            self.ui.camVideo_04,
-            self.ui.camVideo_07,
-            self.ui.camVideo_08,
-            self.ui.camVideo_13,
-            self.ui.camVideo_14,
-            self.ui.camVideo_15,
-            self.ui.camVideo_16,
-            self.ui.camVideo_19,
-            self.ui.camVideo_20,
-            self.ui.camVideo_21,
-            self.ui.camVideo_22,
+            ['cam01',
+            'cam03',
+            'cam04',
+            'cam07',
+            'cam08',
+            'cam13',
+            'cam14',
+            'cam15',
+            'cam16',
+            'cam19',
+            'cam20',
+            'cam21',
+            'cam22',
             ],
 
         }
  
-    def showall(self):
-        self.currentLayer = 0
-        self.setlistcolors()
-        self.changelistColor()
-        for cidx  , cam in enumerate(self.cameras):
-            self.cameras[cam].active=True
-            self.cameras[cam].show()
-            self.cameras[cam].resize(231 , 131)
-            self.camDropWidgets[cam].resize(231 , 131)
-            self.camDropWidgets[cam].move( 10+231*(cidx%6) , 10+131*(cidx//6))
-            self.camDropWidgets[cam].show()
-            pixmap = QtGui.QPixmap("./datas/images/full0.png")
-            pixmap.scaled(231, 131)
-            self.camDropLabels[cam].resize(231 , 131)
-            self.camDropLabels[cam].move(0,0)
-            self.camDropLabels[cam].setPixmap(pixmap)
 
-        """listwidget = self.ui.cmr_listWidget
-        items =  [listwidget.item(i) for i in range(listwidget.count())]
-        for item in items:
-            item.setBackground( QColor(0,200,0) )
-        listwidget = self.ui.cmr_listWidget_3
-        items =  [listwidget.item(i) for i in range(listwidget.count())]
-        for item in items:
-            item.setBackground( QColor(0,200,0) )
-        listwidget = self.ui.cmr_listWidget_4
-        items =  [listwidget.item(i) for i in range(listwidget.count())]
-        for item in items:
-            item.setBackground( QColor(0,200,0) )"""
 
     def showSetting(self , base = False):
         if base and self.inFullScreenMode:
@@ -773,8 +754,30 @@ class btns():
 
 
 #showSetting17
+    def showall(self):
+        self.currentLayer = 0
+        self.setlistcolors()
+        self.changelistColor()
+        for cidx  , cam in enumerate(self.cameras):
+            camera = self.cameras[cam]
+            camera.active=True
+            camera.show()
+            camera.resize(231 , 131)
+            self.camDropWidgets[cam].resize(231 , 131)
+            self.camDropWidgets[cam].move( 10+231*(cidx%6) , 10+131*(cidx//6))
+            self.camDropWidgets[cam].show()
+            pixmap = QtGui.QPixmap("./datas/images/full0.png")
+            pixmap.scaled(231, 131)
+            self.camDropLabels[cam].resize(231 , 131)
+            self.camDropLabels[cam].move(0,0)
+            self.camDropLabels[cam].setPixmap(pixmap)
+            camera.alarm.resize(231 , 21)
+
 
     def showLayer1(self):
+        if self.allStoped==False:
+            self.allStop(noask=True)
+            self.allStart(noask=True)
         self.currentLayer = 1
         self.setlistcolors()
         self.changelistColor()
@@ -789,25 +792,47 @@ class btns():
             [w0*2 , h0*2 , w0*3 , h0*3],
         ]
         for cam in self.cameras:
-            self.cameras[cam].hide()
+            self.camDropWidgets[cam].hide()
             self.cameras[cam].active = False
         for cidx  , cam in enumerate(self.layers["6"]):
-            cam.active=True
-            cam.show()
+            camera = self.cameras[cam]
+            camera.active=True
+            camera.show()
             if cidx == 0:
                 x = l[cidx][0]
                 y = l[cidx][1]
                 w = l[cidx][2] - l[cidx][0]
                 h = l[cidx][3] - l[cidx][1]
-                cam.move(10,10)
-                cam.resize(w,h)
+                camera.resize(w,h)
+                self.camDropWidgets[cam].resize(w , h)
+                self.camDropWidgets[cam].move( x,y)#10+w*(cidx%6) , 10+h*(cidx//6))
+                self.camDropWidgets[cam].show()
+                pixmap = QtGui.QPixmap("./datas/images/full0.png")
+                pixmap.scaled(231, 131)
+                self.camDropLabels[cam].resize(w , h)
+                self.camDropLabels[cam].move(0,0)
+                self.camDropLabels[cam].setPixmap(pixmap)
+                camera.alarm.resize(231 , 21)
             else:
                 x = l[cidx][0]
                 y = l[cidx][1]
-                cam.move(x+10,y+10)
-                cam.resize(w0,h0)
+                #camera.move(x+10,y+10)
+                camera.resize(w0,h0)
+                self.camDropWidgets[cam].resize(w0 , h0)
+                self.camDropWidgets[cam].move( x,y)#10+w*(cidx%6) , 10+h*(cidx//6))
+                self.camDropWidgets[cam].show()
+                pixmap = QtGui.QPixmap("./datas/images/full0.png")
+                pixmap.scaled(231, 131)
+                self.camDropLabels[cam].resize(w0 , h0)
+                self.camDropLabels[cam].move(0,0)
+                self.camDropLabels[cam].setPixmap(pixmap)
+                camera.alarm.resize(w0 , 21)
+
 
     def showLayer2(self):
+        if self.allStoped==False:
+            self.allStop(noask=True)
+            self.allStart(noask=True)
         self.currentLayer = 2
         self.setlistcolors()
         self.changelistColor()
@@ -826,19 +851,31 @@ class btns():
             [w0*3 , h0*3 , w0*4 , h0*4],
         ]
         for cam in self.cameras:
-            self.cameras[cam].hide()
+            self.camDropWidgets[cam].hide()
             self.cameras[cam].active = False
         for cidx  , cam in enumerate(self.layers["7_1"]):
-            cam.show()
-            cam.active = True
+            camera = self.cameras[cam]
+            camera.show()
+            camera.active = True
             x = l[cidx][0]
             y = l[cidx][1]
             w = l[cidx][2] - l[cidx][0]
             h = l[cidx][3] - l[cidx][1]
-            cam.move(x+10,y+10)
-            cam.resize(w,h)      
+            camera.resize(w,h)
+            self.camDropWidgets[cam].resize(w , h)
+            self.camDropWidgets[cam].move( x,y)#10+w*(cidx%6) , 10+h*(cidx//6))
+            self.camDropWidgets[cam].show()
+            pixmap = QtGui.QPixmap("./datas/images/full0.png")
+            pixmap.scaled(231, 131)
+            self.camDropLabels[cam].resize(w , h)
+            self.camDropLabels[cam].move(0,0)
+            self.camDropLabels[cam].setPixmap(pixmap)  
+            camera.alarm.resize(w , 21) 
 
     def showLayer3(self):
+        if self.allStoped==False:
+            self.allStop(noask=True)
+            self.allStart(noask=True)
         self.currentLayer = 3
         self.setlistcolors()
         self.changelistColor()
@@ -857,19 +894,31 @@ class btns():
             [w0*1 , h0*3 , w0*2 , h0*4],
         ]
         for cam in self.cameras:
-            self.cameras[cam].hide()
+            self.camDropWidgets[cam].hide()
             self.cameras[cam].active = False
         for cidx  , cam in enumerate(self.layers["7_2"]):
-            cam.show()
-            cam.active = True
+            camera = self.cameras[cam]
+            camera.show()
+            camera.active = True
             x = l[cidx][0]
             y = l[cidx][1]
             w = l[cidx][2] - l[cidx][0]
             h = l[cidx][3] - l[cidx][1]
-            cam.move(x+10,y+10)
-            cam.resize(w,h)      
+            camera.resize(w,h)
+            self.camDropWidgets[cam].resize(w , h)
+            self.camDropWidgets[cam].move( x,y)#10+w*(cidx%6) , 10+h*(cidx//6))
+            self.camDropWidgets[cam].show()
+            pixmap = QtGui.QPixmap("./datas/images/full0.png")
+            pixmap.scaled(231, 131)
+            self.camDropLabels[cam].resize(w , h)
+            self.camDropLabels[cam].move(0,0)
+            self.camDropLabels[cam].setPixmap(pixmap)  
+            camera.alarm.resize(w , 21)  
 
     def showLayer4(self):
+        if self.allStoped==False:
+            self.allStop(noask=True)
+            self.allStart(noask=True)
         self.currentLayer = 4
         self.setlistcolors()
         self.changelistColor()
@@ -891,19 +940,31 @@ class btns():
         ]
 
         for cam in self.cameras:
-            self.cameras[cam].hide()
+            self.camDropWidgets[cam].hide()
             self.cameras[cam].active = False
         for cidx  , cam in enumerate(self.layers["10"]):
-            cam.show()
-            cam.active = True
+            camera = self.cameras[cam]
+            camera.show()
+            camera.active = True
             x = l[cidx][0]
             y = l[cidx][1]
             w = l[cidx][2] - l[cidx][0]
             h = l[cidx][3] - l[cidx][1]
-            cam.move(x+10,y+10)
-            cam.resize(w,h)  
+            camera.resize(w,h)
+            self.camDropWidgets[cam].resize(w , h)
+            self.camDropWidgets[cam].move( x,y)#10+w*(cidx%6) , 10+h*(cidx//6))
+            self.camDropWidgets[cam].show()
+            pixmap = QtGui.QPixmap("./datas/images/full0.png")
+            pixmap.scaled(231, 131)
+            self.camDropLabels[cam].resize(w , h)
+            self.camDropLabels[cam].move(0,0)
+            self.camDropLabels[cam].setPixmap(pixmap)   
+            camera.alarm.resize(w , 21) 
 
     def showLayer5(self):
+        if self.allStoped==False:
+            self.allStop(noask=True)
+            self.allStart(noask=True)
         self.currentLayer = 5
         self.setlistcolors()
         self.changelistColor()
@@ -928,21 +989,31 @@ class btns():
             [w0*3 , h0*3 , w0*4 , h0*4],
         ]
         for cam in self.cameras:
-            self.cameras[cam].hide()
+            self.camDropWidgets[cam].hide()
             self.cameras[cam].active = False
         for cidx  , cam in enumerate(self.layers["13"]):
-            cam.show()
-            cam.active = True
+            camera = self.cameras[cam]
+            camera.show()
+            camera.active = True
             x = l[cidx][0]
             y = l[cidx][1]
             w = l[cidx][2] - l[cidx][0]
             h = l[cidx][3] - l[cidx][1]
-            cam.move(x+10,y+10)
-            cam.resize(w,h) 
+            camera.resize(w,h)
+            self.camDropWidgets[cam].resize(w , h)
+            self.camDropWidgets[cam].move( x,y)#10+w*(cidx%6) , 10+h*(cidx//6))
+            self.camDropWidgets[cam].show()
+            pixmap = QtGui.QPixmap("./datas/images/full0.png")
+            pixmap.scaled(231, 131)
+            self.camDropLabels[cam].resize(w , h)
+            self.camDropLabels[cam].move(0,0)
+            self.camDropLabels[cam].setPixmap(pixmap) 
+            camera.alarm.resize(w , 21)  
 
     def resizeCamers(self,cam , widgets):
         camera = self.cameras[cam]
         widget = widgets[cam]
+        alarm = camera.alarm
         if camera.full:
             camera.full = False
             self.inFullScreenMode = False
@@ -959,6 +1030,7 @@ class btns():
                     self.cameras[cam_].hide()
                     widgets[cam_].hide()
             camera.resize(1411 , 831)
+            alarm.resize(1411, 50)
             camera.move(0,0)
             camera.show()
             widget.resize(1411 , 831)
@@ -968,6 +1040,7 @@ class btns():
             self.settingLayer.show()
             self.settingLayer.resize(259 , 831)
             self.settingLayer.move(1567 , 80)
+            camera.alarm.resize(1411 , 21) 
 
 
 
