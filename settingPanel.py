@@ -13,9 +13,11 @@ class Pannel(QWidget):
         self.ui.sens_horizontalSlider_7.valueChanged.connect(self.sensChange)
 
     def sensChange(self):
-        self.root.camSettings[self.root.currentLayer][self.root.currentCam]["sens"] = self.ui.sens_horizontalSlider_7.value()
-        val = self.root.camSettings[self.root.currentLayer][self.root.currentCam]["sens"] 
-        if self.root.currentCam in self.root.Qs:
-            self.root.Qs[self.root.currentCam][1].put("sens:"+str(val))
+        if self.root.inBaseSet:
+            val = self.root.camBaseSettings[self.root.baseCamNum]["sens"] = self.ui.sens_horizontalSlider_7.value()
+        else:
+            val  =self.root.camSettings[self.root.currentLayer][self.root.currentCam]["sens"] = self.ui.sens_horizontalSlider_7.value()
+            if self.root.currentCam in self.root.Qs:
+                self.root.Qs[self.root.currentCam][1].put("sens:"+str(val))
         
         

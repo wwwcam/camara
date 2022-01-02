@@ -163,7 +163,7 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
             if w == 1411:
                 check = True
                 break
-        print("check" , check)
+        #print("check" , check)
         if check == False:
             self.inFullScreenMode = False
             
@@ -245,16 +245,21 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         geo = self.ui.geometry()
         x = geo.x()
         y = geo.y()
-        if x+1600 < self.mpos[0]:
-            print("inFullScreenMode" ,self.inFullScreenMode)
-            if self.settingLayer.isHidden() and self.inFullScreenMode:
-                self.settingLayer.resize(259 , 831)
-                self.settingLayer.move(1567 , 80)
-                self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
-                self.settingLayer.show()            
-        else:
-            if self.inBaseSet ==False:
-                self.settingLayer.hide()
+        if self.ui.isActiveWindow():
+            if (self.settingLayer.isHidden() == False) and self.inFullScreenMode and self.inBaseSet:
+                self.inBaseSet = False
+                print("self.inBaseSet = False??" , self.inBaseSet)
+                self.settingLayer.hide()   
+            if x+1600 < self.mpos[0]:
+                if self.settingLayer.isHidden() and self.inFullScreenMode:
+                    self.settingLayer.resize(259 , 831)
+                    self.settingLayer.move(1567 , 80)
+                    self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
+                    self.settingLayer.show()     
+
+            else:
+                if self.inBaseSet ==False:
+                    self.settingLayer.hide()
         for cam in self.Qs:
             q = self.Qs[cam]
             cvimg =None

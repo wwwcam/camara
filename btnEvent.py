@@ -10,7 +10,8 @@ from PySide2.QtGui import *
 from PySide2.QtCore import * 
 from multiprocessing import Process , Queue
 import multiprocessing
-
+import pickle
+import json
 
 
 class DragBtn(QPushButton):
@@ -34,7 +35,7 @@ class DragBtn(QPushButton):
             return
         drag = QDrag(self)
         mimedata = QMimeData()
-        mimedata.setText(self.text())
+        mimedata.setText(json.dumps(self.parent.camBaseSettings[self.parent.baseCamNum]))
         drag.setMimeData(mimedata)
         pixmap = QPixmap(self.size())
         painter = QPainter(pixmap)
@@ -54,6 +55,18 @@ class DropBtn(QPushButton):
             event.acceptProposedAction()
 
     def dropEvent(self, event):
+
+        self.parent.camSettings[self.parent.currentLayer][self.num]["ip"] = self.parent.camBaseSettings[self.parent.baseCamNum]["ip"]
+        self.parent.camSettings[self.parent.currentLayer][self.num]["name"] = self.parent.camBaseSettings[self.parent.baseCamNum]["name"]
+        self.parent.camSettings[self.parent.currentLayer][self.num]["location"] = self.parent.camBaseSettings[self.parent.baseCamNum]["location"]
+        self.parent.camSettings[self.parent.currentLayer][self.num]["zoom"] = self.parent.camBaseSettings[self.parent.baseCamNum]["zoom"]
+        self.parent.camSettings[self.parent.currentLayer][self.num]["sens"] = self.parent.camBaseSettings[self.parent.baseCamNum]["sens"]
+        self.parent.camSettings[self.parent.currentLayer][self.num]["focus"] = self.parent.camBaseSettings[self.parent.baseCamNum]["focus"]
+        self.parent.camSettings[self.parent.currentLayer][self.num]["memo"] = self.parent.camBaseSettings[self.parent.baseCamNum]["memo"]
+        self.parent.settings['camsetting'] = self.parent.camSettings
+        with open(self.parent.setFileName, "wb") as f:
+            pickle.dump(self.parent.settings , f)
+        self.parent.loadCameraSet()
         pos = event.pos()
         text = event.mimeData().text()
         #print(dir(event.mimeData()))
@@ -68,8 +81,8 @@ class btns():
         self.ui.camVideo_01 = DropBtn(self.ui.ca_widget_01)
         self.ui.camVideo_01.resize(224,122)
         self.ui.camVideo_01.move(9,8)
-
         self.ui.camVideo_01.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+
         self.ui.camVideo_02 = DropBtn(self.ui.ca_widget_02)
         self.ui.camVideo_02.resize(224,122)
         self.ui.camVideo_02.move(9,8)
@@ -194,6 +207,10 @@ class btns():
         self.ui.camVideo_32.resize(224,122)
         self.ui.camVideo_32.move(9,8)
         self.ui.camVideo_32.setStyleSheet("background-color: rgba(255, 255, 255, 3);")
+
+        for bidx in range(1 , 33):
+            exec(f'''self.ui.camVideo_{bidx:02d}.parent = self''')
+            exec(f'''self.ui.camVideo_{bidx:02d}.num = "cam{bidx:02d}"''')
 
         self.ui.cmraBt_01 = DragBtn(self.ui.dragCamBase )
         self.ui.cmraBt_01.func = self.showSetting
@@ -729,22 +746,30 @@ class btns():
             item.setBackground( QColor(0,200,0) )"""
 
     def showSetting(self , base = False):
-        now = time.time()
+        if base and self.inFullScreenMode:
+            self.resizeCamers(self.currentCam   , self.camDropWidgets)
+
         if self.settingLayer.isHidden():
+            if base:
+                self.inBaseSet = True
+            else:
+                self.inBaseSet = False
             self.loadCameraSet(base = base)
             self.settingLayer.show()
             self.settingLayer.resize(259 , 831)
             self.settingLayer.move(500-76 , 80-10)
             self.settingLayer.setStyleSheet('background-color: rgba(0, 52, 63, 255);')
+
+        else:
             if base:
                 self.inBaseSet = True
-        else:
+            else:
+                self.inBaseSet = False
             self.settingLayer.hide()
             self.settingLayer.resize(259 , 831)
             self.settingLayer.move(1567 , 80)
             self.settingLayer.setStyleSheet(u"background-color: rgba(50, 50, 80, 50);")
-            if base:
-                self.inBaseSet = False
+
 
 
 #showSetting17
@@ -947,6 +972,8 @@ class btns():
 
 
     def fullscreen01(self):
+        self.inBaseSet=False
+        self.inBaseSet=False
         self.currentCam = 'cam01'
         self.loadCameraSet()        
         self.setLayerCorlr()
@@ -960,6 +987,7 @@ class btns():
 
 
     def fullscreen02(self):
+        self.inBaseSet=False
         self.currentCam = 'cam02'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -970,6 +998,7 @@ class btns():
         self.dclickTime[2] = time.time()
 
     def fullscreen03(self):
+        self.inBaseSet=False
         self.currentCam = 'cam03'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -981,6 +1010,7 @@ class btns():
         self.dclickTime[3] = time.time()
 
     def fullscreen04(self):
+        self.inBaseSet=False
         self.currentCam = 'cam04'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -992,6 +1022,7 @@ class btns():
         self.dclickTime[4] = time.time()
 
     def fullscreen05(self):
+        self.inBaseSet=False
         self.currentCam = 'cam05'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1003,6 +1034,7 @@ class btns():
         self.dclickTime[5] = time.time()
 
     def fullscreen06(self):
+        self.inBaseSet=False
         self.currentCam = 'cam06'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1014,6 +1046,7 @@ class btns():
         self.dclickTime[6] = time.time()
 
     def fullscreen07(self):
+        self.inBaseSet=False
         self.currentCam = 'cam07'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1025,6 +1058,7 @@ class btns():
         self.dclickTime[7] = time.time()
 
     def fullscreen08(self):
+        self.inBaseSet=False
         self.currentCam = 'cam08'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1036,6 +1070,7 @@ class btns():
         self.dclickTime[8] = time.time()
 
     def fullscreen09(self):
+        self.inBaseSet=False
         self.currentCam = 'cam09'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1047,6 +1082,7 @@ class btns():
         self.dclickTime[9] = time.time()
 
     def fullscreen10(self):
+        self.inBaseSet=False
         self.currentCam = 'cam10'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1058,6 +1094,7 @@ class btns():
         self.dclickTime[10] = time.time()
 
     def fullscreen11(self):
+        self.inBaseSet=False
         self.currentCam = 'cam11'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1069,6 +1106,7 @@ class btns():
         self.dclickTime[11] = time.time()
 
     def fullscreen12(self):
+        self.inBaseSet=False
         self.currentCam = 'cam12'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1080,6 +1118,7 @@ class btns():
         self.dclickTime[12] = time.time()
 
     def fullscreen13(self):
+        self.inBaseSet=False
         self.currentCam = 'cam13'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1091,6 +1130,7 @@ class btns():
         self.dclickTime[13] = time.time()
 
     def fullscreen14(self):
+        self.inBaseSet=False
         self.currentCam = 'cam14'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1102,6 +1142,7 @@ class btns():
         self.dclickTime[14] = time.time()
 
     def fullscreen15(self):
+        self.inBaseSet=False
         self.currentCam = 'cam15'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1113,6 +1154,7 @@ class btns():
         self.dclickTime[15] = time.time()
 
     def fullscreen16(self):
+        self.inBaseSet=False
         self.currentCam = 'cam16'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1124,6 +1166,7 @@ class btns():
         self.dclickTime[16] = time.time()
 
     def fullscreen17(self):
+        self.inBaseSet=False
         self.currentCam = 'cam17'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1135,6 +1178,7 @@ class btns():
         self.dclickTime[17] = time.time()
 
     def fullscreen18(self):
+        self.inBaseSet=False
         self.currentCam = 'cam18'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1146,6 +1190,7 @@ class btns():
         self.dclickTime[18] = time.time()
 
     def fullscreen19(self):
+        self.inBaseSet=False
         self.currentCam = 'cam19'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1157,6 +1202,7 @@ class btns():
         self.dclickTime[19] = time.time()
 
     def fullscreen20(self):
+        self.inBaseSet=False
         self.currentCam = 'cam20'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1168,6 +1214,7 @@ class btns():
         self.dclickTime[20] = time.time()
 
     def fullscreen21(self):
+        self.inBaseSet=False
         self.currentCam = 'cam21'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1179,6 +1226,7 @@ class btns():
         self.dclickTime[21] = time.time()
 
     def fullscreen22(self):
+        self.inBaseSet=False
         self.currentCam = 'cam22'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1190,6 +1238,7 @@ class btns():
         self.dclickTime[22] = time.time()
 
     def fullscreen23(self):
+        self.inBaseSet=False
         self.currentCam = 'cam23'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1201,6 +1250,7 @@ class btns():
         self.dclickTime[23] = time.time()
 
     def fullscreen24(self):
+        self.inBaseSet=False
         self.currentCam = 'cam24'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1212,6 +1262,7 @@ class btns():
         self.dclickTime[24] = time.time()
 
     def fullscreen25(self):
+        self.inBaseSet=False
         self.currentCam = 'cam25'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1223,6 +1274,7 @@ class btns():
         self.dclickTime[25] = time.time()
 
     def fullscreen26(self):
+        self.inBaseSet=False
         self.currentCam = 'cam26'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1234,6 +1286,7 @@ class btns():
         self.dclickTime[26] = time.time()
 
     def fullscreen27(self):
+        self.inBaseSet=False
         self.currentCam = 'cam27'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1245,6 +1298,7 @@ class btns():
         self.dclickTime[27] = time.time()
 
     def fullscreen28(self):
+        self.inBaseSet=False
         self.currentCam = 'cam28'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1256,6 +1310,7 @@ class btns():
         self.dclickTime[28] = time.time()
 
     def fullscreen29(self):
+        self.inBaseSet=False
         self.currentCam = 'cam29'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1267,6 +1322,7 @@ class btns():
         self.dclickTime[29] = time.time()
 
     def fullscreen30(self):
+        self.inBaseSet=False
         self.currentCam = 'cam30'
         self.loadCameraSet()
         self.setLayerCorlr()
@@ -1278,6 +1334,7 @@ class btns():
         self.dclickTime[30] = time.time()
 
     def fullscreen31(self):
+        self.inBaseSet=False
         self.currentCam = 'cam31'
         self.loadCameraSet()
         self.setLayerCorlr()

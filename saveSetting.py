@@ -81,7 +81,7 @@ class saveSetting():
                 
 
     def loadCameraSet(self , base = False):
-        if base:
+        if self.inBaseSet:
             self.setpanel.ip_lineEdit_7.setText(self.camBaseSettings[self.baseCamNum]["ip"])
             self.setpanel.camera_lineEdit_7.setText(self.camBaseSettings[self.baseCamNum]["name"])
             self.setpanel.loca_lineEdit_7.setText(self.camBaseSettings[self.baseCamNum]["location"])
@@ -99,18 +99,28 @@ class saveSetting():
             self.setpanel.memo_textEdit_7.setPlainText(self.camSettings[self.currentLayer][self.currentCam]["memo"])
 
 
-    def saveSet(self ):
-        if self.currentCam:
-            self.camSettings[self.currentLayer][self.currentCam]["ip"] = self.setpanel.ip_lineEdit_7.text().strip()
-            self.camSettings[self.currentLayer][self.currentCam]["name"] = self.setpanel.camera_lineEdit_7.text().strip()
-            self.camSettings[self.currentLayer][self.currentCam]["location"] = self.setpanel.loca_lineEdit_7.text().strip()
-            self.camSettings[self.currentLayer][self.currentCam]["zoom"] = self.setpanel.zoom_horizontalSlider_7.value()
-            self.camSettings[self.currentLayer][self.currentCam]["sens"] = self.setpanel.sens_horizontalSlider_7.value()
-            self.camSettings[self.currentLayer][self.currentCam]["focus"] = self.setpanel.foco_horizontalSlider_7.value()
-            self.camSettings[self.currentLayer][self.currentCam]["memo"] = self.setpanel.memo_textEdit_7.toPlainText().strip()
-        self.settings['camsetting'] = self.camSettings
-        self.settings['currentLayer'] = self.currentLayer
-        self.settings['selectedCams'] = self.currenListtLayer
+    def saveSet(self , base=False ):
+        if self.inBaseSet:
+            self.camBaseSettings[self.baseCamNum]["ip"] = self.setpanel.ip_lineEdit_7.text().strip()
+            self.camBaseSettings[self.baseCamNum]["name"] = self.setpanel.camera_lineEdit_7.text().strip()
+            self.camBaseSettings[self.baseCamNum]["location"] = self.setpanel.loca_lineEdit_7.text().strip()
+            self.camBaseSettings[self.baseCamNum]["zoom"] = self.setpanel.zoom_horizontalSlider_7.value()
+            self.camBaseSettings[self.baseCamNum]["sens"] = self.setpanel.sens_horizontalSlider_7.value()
+            self.camBaseSettings[self.baseCamNum]["focus"] = self.setpanel.foco_horizontalSlider_7.value()
+            self.camBaseSettings[self.baseCamNum]["memo"] = self.setpanel.memo_textEdit_7.toPlainText().strip()
+            self.settings['camBaseSet'] = self.camBaseSettings
+        else:
+            if self.currentCam:
+                self.camSettings[self.currentLayer][self.currentCam]["ip"] = self.setpanel.ip_lineEdit_7.text().strip()
+                self.camSettings[self.currentLayer][self.currentCam]["name"] = self.setpanel.camera_lineEdit_7.text().strip()
+                self.camSettings[self.currentLayer][self.currentCam]["location"] = self.setpanel.loca_lineEdit_7.text().strip()
+                self.camSettings[self.currentLayer][self.currentCam]["zoom"] = self.setpanel.zoom_horizontalSlider_7.value()
+                self.camSettings[self.currentLayer][self.currentCam]["sens"] = self.setpanel.sens_horizontalSlider_7.value()
+                self.camSettings[self.currentLayer][self.currentCam]["focus"] = self.setpanel.foco_horizontalSlider_7.value()
+                self.camSettings[self.currentLayer][self.currentCam]["memo"] = self.setpanel.memo_textEdit_7.toPlainText().strip()
+                self.settings['camsetting'] = self.camSettings
+                self.settings['currentLayer'] = self.currentLayer
+                self.settings['selectedCams'] = self.currenListtLayer
         self.settings['savepath'] = self.savePath
         self.settings['mapPath'] = self.mapPath
         with open(self.setFileName, "wb") as f:
