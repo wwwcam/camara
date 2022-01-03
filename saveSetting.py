@@ -59,6 +59,10 @@ class saveSetting():
                     for i in range(32):
                         self.camBaseSettings[i] = {"ip":'' , "name":f'cam{i+1:02d}' , "zoom":0 , "sens":0 , "focus":0 , "memo" : "" , "location":''}
                 
+                if "userInfo" in self.settings:
+                    self.userInfo = self.settings['userInfo']
+                else:
+                    self.userInfo = self.settings['userInfo'] = {}
 
                 if 'mapPath' in  self.settings:
                     self.mapPath = self.settings['mapPath']

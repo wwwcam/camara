@@ -151,19 +151,164 @@ class MyMainWindow(QWidget,btns , vplayer,saveSetting): #클래스로 직접 적
         #print(dir(self.ui))
         self.ui.showRealtime.clicked.connect(self.Realtime)
         self.ui.showReplay.clicked.connect(self.Replay)
+        self.ui.accountManager.clicked.connect(self.showManager)
+        self.ui.accountManager_2.clicked.connect(self.showManager2)
         self.ui.loadmap.clicked.connect(self.selectMap)
         self.ui.folferOpen_Bt.clicked.connect(self.openSaveFolder)
+        self.ui.addUser.clicked.connect(self.newmember)
+        self.ui.changePwd.clicked.connect(self.pwdChanged)
+        self.ui.logIn.clicked.connect(self.userlogin)
+        
         #self.ui.cmr_listWidget.currentItemChanged.connect(self.changelistColor)
         self.showBtnIcon( self.mapPath , self.ui.loadmap , (440,150))
         self.ui.widget_3.show()
         self.ui.replayWidget.hide()
 
-        ### 비디오 플레이를 위한 타이머 추가
-        #self.vp1 = QTimer(self.ui)
-        #self.vp1.setInterval(10)
-        #self.vp1.timeout.connect(self.playV1)
-        #self.vp1.start()
+        self.ui.newPwdlb.hide()
+        self.ui.newPwd.hide()
+        self.ui.newPwd2.hide()
+        self.ui.newPwdlb2.hide()
+        self.ui.changePwd.hide()
+        self.ui.addUser.hide()
+        self.ui.accountManager.move(30 , 150)
+        self.ui.accountManager_2.move(205 , 150)
+        self.ui.accountManager.setDisabled(True)
+        self.ui.accountManager_2.setDisabled(True)
 
+        self.ui.allStart.setDisabled(True)
+        self.ui.allStop.setDisabled(True)
+
+
+    def pwdChanged(self):
+        uid = self.ui.userId.text().strip()
+        upass3 = self.ui.userPwd.text().strip() 
+        upass1 = self.ui.newPwd.text().strip() 
+        upass2 = self.ui.newPwd2.text().strip() 
+
+        if uid not in self.settings['userInfo']:
+            QMessageBox.information(self.ui , "정보" , "아이디를 확인하세요")
+            return
+
+        if self.settings['userInfo'][uid] != upass3:
+            QMessageBox.information(self.ui , "정보" , "기존 비번을 확인하세요")
+            return
+        
+        if len(uid) < 5:
+            QMessageBox.information(self.ui , "정보" , "새 비밀번호를 5자 이상 입력하세요")
+            return
+            
+        if upass1 != upass2:
+            QMessageBox.information(self.ui , "정보" , "새 비밀번호가 일치 하지 않습니다.")
+            return
+
+        self.settings['userInfo'][uid] = upass1
+        with open(self.setFileName, "wb") as f:
+            pickle.dump(self.settings , f)
+
+        QMessageBox.information(self.ui , "정보" , "변경 되었습니다.")
+
+
+    def newmember(self):
+        uid = self.ui.userId.text().strip()
+        
+        upass1 = self.ui.newPwd.text().strip() 
+        upass2 = self.ui.newPwd2.text().strip() 
+
+
+        if len(uid) < 5:
+            QMessageBox.information(self.ui , "정보" , "아이디를 5자 이상 입력하세요")
+            return
+        
+        if len(uid) < 5:
+            QMessageBox.information(self.ui , "정보" , "비밀번호를 5자 이상 입력하세요")
+            return
+
+        if upass1 != upass2:
+            QMessageBox.information(self.ui , "정보" , "비밀번호가 일치 하지 않습니다.")
+            return
+        
+        self.settings['userInfo'][uid] = upass1
+        with open(self.setFileName, "wb") as f:
+            pickle.dump(self.settings , f)
+        QMessageBox.information(self.ui , "정보" , "맴버가 생성 되었습니다.")
+
+
+
+    def userlogin(self):
+        uid = self.ui.userId.text().strip()
+        upass = self.ui.userPwd.text().strip()
+        if uid not in self.settings['userInfo']:
+            QMessageBox.information(self.ui , "정보" , "아이디를 확인하세요")
+            return
+        if self.settings['userInfo'][uid] != upass:
+            QMessageBox.information(self.ui , "정보" , "비번을 확인하세요")
+            return
+        QMessageBox.information(self.ui , "정보" , "로그인 되었습니다")
+        self.ui.accountManager.setDisabled(False)
+        self.ui.allStart.setDisabled(False)
+        self.ui.allStop.setDisabled(False)
+
+
+        
+
+    def showManager2(self):
+        self.ui.userId.clear()
+        self.ui.userPwd.clear()
+        if self.ui.newPwdlb.isHidden():
+            self.ui.newPwdlb.show()
+            self.ui.newPwd.show()
+            self.ui.newPwd2.show()
+            self.ui.newPwdlb2.show()
+            self.ui.changePwd.show()
+            self.ui.addUser.hide()
+            self.ui.changePwd.show()
+            self.ui.logIn.hide()
+            self.ui.accountManager.hide()
+            self.ui.accountManager.move(30 , 225)
+            self.ui.accountManager_2.move(205 , 225)
+        else:
+            self.ui.newPwdlb.hide()
+            self.ui.newPwd.hide()
+            self.ui.newPwd2.hide()
+            self.ui.newPwdlb2.hide()
+            self.ui.changePwd.hide()
+            self.ui.logIn.show()    
+            self.ui.accountManager.show()
+            self.ui.accountManager.move(30 , 150)
+            self.ui.accountManager_2.move(205 , 150)
+
+
+    def showManager(self):
+        self.ui.userId.clear()
+        self.ui.userPwd.clear()
+        if self.ui.newPwdlb.isHidden():
+            self.ui.newPwdlb.show()
+            self.ui.newPwd.show()
+            self.ui.newPwd2.show()
+            self.ui.newPwdlb2.show()
+            self.ui.changePwd.show()
+            self.ui.addUser.show()
+            self.ui.label_12.hide()
+            self.ui.userPwd.hide()
+            self.ui.changePwd.hide()
+            self.ui.logIn.hide()
+            self.ui.accountManager_2.hide()
+            self.ui.accountManager.move(30 , 225)
+            self.ui.accountManager_2.move(205 , 225)
+        else:
+            self.ui.newPwdlb.hide()
+            self.ui.newPwd.hide()
+            self.ui.newPwd2.hide()
+            self.ui.newPwdlb2.hide()
+            self.ui.changePwd.hide()
+            self.ui.addUser.hide()
+            self.ui.label_12.show()
+            self.ui.userPwd.show()
+            self.ui.changePwd.show()
+            self.ui.logIn.show()
+            self.ui.accountManager_2.show()
+            self.ui.accountManager.move(30 , 150)
+            self.ui.accountManager_2.move(205 , 150)
 
     def openSaveFolder(self):
         os.startfile(os.path.abspath(self.savePath))

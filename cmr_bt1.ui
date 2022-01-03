@@ -2466,9 +2466,9 @@ font: 30pt &quot;Agency FB&quot;;</string>
      <property name="geometry">
       <rect>
        <x>440</x>
-       <y>60</y>
+       <y>0</y>
        <width>1461</width>
-       <height>861</height>
+       <height>931</height>
       </rect>
      </property>
      <property name="whatsThis">
@@ -2483,7 +2483,7 @@ font: 30pt &quot;Agency FB&quot;;</string>
         <x>10</x>
         <y>60</y>
         <width>1431</width>
-        <height>791</height>
+        <height>871</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2975,86 +2975,11 @@ color: rgb(255, 255, 255);</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_11">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>80</y>
-        <width>361</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 52, 63);
-color: rgb(255, 255, 255);
-font: 75 15pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string> User ID</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>80</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 52, 63);
-color: rgb(255 , 255 , 0);
-font: 75 15pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string>admin</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>120</y>
-        <width>361</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 52, 63);
-color: rgb(255, 255, 255);
-font: 75 15pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string> User Password</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>120</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 52, 63);
-color: rgb(255 , 255 , 0);
-font: 75 15pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string>admin</string>
-      </property>
-      <property name="echoMode">
-       <enum>QLineEdit::Password</enum>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>240</y>
+        <x>25</x>
+        <y>285</y>
         <width>361</width>
         <height>31</height>
        </rect>
@@ -3071,8 +2996,8 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
      <widget class="QSpinBox" name="spinBox">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>245</y>
+        <x>265</x>
+        <y>290</y>
         <width>101</width>
         <height>21</height>
        </rect>
@@ -3084,31 +3009,13 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
        <number>10</number>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>160</y>
-        <width>75</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 52, 63);
-color: rgb(255, 255, 255);
-font: 75 15pt &quot;Agency FB&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Log In</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="gsetClose">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>820</y>
-        <width>75</width>
-        <height>23</height>
+        <x>295</x>
+        <y>335</y>
+        <width>91</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3118,6 +3025,273 @@ font: 75 15pt &quot;Agency FB&quot;;</string>
       </property>
       <property name="text">
        <string>Close</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>15</y>
+        <width>361</width>
+        <height>206</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>5</y>
+         <width>331</width>
+         <height>240</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="userId">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255 , 255 , 0);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string> User ID</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="1">
+         <widget class="QWidget" name="widget_7" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPushButton" name="changePwd">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Change</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="addUser">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="newPwd">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255 , 255 , 0);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="newPwd2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255 , 255 , 0);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="newPwdlb2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string> Confirm Password</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="logIn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Log In</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="userPwd">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255 , 255 , 0);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string> User Password</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="newPwdlb">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+          </property>
+          <property name="text">
+           <string> New Password</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="accountManager">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>225</y>
+        <width>156</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>NewMember</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="accountManager_2">
+      <property name="geometry">
+       <rect>
+        <x>205</x>
+        <y>225</y>
+        <width>156</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 52, 63);
+color: rgb(255, 255, 255);
+font: 75 15pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Change Password</string>
       </property>
      </widget>
     </widget>
@@ -3468,6 +3642,53 @@ color: rgb(255, 255, 255);</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>userId</tabstop>
+  <tabstop>userPwd</tabstop>
+  <tabstop>newPwd</tabstop>
+  <tabstop>newPwd2</tabstop>
+  <tabstop>functionBt_06</tabstop>
+  <tabstop>functionBt_05</tabstop>
+  <tabstop>functionBt_04</tabstop>
+  <tabstop>functionBt_07</tabstop>
+  <tabstop>functionBt_08</tabstop>
+  <tabstop>functionBt_10</tabstop>
+  <tabstop>functionBt_09</tabstop>
+  <tabstop>functionBt_02</tabstop>
+  <tabstop>functionBt_01</tabstop>
+  <tabstop>functionBt_03</tabstop>
+  <tabstop>userLVDS_2</tabstop>
+  <tabstop>stopReplay_2</tabstop>
+  <tabstop>startReplay_2</tabstop>
+  <tabstop>loadReplay_2</tabstop>
+  <tabstop>allStart</tabstop>
+  <tabstop>allStop</tabstop>
+  <tabstop>folferOpen_Bt</tabstop>
+  <tabstop>folferSelect_Bt</tabstop>
+  <tabstop>folferAddres</tabstop>
+  <tabstop>loadmap</tabstop>
+  <tabstop>spinBox</tabstop>
+  <tabstop>gsetClose</tabstop>
+  <tabstop>showRealtime</tabstop>
+  <tabstop>changePwd</tabstop>
+  <tabstop>addUser</tabstop>
+  <tabstop>showReplay</tabstop>
+  <tabstop>cmr_listWidget_5</tabstop>
+  <tabstop>logIn</tabstop>
+  <tabstop>showReplay_2</tabstop>
+  <tabstop>accountManager</tabstop>
+  <tabstop>accountManager_2</tabstop>
+  <tabstop>functionBt_11</tabstop>
+  <tabstop>stop_bt</tabstop>
+  <tabstop>ip_lineEdit_7</tabstop>
+  <tabstop>camera_lineEdit_7</tabstop>
+  <tabstop>foco_horizontalSlider_7</tabstop>
+  <tabstop>sens_horizontalSlider_7</tabstop>
+  <tabstop>memo_textEdit_7</tabstop>
+  <tabstop>loca_lineEdit_7</tabstop>
+  <tabstop>zoom_horizontalSlider_7</tabstop>
+  <tabstop>iconBt_7</tabstop>
+ </tabstops>
  <resources>
   <include location="datas/image.qrc"/>
  </resources>
